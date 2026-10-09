@@ -57,6 +57,7 @@ about:
     label: "The Global Goals"
     title: "Part of a *wider* promise"
     text: "Our work contributes to the United Nations Sustainable Development Goals."
+    hint: "Hover over or tap a goal to see how our work contributes"
     groups:
       - colour: "coral"
         name: "Social Impact"
@@ -67,7 +68,7 @@ about:
       - colour: "saffron"
         name: "Self Transformation"
         goals: ["4 Quality Education (values and culture)", "11 Sustainable Cities and Communities (cultural heritage)"]
-    # The goals wheel lights up every goal listed above. Hovering or tapping a goal shows this line.
+    # The goals wheel lights up every goal listed above (the lists themselves are not shown on the page). Hovering or tapping a goal shows this line.
     notes:
       1: "Skills and orchards that raise family incomes in Palghar’s tribal villages."
       2: "2.4 million free meals in a year, and farms that grow food for the kitchens."

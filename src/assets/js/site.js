@@ -280,18 +280,16 @@
 
   // Global Goals wheel: hover (or tap) a goal we support to see its name in the centre
   const sdg = document.getElementById('sdg');
-  if (sdg) { const segs = [...sdg.querySelectorAll('.seg.on')], infos = [...sdg.querySelectorAll('.info')], items = [...document.querySelectorAll('.gg li[data-goal]')];
+  if (sdg) { const segs = [...sdg.querySelectorAll('.seg.on')], infos = [...sdg.querySelectorAll('.info')];
     let cur = null;
     const set = n => { if (n === cur) return; cur = n; sdg.classList.toggle('has-act', n !== null);
       segs.forEach(s => s.classList.toggle('act', s.dataset.goal === n));
-      infos.forEach(i => i.classList.toggle('show', i.dataset.goal === n));
-      items.forEach(i => i.classList.toggle('hot', i.dataset.goal === n)); };
+      infos.forEach(i => i.classList.toggle('show', i.dataset.goal === n)); };
     segs.forEach(s => { if (!noHover) { s.addEventListener('mouseenter', () => set(s.dataset.goal)); s.addEventListener('focus', () => set(s.dataset.goal)); }
       s.addEventListener('click', e => { e.stopPropagation(); set(cur === s.dataset.goal && noHover ? null : s.dataset.goal); });
       s.addEventListener('keydown', e => { if (e.key === 'Escape') { set(null); s.blur(); } }); });
     sdg.querySelector('svg').addEventListener('mouseleave', () => set(null));
     segs.forEach(s => s.addEventListener('blur', () => setTimeout(() => { if (!sdg.contains(document.activeElement)) set(null); }, 0)));
-    if (!noHover) items.forEach(i => { i.addEventListener('mouseenter', () => set(i.dataset.goal)); i.addEventListener('mouseleave', () => set(null)); });
     document.addEventListener('click', e => { if (!sdg.contains(e.target)) set(null); }); }
 
   // contact form: "/contact/?interest=project" picks that topic for you
