@@ -36,8 +36,7 @@ The sweeping wave from the S3 letterhead:
 | Accent, Self Transformation: Saffron | `#E3A21A` |
 
 ## Fonts (Google Fonts)
-- Recommended: Fraunces (headings, big numbers, italic accent words) + Figtree (body, menus, small caps labels)
-- Alternative: Instrument Serif + Inter
+- **Chosen:** Fraunces (headings, big numbers, italic accent words) + Figtree (body, menus, small caps labels)
 - For Hindi or Marathi later: Tiro Devanagari + Mukta
 
 ## Site map
@@ -53,13 +52,29 @@ The sweeping wave from the S3 letterhead:
    - Beyond GEV
    - Policy & Advocacy
    - Upcoming projects
-   - On hold: IOCL, Donation Projects (details from Harneet ma'am), Goshala, Livelihood for Landless (no content yet)
    - **Project pages:** hero in wave frame · at a glance · progress line along the timeline (Dell) · overlapping key-figure card (RWJF) · gallery
-4. **Impact:** reveal-on-tap number cards (Open Society) · stories · testimonials · partners · awards and videos (hidden until content)
+4. **Impact:** reveal-on-tap number cards (Open Society) · stories · testimonials · partners · in the press · awards and videos (hidden until content)
 5. **Get Involved:** partner with us · back an upcoming project · values education for schools · donate (added later)
 6. **Contact Us**
 
 **On phones:** hover effects play as items scroll into view; tap reveals details; the ribbon becomes a single line; reduced-motion settings are respected.
 
-## Excluded (not in the Drive copy)
-Mira Road water proposal · MSDE skilling proposal · Srinath ji Cafe
+## Excluded for now
+Only the projects in the Drive copy are listed. Not listed: Mira Road water proposal, MSDE skilling proposal, Srinath ji Cafe, IOCL, other donation projects, Goshala, Livelihood for Landless.
+
+## Decisions log
+- Role: funder. Project tables say "Supported by" (changed from "Implemented by" on Priya Kund, Braj kunds revival and EV course).
+- Pond spelling: Vihval. School name: Govardhan English Medium School.
+- Budgets: shown where they appear in the Drive copy.
+- Trustees: Harneet Hariharan (Rādhikā Līlā DD), Managing Trustee; Aayushi Hariharan, Trustee. Placeholder bios and photos for now.
+- Inspiration: no person or tradition named for now.
+- Legal details, email, phone and contact inbox: placeholders until supplied.
+- Partner logos: shown (logo files needed). Braj Breaking press clipping: shown.
+- Photo consent for children: confirmed.
+- Colours: matched by eye from the logo and letterhead.
+- Tone: warm, grounded and service-led, following the Govardhan Annakshetra examples. Emphasis words in Fraunces italic, in pillar colours.
+- Donate: added later by a developer.
+- Hosting: on the foundation's existing domain, once the site is approved.
+- Maintenance: Aayushi for visual and content changes; a developer for donations and integrations.
+- Analytics: a privacy-friendly option with no cookie banner.
+- Language: English only for now.
