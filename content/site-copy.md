@@ -4,6 +4,7 @@ Copy for every section that is not covered by the Drive project copy (`projects.
 Project pages use the Drive copy as written.
 
 Rules followed:
+- No full stops at the end of titles or headings.
 - Every figure comes from the Drive project copy. No numbers are invented.
 - No em dashes.
 - Tone: warm, grounded and service-led, in the spirit of the Govardhan Annakshetra examples. Key words are set in Fraunces italic in a pillar colour (shown here in *italics*).
@@ -58,13 +59,13 @@ Our mission is to *serve*: to *nourish people*, uplift communities and *care for
 
 ### Our three commitments
 **Title:** Our three *commitments*.
-**Social Impact: *Nourishing lives.***
+**Social Impact: Nourishing *lives***
 Meals for the hungry, classrooms for the curious, skills for those ready to earn, and care for those who need it most.
 
-**Sustainability: *Caring for the land.***
+**Sustainability: Caring for the *land***
 Clean water, living ponds, healthy soil and clean energy, so the earth can keep giving to everyone who depends on it.
 
-**Self Transformation: *Awakening the spirit.***
+**Self Transformation: Awakening the *spirit***
 Sacred spaces, timeless values and a deeper sense of purpose, so that every change on the outside takes root within.
 
 ### Impact journey (scroll ribbon)
