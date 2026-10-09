@@ -597,12 +597,14 @@ footer a:hover,footer a:focus-visible{color:#fff;background-size:100% 1px}
 .goals .gg li{font-size:.9rem;line-height:1.3;cursor:default;border-radius:999px;transition:background .3s}
 .goals .gg li.hot{background:color-mix(in srgb,var(--tone) 10%,transparent)}
 .sdg{position:relative;width:min(100%,560px);aspect-ratio:1;margin-inline:auto}
-.sdg svg{display:block;width:100%;height:100%;overflow:visible}
+.sdg > svg{display:block;width:100%;height:100%;overflow:visible}
 .sdg .rim{fill:none;stroke:#D9E4E0;stroke-width:1.5}
 .sdg .seg path{fill:#E6E3DD;transition:fill .5s ease}
 .sdg .seg text{font:700 22px var(--body);fill:#A8A49C;text-anchor:middle;dominant-baseline:central;pointer-events:none}
 .sdg .seg.on path{fill:var(--c)}
 .sdg .seg.on text{fill:#fff}
+.sdg .ico{pointer-events:none;overflow:visible}
+.sdg .seg:not(.on) .ico *{fill:#B3AEA5!important;stroke:none!important}
 .sdg .seg.on{cursor:pointer;outline:none;transition:transform .55s cubic-bezier(.34,1.56,.64,1),filter .4s}
 .sdg .seg.on.act{transform:translate(var(--dx),var(--dy)) scale(1.04);transform-origin:300px 300px;filter:drop-shadow(0 10px 14px rgba(19,22,44,.28))}
 .sdg.has-act .seg.on:not(.act) path{opacity:.55}
@@ -615,9 +617,9 @@ footer a:hover,footer a:focus-visible{color:#fff;background-size:100% 1px}
 .sdg.has-act .hub .rest{opacity:0;transform:translateY(-8px)}
 .sdg .hub .info.show{opacity:1;transform:none}
 .sdg .k{font-size:.7rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--leaf-ink)}
-.sdg .big{font-family:var(--display);font-weight:500;font-size:clamp(3.2rem,8vw,5rem);line-height:1;color:var(--ink)}
+.sdg .big{font-family:var(--display);font-weight:500;font-size:clamp(4rem,10vw,6.4rem);line-height:1;color:var(--ink)}
 .sdg .big .of{font-size:.42em;color:var(--muted);margin-left:.15em;font-weight:400}
-.sdg .lbl{font-size:.78rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--ink)}
+.sdg .lbl{font-size:.78rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--ink);max-width:15em;line-height:1.5}
 .sdg .line{font-family:var(--display);font-size:clamp(.9rem,1.3vw,1.05rem);line-height:1.4;color:var(--muted);border-top:1px solid var(--line);padding-top:10px;margin-top:4px;max-width:20em}
 .sdg .info .k{color:var(--c)}
 .sdg .info .nm{font-family:var(--display);font-weight:500;font-size:clamp(1.3rem,2.6vw,1.9rem);line-height:1.15;color:var(--c);text-wrap:balance}

@@ -59,16 +59,15 @@ description: "S3 Impact Foundation is a charitable foundation based in Mumbai, s
       <circle class="rim" cx="300" cy="300" r="297"/><circle class="rim" cx="300" cy="300" r="182"/>
       {% for x in sdgs.goals %}
       <g class="seg{% if x.on %} on{% endif %}" style="--dx:{{ x.dx }}px;--dy:{{ x.dy }}px;--c:{{ x.colour }};--i:{{ loop.index0 }}" data-goal="{{ x.n }}"{% if x.on %} tabindex="0" role="button" aria-label="Goal {{ x.n }}: {{ x.name }}"{% endif %}>
-        <path d="{{ x.d }}"/><text x="{{ x.lx }}" y="{{ x.ly }}">{{ x.num }}</text>
+        <path d="{{ x.d }}"/>{% if x.icon %}<svg class="ico" x="{{ x.icon.x }}" y="{{ x.icon.y }}" width="54" height="54" viewBox="{{ x.icon.vb }}" aria-hidden="true">{% include x.icon.file %}</svg>{% else %}<text x="{{ x.lx }}" y="{{ x.ly }}">{{ x.num }}</text>{% endif %}
       </g>
       {% endfor %}
     </svg>
     <div class="hub" aria-live="polite">
       <div class="rest">
         <p class="k">{{ site.tagline }}</p>
-        <p class="big"><span class="fig" data-to="{{ sdgs.count }}">{{ sdgs.count }}</span><span class="of">/ 17</span></p>
-        <p class="lbl">Global Goals</p>
-        <p class="line">{{ a.goals.wheel_line }}</p>
+        <p class="big"><span class="fig" data-to="{{ sdgs.count }}">{{ sdgs.count }}</span></p>
+        <p class="lbl">UN Sustainable Development Goals</p>
       </div>
       {% for x in sdgs.goals %}{% if x.on %}
       <div class="info" data-goal="{{ x.n }}" style="--c:{{ x.colour }}">

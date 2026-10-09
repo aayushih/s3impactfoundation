@@ -25,6 +25,11 @@ for (const grp of g.groups) for (const item of grp.goals) {
   (pillars[n] = pillars[n] || []).push({ name: grp.name, colour: grp.colour });
 }
 
+// white pictograms from the official UN goal icons, one file per goal in src/_includes/sdg/
+const boxes = JSON.parse(fs.readFileSync(path.join(root, "src/_includes/sdg/boxes.json"), "utf8"));
+// show icons only once all 17 are in place, otherwise the wheel keeps its numbers
+const iconBoxes = Object.keys(boxes).length === 17 ? boxes : {};
+
 const C = 300, R = 286, r = 192, GAP = 1.4; // viewBox 600 × 600
 const pt = (rad, deg) => { const a = (deg - 90) * Math.PI / 180; return [C + rad * Math.cos(a), C + rad * Math.sin(a)]; };
 const f = (n) => n.toFixed(2);
@@ -39,6 +44,7 @@ const goals = GOALS.map(([name, colour], i) => {
     on: Boolean(pillars[n]), pillars: pillars[n] || [], note: (g.notes || {})[n] || "",
     d: `M${f(x0)} ${f(y0)}A${R} ${R} 0 0 1 ${f(x1)} ${f(y1)}L${f(x2)} ${f(y2)}A${r} ${r} 0 0 0 ${f(x3)} ${f(y3)}Z`,
     lx: f(lx), ly: f(ly), dx: f(dx), dy: f(dy),
+    icon: iconBoxes[n] ? { vb: iconBoxes[n], file: `sdg/${String(n).padStart(2, "0")}.svg`, x: f(lx - 27), y: f(ly - 27) } : null,
   };
 });
 
