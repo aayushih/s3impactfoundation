@@ -278,19 +278,36 @@
   addEventListener('load', build);
   }
 
-  // Global Goals wheel: hover (or tap) a goal we support to see its name in the centre
+  // Global Goals wheel: hover (or tap) a goal we support to see its name in the centre.
+  // Left alone, it moves through the goals by itself so people can see there is more to discover.
   const sdg = document.getElementById('sdg');
   if (sdg) { const segs = [...sdg.querySelectorAll('.seg.on')], infos = [...sdg.querySelectorAll('.info')];
-    let cur = null;
+    let cur = null, busy = false, seen = false, step = -1, timer = 0;
     const set = n => { if (n === cur) return; cur = n; sdg.classList.toggle('has-act', n !== null);
       segs.forEach(s => s.classList.toggle('act', s.dataset.goal === n));
       infos.forEach(i => i.classList.toggle('show', i.dataset.goal === n)); };
-    segs.forEach(s => { if (!noHover) { s.addEventListener('mouseenter', () => set(s.dataset.goal)); s.addEventListener('focus', () => set(s.dataset.goal)); }
-      s.addEventListener('click', e => { e.stopPropagation(); set(cur === s.dataset.goal && noHover ? null : s.dataset.goal); });
+    // the automatic tour: each goal for a few seconds, then "Rooted in 11" for a breath, then round again
+    const HOLD = 3200;
+    const tick = () => { if (busy || !seen) return;
+      step = step + 1 > segs.length ? 0 : step + 1;
+      set(step === segs.length ? null : segs[step].dataset.goal);
+      timer = setTimeout(tick, step === segs.length ? HOLD * 1.25 : HOLD); };
+    const resume = (wait = 4000) => { clearTimeout(timer); if (!reduce) timer = setTimeout(tick, wait); };
+    const pause = () => { busy = true; clearTimeout(timer); };
+    const release = (wait) => { busy = false; resume(wait); };
+    // someone takes over: the tour stops while they explore and picks up again a little after they leave
+    const pick = n => { pause(); step = segs.findIndex(s => s.dataset.goal === n); set(n); };
+    segs.forEach(s => { if (!noHover) { s.addEventListener('mouseenter', () => pick(s.dataset.goal)); s.addEventListener('focus', () => pick(s.dataset.goal)); }
+      s.addEventListener('click', e => { e.stopPropagation(); if (noHover && cur === s.dataset.goal && busy) { set(null); release(6000); } else { pick(s.dataset.goal); if (noHover) release(9000); } });
       s.addEventListener('keydown', e => { if (e.key === 'Escape') { set(null); s.blur(); } }); });
-    sdg.querySelector('svg').addEventListener('mouseleave', () => set(null));
-    segs.forEach(s => s.addEventListener('blur', () => setTimeout(() => { if (!sdg.contains(document.activeElement)) set(null); }, 0)));
-    document.addEventListener('click', e => { if (!sdg.contains(e.target)) set(null); }); }
+    const svgEl = sdg.querySelector('svg');
+    svgEl.addEventListener('mouseenter', () => { if (!noHover) pause(); });
+    svgEl.addEventListener('mouseleave', () => { if (noHover) return; set(null); release(); });
+    segs.forEach(s => s.addEventListener('blur', () => setTimeout(() => { if (!sdg.contains(document.activeElement) && !sdg.matches(':hover')) { set(null); release(); } }, 0)));
+    document.addEventListener('click', e => { if (!sdg.contains(e.target) && busy) { set(null); release(); } });
+    // only tour while the wheel is on screen; start after the segments have appeared
+    if (io) new IntersectionObserver(es => es.forEach(e => { seen = e.isIntersecting;
+      if (seen && !busy) resume(cur === null && step < 0 ? 3600 : 1500); else if (!seen) { clearTimeout(timer); } }), {threshold:.45}).observe(sdg); }
 
   // contact form: "/contact/?interest=project" picks that topic for you
   const sel = document.getElementById('interest');
