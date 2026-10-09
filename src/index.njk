@@ -1,0 +1,114 @@
+---
+layout: base.njk
+---
+{%- set h = home -%}
+<section class="hero" id="hero">
+    <div class="portal closed" id="portal" aria-roledescription="carousel" aria-label="Highlights">
+      {% for s in h.hero.slides %}
+      <div class="slide{% if loop.first %} on{% endif %}" aria-roledescription="slide" aria-label="{{ loop.index }} of {{ h.hero.slides.length }}"{% if not loop.first %} aria-hidden="true"{% endif %}>
+        <img src="assets/img/{{ s.image }}" alt="" sizes="100vw" style="object-position:{{ s.image_focus or '50% 50%' }}"{% if loop.first %} loading="eager" fetchpriority="high"{% endif %}>
+        <span class="shade"></span>
+        <div class="copy">
+          {% if loop.first %}<h1>{% else %}<h2>{% endif %}{% for line in s.lines %}<span class="ln">{{ line | em | safe }}</span>{% if not loop.last %} {% endif %}{% endfor %}{% if loop.first %}</h1>{% else %}</h2>{% endif %}
+          <p class="sub">{{ s.text }}</p>
+          <div class="btns">{% if s.button %}<a class="btn sun" href="{{ s.button.link }}"{% if not loop.first %} tabindex="-1"{% endif %}>{{ s.button.label }} <span class="arr">→</span></a>{% endif %}{% if s.second_button %}<a class="btn ghost" href="{{ s.second_button.link }}"{% if not loop.first %} tabindex="-1"{% endif %}>{{ s.second_button.label }}</a>{% endif %}</div>
+        </div>
+      </div>
+      {% endfor %}
+      <div class="ctrl" role="group" aria-label="Choose a slide">
+        <button class="arw" type="button" id="prevBtn" aria-label="Previous slide"><svg viewBox="0 0 24 20" width="20" aria-hidden="true"><path d="M12 17V3M5 10l7-7 7 7" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></button>
+        {% for s in h.hero.slides %}<button class="dot" type="button" aria-label="Slide {{ loop.index }}" aria-current="{{ 'true' if loop.first else 'false' }}"></button>
+        {% endfor %}<button class="arw" type="button" id="nextBtn" aria-label="Next slide"><svg viewBox="0 0 24 20" width="20" aria-hidden="true"><path d="M12 3v14M5 10l7 7 7-7" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></button>
+      </div>
+      <button class="pause" type="button" id="pauseBtn" aria-label="Pause slideshow"><svg viewBox="0 0 12 12" width="11" aria-hidden="true"><path d="M3 2v8M9 2v8" stroke="currentColor" stroke-width="2"/></svg></button>
+      <div class="wall" id="wall" aria-hidden="true"></div>
+    </div>
+</section>
+
+<div class="mband">
+<section class="mission wrap" id="about">
+  <p class="big rv">{{ h.mission | em("mission") | safe }}</p>
+</section>
+</div>
+
+<section class="temple-wrap wrap" aria-label="{{ h.pillars.title | replace('*','') }}">
+  <div class="temple">
+    <h2 class="ctitle rv">{{ h.pillars.title | em("k") | safe }}</h2>
+    <div class="colonnade">
+      {% for p in h.pillars.items %}
+      <div class="cm t-{{ p.colour }}"><div class="pil rv" style="--d:{{ (loop.index0 * 0.9) | round(2) }}s" aria-hidden="true">{% include "pillar.svg" %}</div><article class="bay rv" style="--d:{{ (loop.index0 * 0.9 + 0.5) | round(2) }}s"><p class="eyebrow">{{ p.label }}</p><h3>{{ p.title | em | safe }}</h3><p>{{ p.text }}</p></article></div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="journey" id="journey">
+  <svg class="ribbon" aria-hidden="true"><g class="ghost"></g><g class="live"></g></svg>
+  <div class="wrap">
+    <div class="head rv"><p class="eyebrow">{{ h.journey.label }}</p><h2>{{ h.journey.title | em("k") | safe }}</h2></div>
+    <div class="jlist">
+      {% for j in h.journey.stories %}
+      <div class="jblock{% if loop.index0 % 2 %} flip{% endif %} t-{{ j.colour }}"><figure><img src="assets/img/{{ j.image }}" alt="{{ j.image_alt }}" sizes="(max-width: 760px) 92vw, 46vw"></figure>
+        <div class="jtext rv"><p class="eyebrow">{{ j.label }}</p><p class="stat"><b>{{ j.highlight }}</b> {{ j.text }}</p><a class="tlink" href="{{ j.link.url }}">{{ j.link.label }} <span class="a" aria-hidden="true">→</span></a></div></div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="numbers" id="impact">
+  <div class="wrap">
+    <div class="head">
+      <h2 class="rv">{{ h.numbers.title | em("k") | safe }}</h2>
+      <p class="lede rv" style="--d:.12s">{{ h.numbers.intro }}</p>
+    </div>
+    <div class="ngrid">
+      {% for n in h.numbers.items %}
+      <div class="ncol t-{{ n.colour }} rv" style="--d:{{ (0.05 + loop.index0 * 0.1) | round(2) }}s"><img class="nicon" src="assets/icons/{{ n.icon }}" alt="" sizes="(max-width: 900px) 34vw, 140px">
+        <button class="num" type="button" aria-expanded="false">
+        <span class="front"><span class="fig" data-to="{{ n.count_to }}"{% if n.decimals %} data-dec="{{ n.decimals }}"{% endif %}{% if n.suffix %} data-suf="{{ n.suffix }}"{% endif %}{% if n.format == 'indian' %} data-loc="en-IN"{% elif n.format == 'international' %} data-loc="en-US"{% endif %}>{{ n.shows }}</span><span class="lab">{{ n.label }}</span></span>
+        <span class="back"><p>{{ n.detail }}</p></span></button>
+        <a class="pill" href="{{ n.link.url }}">{{ n.link.label }}</a></div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="work wrap" id="work">
+  <div class="top-row">
+    <div class="rv"><p class="eyebrow">{{ h.work.label }}</p><h2 style="margin-top:12px">{{ h.work.title | em("k") | safe }}</h2></div>
+    <a class="btn ink rv" href="{{ h.work.button.link }}">{{ h.work.button.label }} <span class="arr">→</span></a>
+  </div>
+  <div class="tiles">
+    {% for t in h.work.tiles %}
+    <a class="tile t-{{ t.colour }} rv" style="--d:{{ (0.05 + loop.index0 * 0.1) | round(2) }}s" href="{{ t.link }}"><div class="img"><img src="assets/img/{{ t.image }}" alt="{{ t.image_alt }}" sizes="(max-width: 900px) 46vw, 24vw"><span class="tint"></span></div><span class="rule"></span><h3>{{ t.title }}</h3><p>{{ t.text }}</p></a>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="voice wrap" aria-label="A voice from the work">
+  <div class="voice-grid rv">
+    <figure><img src="assets/img/{{ h.quote.image }}" alt="{{ h.quote.image_alt }}" sizes="(max-width: 760px) 92vw, 60vw"></figure>
+    <blockquote><span class="qm" aria-hidden="true">“</span><p>{{ h.quote.text | words | safe }}</p><cite>{{ h.quote.name }}<span>{{ h.quote.role }}</span></cite></blockquote>
+  </div>
+</section>
+
+<section class="stages wrap" aria-labelledby="stagesH">
+  <p class="eyebrow rv">{{ h.recognition.label }}</p>
+  <h2 id="stagesH" class="rv" style="margin-top:12px">{{ h.recognition.title | em("k") | safe }}</h2>
+  <p class="lede rv">{{ h.recognition.intro }}</p>
+  <div class="scards">
+    {% for c in h.recognition.cards %}
+    <a class="scard t-{{ c.colour }} rv" style="--d:{{ (0.05 + loop.index0 * 0.1) | round(2) }}s" href="{{ c.link.url }}"><div class="img"><img src="assets/img/{{ c.image }}" alt="{{ c.image_alt }}" sizes="(max-width: 900px) 92vw, 32vw"><span class="tint"></span></div><p class="eyebrow">{{ c.label }}</p><p class="where">{{ c.title }}</p><p>{{ c.text | em | safe }}</p><span class="tlink">{{ c.link.label }} <span class="a" aria-hidden="true">→</span></span></a>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="wrap" id="contact">
+  <div class="band rv">
+    <img class="bimg" src="assets/img/{{ h.closing.image }}" alt="" sizes="(max-width: 1240px) 100vw, 1200px"><span class="bshade" aria-hidden="true"></span>
+    <h2>{{ h.closing.title | em("k") | safe }}</h2>
+    <p class="sub2">{{ h.closing.subtitle }}</p>
+    <p class="t">{{ h.closing.text }}</p>
+    <div class="btns">{% if h.closing.button %}<a class="btn sun" href="{{ h.closing.button.link }}">{{ h.closing.button.label }} <span class="arr">→</span></a>{% endif %}{% if h.closing.second_button %}<a class="btn ghost" href="{{ h.closing.second_button.link }}">{{ h.closing.second_button.label }}</a>{% endif %}</div>
+  </div>
+</section>

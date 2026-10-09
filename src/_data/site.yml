@@ -1,0 +1,64 @@
+# ─────────────────────────────────────────────────────────────
+#  SITE-WIDE DETAILS
+#  Edit the text after each colon. Keep the quotation marks.
+#  Leave a value as "" to show "To be added" on the site.
+# ─────────────────────────────────────────────────────────────
+
+name: "S3 Impact Foundation"
+tagline: "Rooted in service"
+description: "S3 Impact Foundation supports work that nourishes people, cares for the land and helps every life grow in spirit as well as in strength, from Palghar to Braj."
+
+# The web address once the site is live (no slash at the end)
+url: "https://example.org"
+
+# While this is true, search engines are asked not to list the site.
+# Change to false on launch day.
+preview: true
+
+contact:
+  address: "2nd Floor, Chandramani Apartments, Plot No. 133/134, Road No. 3, Matunga Central, Mumbai 400019"
+  email: ""
+  phone: ""
+
+# Main menu. "link" can be a page (/about/) or a section on the home page (/#impact).
+menu:
+  - label: "About Us"
+    link: "/#about"
+  - label: "Our Work"
+    link: "/#work"
+    dropdown: true
+  - label: "Impact"
+    link: "/#impact"
+  - label: "Contact Us"
+    link: "/#contact"
+    button: true
+
+# The panel that opens under "Our Work"
+work_menu:
+  intro_title: "Twenty-two projects, one *calling*"
+  intro_text: "From warm meals and village classrooms to sacred ponds and clean water. Most begin in the villages around Govardhan Ecovillage in Palghar."
+  intro_link: "See all projects"
+  # Each column's links lead to "link" until the project pages are built
+  columns:
+    - heading: "Rural Development at GEV"
+      link: "/#work"
+      links: ["Farmers & Agriculture", "Water Resource Development", "Women Empowerment", "Skill Development", "Rural Education", "Healthcare & Elder Care", "Animal Welfare"]
+    - heading: "Programmes"
+      link: "/#work"
+      links: ["Govardhan Annakshetra", "Spiritual & Culture", "Braj Kunds"]
+    - heading: "Further afield"
+      link: "/#work"
+      links: ["Beyond GEV", "Policy & Advocacy", "Upcoming projects"]
+
+footer:
+  columns:
+    - heading: "About"
+      link: "/#about"
+      links: ["Why S3", "Vision & Mission", "Our Values", "Our Trustees", "Accountability"]
+    - heading: "Our Work"
+      link: "/#work"
+      links: ["Rural Development at GEV", "Govardhan Annakshetra", "Spiritual & Culture", "Braj Kunds", "Beyond GEV", "Policy & Advocacy"]
+    - heading: "Explore"
+      link: "/#contact"
+      links: ["Impact", "Upcoming projects", "Get Involved", "Contact Us"]
+  copyright: "© 2026 S3 Impact Foundation. All rights reserved."

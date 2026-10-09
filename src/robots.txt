@@ -1,0 +1,6 @@
+# Preview: keep search engines out until launch.
+# On launch day replace both lines below with:
+#   User-agent: *
+#   Allow: /
+User-agent: *
+Disallow: /

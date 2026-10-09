@@ -1,0 +1,22 @@
+<svg viewBox="44 18 212 502" aria-hidden="true">
+<rect class="dr" pathLength="1" x="58" y="24" width="184" height="33" rx="7"/>
+<rect class="dr c" pathLength="1" x="50" y="54" width="200" height="29" rx="8"/>
+<path class="dr" pathLength="1" d="M60 82H240V101C240 107 235 112 229 112H71C65 112 60 107 60 101V82Z"/>
+<path class="dr" pathLength="1" d="M70 111H230C225 126 216 137 202 145H98C84 137 75 126 70 111Z"/>
+<path class="dr" pathLength="1" d="M97 144H203C199 157 188 166 174 170H126C112 166 101 157 97 144Z"/>
+<path class="dr c" pathLength="1" d="M105 145C120 150 132 159 139 172C126 170 115 163 105 151Z"/>
+<path class="dr c" pathLength="1" d="M195 145C180 150 168 159 161 172C174 170 185 163 195 151Z"/>
+<path class="dr c" pathLength="1" d="M150 140C163 149 169 159 169 171C162 176 156 179 150 179C144 179 138 176 131 171C131 159 137 149 150 140Z"/>
+<rect class="dr" pathLength="1" x="112" y="174" width="76" height="18" rx="7"/>
+<path class="dr" pathLength="1" d="M120 190H180L177 225H123L120 190Z"/>
+<rect class="dr c" pathLength="1" x="111" y="218" width="78" height="17" rx="8"/>
+<rect class="dr" pathLength="1" x="109" y="232" width="82" height="17" rx="8"/>
+<path class="dr" pathLength="1" d="M122 248H178L184 374H116L122 248Z"/>
+<rect class="dr c" pathLength="1" x="108" y="366" width="84" height="18" rx="8"/>
+<rect class="dr" pathLength="1" x="106" y="381" width="88" height="18" rx="8"/>
+<path class="dr c" pathLength="1" d="M116 398H184L187 431H113L116 398Z"/>
+<rect class="dr" pathLength="1" x="101" y="425" width="98" height="18" rx="8"/>
+<rect class="dr" pathLength="1" x="84" y="440" width="132" height="24" rx="8"/>
+<rect class="dr c" pathLength="1" x="70" y="461" width="160" height="27" rx="8"/>
+<rect class="dr" pathLength="1" x="55" y="485" width="190" height="28" rx="8"/>
+</svg>

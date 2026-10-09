@@ -1,0 +1,200 @@
+# ─────────────────────────────────────────────────────────────
+#  HOME PAGE TEXT
+#  Edit the words between the quotation marks.
+#
+#  Little codes you can use inside the text:
+#    *word*            makes the word italic (and coloured in titles)
+#    *word*{coral}     italic in a colour: coral, leaf, saffron, water, rose, s3
+#
+#  Photos: put a new photo in src/assets/img/ and type its file name here.
+#  Colours for sections: coral, leaf, saffron, water, rose
+# ─────────────────────────────────────────────────────────────
+
+hero:
+  slides:
+    - lines: ["Rooted in *service,*", "nourishing *every soul*"]
+      text: "From a warm meal in a tribal village to a sacred pond brought back to life, we walk alongside communities as they grow in health, livelihood and spirit."
+      image: "hero-meal.webp"
+      image_focus: "50% 46%"
+      button: { label: "Explore our work", link: "/#work" }
+      second_button: { label: "Our story", link: "/#about" }
+    - lines: ["2.4 million free meals,", "*in a single year*"]
+      text: "Served in 2025-26 to tribal villagers, schoolchildren, young trainees and hospital patients around Palghar."
+      image: "hero-grocery-kits.webp"
+      image_focus: "50% 18%"
+      button: { label: "See the story", link: "/#journey" }
+    - lines: ["A home for culture,", "*open to all*"]
+      text: "In 2026 the kalash was fixed atop the spire and the new roof completed at the cultural heart of Govardhan Ecovillage, which welcomed 8,11,071 visitors in 2024-25."
+      image: "hero-kalash.webp"
+      image_focus: "50% 40%"
+      button: { label: "See the centre", link: "/#work" }
+
+mission: "Our mission is to *serve:*{s3} to *nourish people*{coral}, uplift communities and *care for the land*{leaf}, so that every life we touch can *grow in spirit*{saffron} as well as in *strength.*{saffron}"
+
+pillars:
+  title: "Our Three *Pillars*"
+  items:
+    - colour: "coral"
+      label: "Social Impact"
+      title: "Nourishing *lives*"
+      text: "Meals for the hungry, classrooms for the curious, skills for those ready to earn, and care for those who need it most."
+    - colour: "leaf"
+      label: "Sustainability"
+      title: "Caring for the *land*"
+      text: "Clean water, living ponds, healthy soil and clean energy, so the earth can keep giving to everyone who depends on it."
+    - colour: "saffron"
+      label: "Self Transformation"
+      title: "Awakening the *spirit*"
+      text: "Sacred spaces, timeless values and a deeper sense of purpose, so that every change on the outside takes root within."
+
+journey:
+  label: "Impact journey"
+  title: "Every number is a *life*"
+  stories:
+    - colour: "coral"
+      label: "Food"
+      image: "journey-food.webp"
+      image_alt: "Volunteers serving hot food to a queue of visitors"
+      highlight: "2.4 million free meals"
+      text: "served in 2025-26 to tribal villagers, schoolchildren, young trainees and hospital patients around Palghar."
+      link: { label: "Govardhan Annakshetra", url: "/#work" }
+    - colour: "saffron"
+      label: "Education"
+      image: "journey-education.webp"
+      image_alt: "Schoolgirls in blue uniforms holding new books in a classroom"
+      highlight: "A 67% rise in learning scores"
+      text: "across 102 tribal residential schools, as fellows, trained teachers and student-led schools took root."
+      link: { label: "Better Learning in Palghar's Tribal Residential Schools", url: "/#work" }
+    - colour: "water"
+      label: "Water"
+      image: "journey-water.webp"
+      image_alt: "Operators at the ultrafiltration water plant at Govardhan Ecovillage"
+      highlight: "12,000 litres of safe water an hour"
+      text: "at Govardhan Ecovillage, where borewell water now tests free of coliform bacteria."
+      link: { label: "Safe Drinking Water for Govardhan Ecovillage", url: "/#work" }
+    - colour: "rose"
+      label: "Livelihoods"
+      image: "journey-livelihoods.webp"
+      image_alt: "A trainee sewing at the tailoring course, Govardhan Skill Centre"
+      highlight: "65 of 80 women earning"
+      text: "within three months of finishing their training in tailoring, beauty and computer skills."
+      link: { label: "Skills and Income for Rural and Tribal Women", url: "/#work" }
+    - colour: "leaf"
+      label: "Sacred water"
+      image: "journey-kund.webp"
+      image_alt: "Priya Kund in Barsana with restored banks and painted walls"
+      highlight: "6 sacred kunds"
+      text: "in Braj being brought back to life, with natural springs flowing again once the silt was cleared."
+      link: { label: "Braj Kunds", url: "/#work" }
+
+numbers:
+  title: "Lives behind the *numbers*"
+  intro: "We count what changes: meals served, scores raised, litres cleaned, incomes earned. Hover or tap a number to see where it comes from."
+  # count_to is the number the counter rolls up to; decimals and suffix shape how it reads.
+  # format "indian" writes 8,11,071; "international" writes 12,000.
+  items:
+    - colour: "coral"
+      icon: "meals.webp"
+      shows: "2.4M"
+      count_to: 2.4
+      decimals: 1
+      suffix: "M"
+      label: "Free meals in 2025-26"
+      detail: "Cooked at Govardhan Annakshetra for villagers, schoolchildren, trainees and hospital patients across five talukas."
+      link: { label: "Govardhan Annakshetra", url: "/#work" }
+    - colour: "saffron"
+      icon: "learning.webp"
+      shows: "67%"
+      count_to: 67
+      suffix: "%"
+      label: "Rise in learning scores"
+      detail: "Average scores rose from 19.85 to 33.16 across 102 tribal residential schools in Palghar."
+      link: { label: "Ashramshala education", url: "/#work" }
+    - colour: "water"
+      icon: "water.webp"
+      shows: "12,000"
+      count_to: 12000
+      format: "international"
+      label: "Litres of safe water an hour"
+      detail: "Borewell water at Govardhan Ecovillage now tests free of coliform bacteria and E. coli."
+      link: { label: "Safe drinking water", url: "/#work" }
+    - colour: "leaf"
+      icon: "temple.webp"
+      shows: "8,11,071"
+      count_to: 811071
+      format: "indian"
+      label: "Visitors in a year"
+      detail: "Day visitors to Govardhan Ecovillage in 2024-25, up from about one lakh a year."
+      link: { label: "Cultural Centre", url: "/#work" }
+
+work:
+  label: "Our work"
+  title: "Where we *serve*"
+  button: { label: "See all projects", link: "/#work" }
+  tiles:
+    - colour: "coral"
+      image: "work-rural.webp"
+      image_alt: "Women learning computer skills at Govardhan Skill Centre"
+      title: "Rural Development at GEV"
+      text: "Farming, water, schools, skills and care in the tribal villages of Palghar."
+      link: "/#work"
+    - colour: "leaf"
+      image: "work-annakshetra.webp"
+      image_alt: "A free meal being served at Govardhan Ecovillage"
+      title: "Govardhan Annakshetra"
+      text: "A community kitchen that served 2.4 million free meals in a single year."
+      link: "/#work"
+    - colour: "saffron"
+      image: "work-spiritual.webp"
+      image_alt: "The carved ceiling and shrine of the renewed temple at Govardhan Ecovillage"
+      title: "Spiritual & Culture"
+      text: "Restoring sacred places and passing timeless values to the next generation."
+      link: "/#work"
+    - colour: "water"
+      image: "work-kunds.webp"
+      image_alt: "Pavan Sarovar, one of the sacred kunds of Braj"
+      title: "Braj Kunds"
+      text: "Reviving the sacred ponds of Braj with natural methods and local hands."
+      link: "/#work"
+
+quote:
+  image: "quote-kitchen.webp"
+  image_alt: "Cooks stirring a large pot at Govardhan Annakshetra"
+  text: "The primary condition of civilization is the availability of an abundance of food, and the primary discipline of civilization is the sharing of that food."
+  name: "HG Gauranga Das"
+  role: "Director, Govardhan EcoVillage, at the C20 meeting in Recife"
+
+recognition:
+  label: "Recognition"
+  title: "On *wider* stages"
+  intro: "Work that begins in a village does not stay there."
+  cards:
+    - colour: "water"
+      image: "stage-c20.webp"
+      image_alt: "The C20 Brazil 2024 stage in Recife"
+      label: "G20 · Recife, Brazil · 2024"
+      title: "C20 Working Group"
+      text: "A project we support at Govardhan EcoVillage co-led the C20 Working Group on Food Systems, Hunger and Poverty during Brazil's 2024 G20 Presidency."
+      link: { label: "Read more", url: "/#work" }
+    - colour: "saffron"
+      image: "stage-sushasan.webp"
+      image_alt: "The Sushasan Mahotsav 2024 stage in New Delhi"
+      label: "New Delhi · February 2024"
+      title: "Sushasan Mahotsav"
+      text: "With our support, Govardhan EcoVillage was invited to partner in a national festival of good governance, in recognition of its work on food security."
+      link: { label: "Read more", url: "/#work" }
+    - colour: "leaf"
+      image: "press-braj.webp"
+      image_alt: "Visitors beside the new murals at Priya Kund"
+      label: "In the press"
+      title: "A Braj Break-through"
+      text: "The revival of Braj's kunds was reported by *Braj Breaking*, a local Braj news site, which called restoring the kunds and cleaning their water the first need of the day."
+      link: { label: "Read the article", url: "/#work" }
+
+closing:
+  image: "band-temple-path.webp"
+  title: "Walk this path *with us*"
+  subtitle: "There is a place for you in this work"
+  text: "Seven new projects are waiting for partners, from a school for 620 children to a sanctuary for Palghar's community dogs. Let's bring them to life together."
+  button: { label: "Partner with us", link: "/#contact" }
+  second_button: { label: "See upcoming projects", link: "/#work" }

@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>{% if title %}{{ title }} · {% endif %}{{ site.name }}</title>
+<meta name="description" content="{{ description or site.description }}">
+{% if site.preview %}<meta name="robots" content="noindex, nofollow">{% endif %}
+<meta name="theme-color" content="#1F2340">
+<meta property="og:type" content="website">
+<meta property="og:title" content="{% if title %}{{ title }} · {% endif %}{{ site.name }}">
+<meta property="og:description" content="{{ description or site.description }}">
+<meta property="og:image" content="{{ site.url }}/assets/logo/icon-512.png">
+<link rel="icon" type="image/png" sizes="48x48" href="/assets/logo/favicon-48.png">
+<link rel="apple-touch-icon" href="/assets/logo/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..700,0..100;1,9..144,300..700,0..100&family=Figtree:wght@300..800&display=swap">
+<link rel="stylesheet" href="/assets/css/site.css">
+<noscript><style>.portal.closed .slide .copy > *,.portal.closed .ctrl,.portal.closed .pause{opacity:1!important;transform:none!important}</style></noscript>
+</head>
+<body>
+
+<header class="top" id="top">
+  <div class="wrap bar">
+    <a class="brand" href="/" aria-label="{{ site.name }} home"><img class="logo-mark" src="/assets/logo/s3-logo-mark.svg" alt="{{ site.name }}" width="55" height="50" eleventy:ignore></a>
+    <nav class="main" aria-label="Main">
+      {% for item in site.menu %}
+      {% if item.dropdown %}
+      <div class="item has-mega" id="workItem">
+        <button type="button" id="workBtn" aria-expanded="false" aria-controls="workMega">{{ item.label }} <svg class="chev" viewBox="0 0 10 10" aria-hidden="true"><path d="M1 3l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
+        <div class="mega" id="workMega">
+          <div class="mega-in">
+            <div class="intro">
+              <p class="eyebrow" style="color:var(--ink)">{{ item.label }}</p>
+              <h3>{{ site.work_menu.intro_title | em("k") | safe }}</h3>
+              <p>{{ site.work_menu.intro_text }}</p>
+              <a href="{{ item.link }}">{{ site.work_menu.intro_link }} →</a>
+            </div>
+            <div class="cols">
+              {% for col in site.work_menu.columns %}
+              <div><h4>{{ col.heading }}</h4><ul>{% for l in col.links %}<li><a href="{{ col.link }}">{{ l }}</a></li>{% endfor %}</ul></div>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+      {% else %}
+      <div class="item"><a href="{{ item.link }}"{% if item.button %} class="cta-pill"{% endif %}>{{ item.label }}</a></div>
+      {% endif %}
+      {% endfor %}
+    </nav>
+    <button class="menu-btn" type="button" id="menuBtn" aria-controls="sheet" aria-expanded="false">Menu</button>
+  </div>
+</header>
+
+<div class="sheet" id="sheet" role="dialog" aria-label="Menu">
+  <button class="close" type="button" id="closeBtn">Close</button>
+  <p class="lead">{{ site.tagline }}</p>
+  {% for col in site.footer.columns %}
+  <details{% if loop.index == 2 %} open{% endif %}><summary>{{ col.heading }}</summary><ul>{% for l in col.links %}<li><a href="{{ col.link }}">{{ l }}</a></li>{% endfor %}</ul></details>
+  {% endfor %}
+</div>
+
+<main>
+{{ content | safe }}
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="ftop">
+      <a class="brand" href="/" aria-label="{{ site.name }} home"><img class="logo-full" src="/assets/logo/s3-logo-full.svg" alt="{{ site.name }}: Sustainability, Social Impact, Self Transformation" width="253" height="100" eleventy:ignore></a>
+      <p class="tag">{{ site.tagline }}</p>
+    </div>
+    <div class="fcols">
+      {% for col in site.footer.columns %}
+      <div><h4>{{ col.heading }}</h4><ul>{% for l in col.links %}<li><a href="{{ col.link }}">{{ l }}</a></li>{% endfor %}</ul></div>
+      {% endfor %}
+      <div class="fcontact"><h4 style="margin-bottom:2px">Get in touch</h4>
+        <p><span class="lab">Visit</span>{{ site.contact.address }}</p>
+        <p><span class="lab">Email</span>{% if site.contact.email %}<a href="mailto:{{ site.contact.email }}">{{ site.contact.email }}</a>{% else %}<span class="pending">To be added</span>{% endif %}</p>
+        <p><span class="lab">Phone</span>{% if site.contact.phone %}<a href="{{ site.contact.phone | tel }}">{{ site.contact.phone }}</a>{% else %}<span class="pending">To be added</span>{% endif %}</p>
+      </div>
+    </div>
+    <div class="fbot"><p>{{ site.footer.copyright }}</p><p><a href="#top">Privacy Policy</a> · <a href="#top">Terms of Use</a></p></div>
+  </div>
+</footer>
+
+<script src="/assets/js/site.js"></script>
+</body>
+</html>
