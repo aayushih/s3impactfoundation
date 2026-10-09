@@ -39,7 +39,7 @@ Email: **[PLACEHOLDER]** · Phone: **[PLACEHOLDER]**
 
 **Slide 2:** Eyebrow: Govardhan Annakshetra. Heading: 2.4 million free meals, *in a single year*. Text: Served in 2025-26 to tribal villagers, schoolchildren, young trainees and hospital patients around Palghar. Button: See the story
 
-**Slide 3:** Eyebrow: Vedic Education & Cultural Centre. Heading: A home for culture, *open to all*. Text: The cultural heart of Govardhan Ecovillage welcomed 8,11,071 visitors in 2024-25, and has been renewed to welcome many more. Button: See the centre
+**Slide 3:** Eyebrow: Vedic Education & Cultural Centre. Heading: A home for culture, *open to all*. Text: In 2026 the kalash was fixed atop the spire and the new roof completed at the cultural heart of Govardhan Ecovillage, which welcomed 8,11,071 visitors in 2024-25. Button: See the centre
 
 Alternatives:
 - Rooted in service. Reaching every heart, *touching every soul*.
