@@ -539,6 +539,8 @@ footer a:hover,footer a:focus-visible{color:#fff;background-size:100% 1px}
 .cform textarea{resize:vertical}
 .cform .btn{justify-self:start;cursor:pointer}
 .hp{position:absolute;left:-9999px}
+.formnote{background:var(--sky-soft);color:var(--water-ink);border-radius:12px;padding:12px 16px;font-size:.92rem}
+.cform .btn:disabled{opacity:.45;cursor:not-allowed;transform:none}
 .cdetails{display:grid;gap:26px;background:var(--indigo);color:#E3E6F0;border-radius:12px 72px 12px 72px;padding:clamp(28px,4vw,44px)}
 .cdetails .lab{font-size:.74rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--sky);margin-bottom:6px}
 .cdetails .pending{color:var(--sky)}

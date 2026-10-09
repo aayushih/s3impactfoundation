@@ -309,6 +309,10 @@
     if (io) new IntersectionObserver(es => es.forEach(e => { seen = e.isIntersecting;
       if (seen && !busy) resume(cur === null && step < 0 ? 3600 : 1500); else if (!seen) { clearTimeout(timer); } }), {threshold:.45}).observe(sdg); }
 
+  // contact form: after sending, come back to our own thank-you page
+  const rd = document.querySelector('#contactForm input[name=redirect]');
+  if (rd) rd.value = location.origin + rd.dataset.thanks;
+
   // contact form: "/contact/?interest=project" picks that topic for you
   const sel = document.getElementById('interest');
   if (sel) { const v = new URLSearchParams(location.search).get('interest'); if (v && [...sel.options].some(o => o.value === v)) sel.value = v; }

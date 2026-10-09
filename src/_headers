@@ -1,0 +1,14 @@
+# Response headers for Cloudflare Pages.
+# While the site is a preview, ask search engines not to list it. Delete these two lines on launch day.
+/*
+  X-Robots-Tag: noindex, nofollow
+
+# Resized photos never change once made, so browsers can keep them
+/assets/img/*
+  Cache-Control: public, max-age=604800
+
+# Styles and scripts: browsers check for a newer version on every visit
+/assets/css/*
+  Cache-Control: public, max-age=0, must-revalidate
+/assets/js/*
+  Cache-Control: public, max-age=0, must-revalidate

@@ -23,7 +23,7 @@ We use what you send only to reply to you, to follow up on the partnership, proj
 
 ## Where it is kept
 
-Messages sent through the form are delivered by our website host, Netlify, and kept in our email. We keep them only for as long as we need them for the purposes above.
+Messages sent through the form are delivered to our email by Web3Forms, a form service, and kept in our email. We keep them only for as long as we need them for the purposes above.
 
 ## Cookies and analytics
 

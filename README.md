@@ -1,6 +1,6 @@
 # S3 Impact Foundation website
 
-The live site is built automatically from this repository. When a change is saved here on GitHub, Netlify rebuilds the site and it is live within a minute or two.
+The live site is built automatically from this repository. The site is hosted on Cloudflare Pages. When a change is saved to the `main` branch on GitHub, Cloudflare rebuilds the live site within a minute or two. Changes saved to any other branch appear on a separate preview link instead (shown in Cloudflare under **Deployments**).
 
 ## How to make small changes (on GitHub, no tools needed)
 
@@ -9,7 +9,7 @@ The live site is built automatically from this repository. When a change is save
 3. Click **Commit changes** at the top right, write a few words about what you changed, and confirm.
 4. Wait a minute or two, then refresh the website.
 
-If something goes wrong, Netlify keeps the last working version online and shows the error on its **Deploys** page, so a mistake will not take the site down.
+If something goes wrong, Cloudflare keeps the last working version online and shows the error under **Deployments**, so a mistake will not take the site down.
 
 ### Where the words live
 
@@ -42,15 +42,15 @@ The logo files are in `src/assets/logo/`: `s3-logo-mark.svg` (header), `s3-logo-
 
 ## Contact form
 
-Messages sent through the contact form appear in Netlify under **Forms → contact**. To get them by email: **Site configuration → Notifications → Emails and webhooks → Form submission notifications → Add notification**, and enter the inbox address.
+Messages sent through the contact form are emailed to you by [Web3Forms](https://web3forms.com) (free). To switch the form on: go to web3forms.com, enter the inbox that should receive messages, copy the access key they email you, and paste it into `form_key` in `src/_data/site.yml`. Until then the form shows a short note and its button is disabled.
 
 ## Before launch (one-time)
 
 1. In `src/_data/site.yml` set `preview: false` and set `url` to the real web address.
 2. In `src/robots.txt` replace the two lines at the bottom with `User-agent: *` and `Allow: /`.
 3. Have the Privacy Policy and Terms of Use checked, then remove the "Draft for review" note in `src/_includes/legal.njk`.
-4. In `netlify.toml` delete the block marked "While the site is a preview".
-5. Connect the domain in Netlify (**Domain management**).
+4. In `src/_headers` delete the two lines under "While the site is a preview".
+5. Connect the domain in Cloudflare Pages (**Custom domains**).
 
 ## For developers
 

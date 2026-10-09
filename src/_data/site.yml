@@ -19,6 +19,9 @@ contact:
   address: "2nd Floor, Chandramani Apartments, Plot No. 133/134, Road No. 3, Matunga Central, Mumbai 400019"
   email: ""
   phone: ""
+  # Contact form: messages are emailed to you by Web3Forms (free).
+  # Get a key at web3forms.com (enter the inbox that should receive messages), then paste it here.
+  form_key: ""
 
 # Main menu along the top
 menu:

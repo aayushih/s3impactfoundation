@@ -9,9 +9,13 @@ description: "Partnerships, questions and visits. Write to S3 Impact Foundation.
 {% include "phero.njk" %}
 
 <section class="wrap contact">
-  <form class="cform rv" name="contact" method="POST" action="/contact/thanks/" data-netlify="true" netlify-honeypot="bot-field">
-    <input type="hidden" name="form-name" value="contact">
-    <p class="hp"><label>Leave this empty <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+  <form class="cform rv" method="POST" action="https://api.web3forms.com/submit" id="contactForm">
+    <input type="hidden" name="access_key" value="{{ site.contact.form_key }}">
+    <input type="hidden" name="subject" value="New message from the {{ site.name }} website">
+    <input type="hidden" name="from_name" value="{{ site.name }} website">
+    <input type="hidden" name="redirect" value="" data-thanks="/contact/thanks/">
+    <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+    {% if not site.contact.form_key %}<p class="formnote">The form will be switched on shortly. Until then, please use the details beside it.</p>{% endif %}
     <div class="row2">
       <label>Name<input name="name" type="text" autocomplete="name" required></label>
       <label><span>Organisation <small>(optional)</small></span><input name="organisation" type="text" autocomplete="organization"></label>
@@ -23,7 +27,7 @@ description: "Partnerships, questions and visits. Write to S3 Impact Foundation.
       </select>
     </label>
     <label>Message<textarea name="message" rows="6" required></textarea></label>
-    <button class="btn ink" type="submit">{{ c.button }} <span class="arr">→</span></button>
+    <button class="btn ink" type="submit"{% if not site.contact.form_key %} disabled{% endif %}>{{ c.button }} <span class="arr">→</span></button>
   </form>
   <aside class="cdetails rv" style="--d:.15s">
     <div><p class="lab">Visit</p><p>{{ site.contact.address }}</p></div>
