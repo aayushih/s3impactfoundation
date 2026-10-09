@@ -28,7 +28,7 @@ for (const grp of g.groups) for (const item of grp.goals) {
 // white pictograms from the official UN goal icons, one file per goal in src/_includes/sdg/
 const boxes = JSON.parse(fs.readFileSync(path.join(root, "src/_includes/sdg/boxes.json"), "utf8"));
 // show icons only once all 17 are in place, otherwise the wheel keeps its numbers
-const iconBoxes = Object.keys(boxes).length === 17 ? boxes : {};
+const iconBoxes = (Object.keys(boxes).length === 17 || process.env.SDG_PREVIEW) ? boxes : {};
 
 const C = 300, R = 286, r = 192, GAP = 1.4; // viewBox 600 × 600
 const pt = (rad, deg) => { const a = (deg - 90) * Math.PI / 180; return [C + rad * Math.cos(a), C + rad * Math.sin(a)]; };

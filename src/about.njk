@@ -65,12 +65,13 @@ description: "S3 Impact Foundation is a charitable foundation based in Mumbai, s
     </svg>
     <div class="hub" aria-live="polite">
       <div class="rest">
-        <p class="k">{{ site.tagline }}</p>
+        <p class="k">Rooted in</p>
         <p class="big"><span class="fig" data-to="{{ sdgs.count }}">{{ sdgs.count }}</span></p>
-        <p class="lbl">UN Sustainable Development Goals</p>
+        <p class="lbl">United Nations Sustainable Development Goals</p>
       </div>
       {% for x in sdgs.goals %}{% if x.on %}
       <div class="info" data-goal="{{ x.n }}" style="--c:{{ x.colour }}">
+        {% if x.icon %}<svg class="badge" viewBox="{{ x.icon.vb }}" aria-hidden="true">{% include x.icon.file %}</svg>{% endif %}
         <p class="k">Goal {{ x.num }}</p>
         <p class="nm">{{ x.name }}</p>
         <p class="pl">{% for pl in x.pillars %}<span class="t-{{ pl.colour }}">{{ pl.name }}</span>{% endfor %}</p>
