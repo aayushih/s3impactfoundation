@@ -81,7 +81,7 @@ Only the projects in the Drive copy are listed. Not listed: Mira Road water prop
 - Trustees: Harneet Hariharan (Rādhikā Līlā DD), Managing Trustee; Aayushi Hariharan, Trustee. Placeholder bios and photos for now.
 - Inspiration: no person or tradition named for now.
 - Legal details, email, phone and contact inbox: placeholders until supplied.
-- Partner logos: shown (logo files needed). Braj Breaking press clipping: shown under the title "A breakthrough for Braj's sacred ponds", with the outlet named in italics in the text (*Braj Breaking* is the news site's real name, so it is credited but not used as a headline).
+- Partner logos: shown (logo files needed). Braj Breaking press clipping: shown under the title "A Braj Break-through", with the outlet named in italics in the text (*Braj Breaking* is the news site's real name, so it is credited but not used as a headline).
 - Photo consent for children: confirmed.
 - Colours: matched by eye from the logo and letterhead.
 - Tone: warm, grounded and service-led, following the Govardhan Annakshetra examples. Emphasis words in Fraunces italic, in pillar colours.

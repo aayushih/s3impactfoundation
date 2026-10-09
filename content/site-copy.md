@@ -114,7 +114,7 @@ Sacred spaces, timeless values and a deeper sense of purpose, so that every chan
 **Text:** Work that begins in a village does not stay there.
 - A project we support at Govardhan EcoVillage co-led the C20 Working Group on Food Systems, Hunger and Poverty during Brazil's 2024 G20 Presidency.
 - With our support, Govardhan EcoVillage was invited to partner in Sushasan Mahotsav 2024, a national festival of good governance in New Delhi, in recognition of its work on food security.
-- **In the press** · *A breakthrough for Braj's sacred ponds*: The revival of Braj's kunds was reported by *Braj Breaking*, a local Braj news site, which called restoring the kunds and cleaning their water the first need of the day.
+- **In the press** · *A Braj Break-through*: The revival of Braj's kunds was reported by *Braj Breaking*, a local Braj news site, which called restoring the kunds and cleaning their water the first need of the day.
 
 ### Closing band
 **Heading:** Walk this path *with us*.
@@ -280,7 +280,7 @@ HG Gauranga Das, Director, Govardhan EcoVillage, at the C20 meeting in Recife
 Same logos and text as the home page.
 
 ### In the press
-The *Braj Breaking* article on the restoration of Braj's kunds (from the photo folder). Shown under the title "A breakthrough for Braj's sacred ponds"; the outlet's real name appears in italics in the text, never as the headline, so it isn't read as bad news.
+The *Braj Breaking* article on the restoration of Braj's kunds (from the photo folder). Shown under the title "A Braj Break-through"; the outlet's real name appears in italics in the text, never as the headline, so it isn't read as bad news.
 
 ### Awards / Videos
 Hidden until there is content.
