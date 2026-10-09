@@ -55,8 +55,8 @@ description: "S3 Impact Foundation is a charitable foundation based in Mumbai, s
     </div>
   </div>
   <div class="sdg rv" id="sdg">
-    <svg viewBox="0 0 600 600" role="img" aria-labelledby="sdgT"><title id="sdgT">The {{ sdgs.count }} of 17 Global Goals our work supports</title>
-      <circle class="rim" cx="300" cy="300" r="297"/><circle class="rim" cx="300" cy="300" r="182"/>
+    <svg viewBox="0 0 600 600" role="img" aria-label="The {{ sdgs.count }} of 17 Global Goals our work supports">
+      <circle class="rim" cx="300" cy="300" r="297"/><circle class="rim" cx="300" cy="300" r="192"/>
       {% for x in sdgs.goals %}
       <g class="seg{% if x.on %} on{% endif %}" style="--dx:{{ x.dx }}px;--dy:{{ x.dy }}px;--c:{{ x.colour }};--i:{{ loop.index0 }}" data-goal="{{ x.n }}"{% if x.on %} tabindex="0" role="button" aria-label="Goal {{ x.n }}: {{ x.name }}"{% endif %}>
         <path d="{{ x.d }}"/>{% if x.icon %}<svg class="ico" x="{{ x.icon.x }}" y="{{ x.icon.y }}" width="54" height="54" viewBox="{{ x.icon.vb }}" aria-hidden="true">{% include x.icon.file %}</svg>{% else %}<text x="{{ x.lx }}" y="{{ x.ly }}">{{ x.num }}</text>{% endif %}

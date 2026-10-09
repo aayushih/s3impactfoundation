@@ -30,7 +30,7 @@ const boxes = JSON.parse(fs.readFileSync(path.join(root, "src/_includes/sdg/boxe
 // show icons only once all 17 are in place, otherwise the wheel keeps its numbers
 const iconBoxes = Object.keys(boxes).length === 17 ? boxes : {};
 
-const C = 300, R = 286, r = 192, GAP = 1.4; // viewBox 600 × 600
+const C = 300, R = 288, r = 202, GAP = 1.4; // viewBox 600 × 600
 const pt = (rad, deg) => { const a = (deg - 90) * Math.PI / 180; return [C + rad * Math.cos(a), C + rad * Math.sin(a)]; };
 const f = (n) => n.toFixed(2);
 
