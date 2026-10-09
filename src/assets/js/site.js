@@ -243,8 +243,8 @@
         xy.push((pts[i][0] + w * (c * nx + s2 * tan[i][0])).toFixed(1) + ',' + (pts[i][1] + w * (c * ny + s2 * tan[i][1])).toFixed(1));
       }
       const g = document.createElementNS(NS,'path'); g.setAttribute('d', 'M' + xy.join('L')); gGhost.appendChild(g);
-      // phones draw each strand in short pieces that fill one after another (Safari stops redrawing very long dashed lines); larger screens keep one piece
-      const CH = mobile ? 60 : xy.length;
+      // each strand is drawn in short pieces that fill one after another (Safari, on phones and desktops, stops redrawing very long dashed lines)
+      const CH = 60;
       for (let a = 0; a < xy.length - 1; a += CH) {
         const b = Math.min(a + CH, xy.length - 1);
         const p = document.createElementNS(NS,'path'); p.setAttribute('d', 'M' + xy.slice(a, b + 1).join('L'));
