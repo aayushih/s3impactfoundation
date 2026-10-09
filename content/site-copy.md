@@ -34,12 +34,12 @@ Email: **[PLACEHOLDER]** · Phone: **[PLACEHOLDER]**
 ## 1. Home
 
 ### Hero
-**Headline:** Rooted in *service*. Reaching *every heart*, nourishing *every soul*.
-(Highlights: service, every heart and every soul, all in gold.)
+**Headline:** Rooted in *service*, nourishing *every soul*.
+(One sentence. Highlights in gold.)
 
 **Slide 2:** Eyebrow: Govardhan Annakshetra. Heading: 2.4 million free meals, *in a single year*. Text: Served in 2025-26 to tribal villagers, schoolchildren, young trainees and hospital patients around Palghar. Button: See the story
 
-**Slide 3:** Eyebrow: Braj Kunds. Heading: Six sacred ponds, *coming back to life*. Text: As silt is cleared and banks are replanted, natural springs are flowing again in the sacred kunds of Braj. Button: See the kunds
+**Slide 3:** Eyebrow: Vedic Education & Cultural Centre. Heading: A home for culture, *open to all*. Text: The cultural heart of Govardhan Ecovillage welcomed 8,11,071 visitors in 2024-25, and has been renewed to welcome many more. Button: See the centre
 
 Alternatives:
 - Rooted in service. Reaching every heart, *touching every soul*.
@@ -50,9 +50,9 @@ Alternatives:
 **Button:** Explore our work
 
 ### Mission
-We exist to *serve*: to *nourish people*, uplift communities and *care for the land*, so that every life we touch can *grow in spirit* as well as in *strength*.
+Our mission is to *serve*: to *nourish people*, uplift communities and *care for the land*, so that every life we touch can *grow in spirit* as well as in *strength*.
 
-(serve in S3 blue; nourish people in coral; care for the land in leaf; grow in spirit and strength in saffron.)
+(No eyebrow above it. serve in S3 blue; nourish people in coral; care for the land in leaf; grow in spirit and strength in saffron.)
 
 **Link:** Our story
 

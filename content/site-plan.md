@@ -19,7 +19,7 @@ Really nice, clean, sophisticated, with a "wow" factor. Phones first, and fast o
 Mobile weight measured (homepage, iPhone size): Rockefeller 0.5 MB, RWJF 0.8 MB, Open Society 1.2 MB, Dell 2.4 MB, Hewlett 5.9 MB, Gates 15.6 MB. Target for S3: under 1.5 MB per page, using CSS and SVG effects, lazy-loaded responsive images and few scripts.
 
 ## Signature shapes
-- The hero gate: a narrow column with a wide body and soft shoulders, opening on arrival (Gates).
+- The hero gate: our own gate silhouette (side posts, S-curved rising rail, centre finials), opening with light.
 - Leaf corners on photos and cards (RWJF).
 - The letterhead wave lives on as the Dell-style scroll ribbon. The hero swoosh was removed.
 
@@ -52,7 +52,7 @@ Mobile weight measured (homepage, iPhone size): Rockefeller 0.5 MB, RWJF 0.8 MB,
 ## Site map
 **Navigation:** dropdown panels with an intro card (Rockefeller, Gates). On phones, a full-screen menu with expandable sections.
 
-1. **Home:** temple-door hero (indigo header and hero as one band; arched portal with a thin gold line; two carved door leaves open on arrival; three vibrant photo slides with dots, arrows and pause; highlights in gold) · mission · three commitments as ionic pillars on a stepped base (lift, shadow and turning scrolls on hover) · impact journey with a Dell-style continuous ribbon (draws at 68% of the screen, takes the colour of the last photo reached; text drifts up) · numbers on a light sky band with wave separators, icons and slow count-up · Our Work tiles as consistent arches with colour on hover · parallax quote · Recognition cards with colour on hover, each linking to an inner page · closing band · footer in Rockefeller-style columns with contact details (no social, no newsletter)
+1. **Home:** gate hero (near full width like Gates; gate silhouette with posts, rising rail and centre finials, edged in gold; wrought-iron doors open on a seam of warm light; three vibrant high-resolution photo slides with dots, arrows and pause; one-line headline with gold highlights) · mission · three commitments as ionic pillars on a stepped base (lift, shadow and turning scrolls on hover) · impact journey with a Dell-style continuous ribbon (starts thin, swells, turns over and tapers to a point; swings to the page edges behind each photo; draws at 68% of the screen and takes the colour of the last photo reached; text drifts up) · numbers on a light sky band with wave separators, icons and slow count-up · Our Work tiles as consistent arches with colour on hover · parallax quote · Recognition cards with colour on hover, each linking to an inner page · closing band · footer in Rockefeller-style columns with contact details (no social, no newsletter)
 2. **About Us:** why S3 (inspiration) · mission & vision · how we work · values wheel (MacArthur) · commitments and the SDGs · trustees · leadership (hidden until confirmed) · accountability (legal details)
 3. **Our Work:** categories in alternating rows (Hewlett)
    - Rural Development at GEV: Farmers & Agriculture · Water Resource Development · Women Empowerment · Skill Development · Rural Education · Healthcare & Elder Care · Animal Welfare
