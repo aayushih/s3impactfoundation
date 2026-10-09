@@ -93,4 +93,6 @@ Only the projects in the Drive copy are listed. Not listed: Mira Road water prop
 - Titles and headings: no full stops.
 - Journey photos: leaf-shaped frames.
 - Saffron text uses the bright mission saffron `#E3A21A` everywhere.
-- Hero alternative on trial: a brick wall in the icon line style (white rounded bricks, bold ink outlines, flat gold ground) whose courses slide apart and leave stepped kund-like sides. Compared side by side with the gate. (First tried as textured Braj sandstone.)
+- Hero alternative on trial: a plain wall of gold bricks (no outline, no ground colour), full width with no indigo frame, whose courses slide apart and leave stepped kund-like gold sides around the photo. Compared side by side with the gate. (Earlier tries: textured Braj sandstone; white bricks with ink outlines on gold.)
+- Mission and commitments sit together on one deep indigo band: white text, *serve* in bold white, the coral, green and saffron phrases unchanged.
+- Pillars: the supplied temple pillar SVG (white fill, ink outline) in leaf-shaped bays. Two hover styles under review: colour inside (wide slab, lotus, rings, plinth, middle base step) or a paint swipe behind cut from the icons' brush shape.
