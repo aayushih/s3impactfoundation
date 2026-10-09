@@ -109,14 +109,24 @@
   arm();
   }
 
-  // mission: "Our mission is to serve:" first, a pause, then the rest word by word with a rest at each comma
-  if (!reduce && io) { const mp = document.querySelector('.mission p.big'); let t = 0;
-    const walk = n => [...n.childNodes].forEach(c => { if (c.nodeType === 3) { const frag = document.createDocumentFragment();
-      c.textContent.split(/(\s+)/).forEach(w => { if (!w) return; if (/^\s+$/.test(w)) { frag.appendChild(document.createTextNode(w)); return; }
-        const sp = document.createElement('span'); sp.className = 'mw'; sp.textContent = w; sp.style.setProperty('--t', t.toFixed(2) + 's'); frag.appendChild(sp);
-        t += /:$/.test(w) ? 0.6 : /,$/.test(w) ? 0.3 : (t < 0.5 ? 0.06 : 0.08); });
-      c.replaceWith(frag); } else walk(c); });
-    if (mp) walk(mp); }
+  // mission: "Our mission is to serve:" word by word, a pause, then the rest one line at a time
+  if (!reduce && io) { const mp = document.querySelector('.mission p.big');
+    if (mp) { let t = 0, rest = false; const words = [];
+      const walk = n => [...n.childNodes].forEach(c => { if (c.nodeType === 3) { const frag = document.createDocumentFragment();
+        c.textContent.split(/(\s+)/).forEach(w => { if (!w) return; if (/^\s+$/.test(w)) { frag.appendChild(document.createTextNode(w)); return; }
+          const sp = document.createElement('span'); sp.className = 'mw'; sp.textContent = w; frag.appendChild(sp);
+          if (rest) { words.push(sp); return; }
+          sp.style.setProperty('--t', t.toFixed(2) + 's'); t += t < 0.5 ? 0.06 : 0.08;
+          if (/:$/.test(w)) rest = true; });
+        c.replaceWith(frag); } else walk(c); });
+      walk(mp);
+      // group the remaining words by the line they sit on, and give each line its own moment
+      const lines = () => { if (mp.classList.contains('in')) return; let top = null, k = -1;
+        const ln = words.map(sp => { const y = sp.offsetTop; if (top === null || Math.abs(y - top) > 4) { top = y; k++; } return k; });
+        const step = k > 3 ? 0.55 : 0.7; // narrow screens have more lines, so each comes a little sooner
+        words.forEach((sp, i) => sp.style.setProperty('--t', (t + 0.6 + ln[i] * step).toFixed(2) + 's')); };
+      lines(); if (document.fonts && document.fonts.ready) document.fonts.ready.then(lines);
+      let lt; addEventListener('resize', () => { clearTimeout(lt); lt = setTimeout(lines, 150); }); } }
 
   // commitments: on touch screens the pillar takes its colour as it reaches the middle of the screen
   if (noHover && io) { const cio = new IntersectionObserver(es => es.forEach(e => e.target.classList.toggle('lit', e.isIntersecting)), {rootMargin:'-35% 0px -35% 0px'}); document.querySelectorAll('.cm').forEach(c => cio.observe(c)); }
