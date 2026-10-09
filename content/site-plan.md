@@ -27,15 +27,15 @@ Mobile weight measured (homepage, iPhone size): Rockefeller 0.5 MB, RWJF 0.8 MB,
 - Apple-style fade-up as elements enter the screen, on every section, kept slow and calm (about 2 seconds per reveal; hero lines rise one after another).
 - Text links show a small arrow on hover.
 - Higher contrast: near-black indigo text, bolder coloured highlights (Dell-style).
-- Buttons: gold turns sky blue on hover; outline buttons take a sky-blue outline.
+- Buttons: light sky blue with indigo text, turning white on hover; outline buttons take a sky-blue outline.
 
 ## Colours (matched by eye from the logo and letterhead; replace with exact brand values when available)
 | Role | Hex |
 |---|---|
 | Midnight Indigo (base dark) | `#1F2340` |
-| Sky Blue (logo, wave) | `#9DCFE0` |
+| Sky Blue (logo; the accent on indigo: buttons, hero highlights, menu panel, quote card, links and hovers) | `#9DCFE0` |
 | S3 Blue (sky for text on light backgrounds) | `#2F7FA0` |
-| Gold (wordmark) | `#E3B23C` |
+| Gold (FOUNDATION wordmark only) | `#E3B23C` |
 | Forest (letterhead gradient) | `#2E4A2E` |
 | Background, mist | `#F3F6F7` |
 | Accent, Social Impact: Coral | `#E2704F` |
@@ -93,7 +93,7 @@ Only the projects in the Drive copy are listed. Not listed: Mira Road water prop
 - Titles and headings: no full stops.
 - Journey photos: leaf-shaped frames.
 - Saffron text uses the bright mission saffron `#E3A21A` everywhere.
-- Hero alternative on trial: a plain wall of midnight indigo bricks, flush with both page edges, with the photo glimpsed through the joints from the start; the courses slide apart and leave stepped kund-like indigo sides that melt into the header. Compared side by side with the gate. (Earlier tries: textured Braj sandstone; white bricks with ink outlines; gold bricks.)
+- Hero alternative on trial: a plain wall of midnight indigo bricks, flush with both page edges, with the photo glimpsed through the joints from the start; the courses slide apart, with no light effect, and leave stepped kund-like indigo sides that melt into the header. Compared side by side with the gate. (Earlier tries: textured Braj sandstone; white bricks with ink outlines; gold bricks.)
 - Hero accents in light sky blue (`#9DCFE0`): the italic words including the comma after *service*, the main button, the active slide dot and hover states; no eyebrows on any slide. On phones each headline sits on two lines and only the main button shows (no "Our story").
 - Mission exactly as in the earlier approved version: coloured italic phrases (*serve* in S3 blue, *nourish people* coral, *care for the land* leaf, *grow in spirit* and *strength* saffron), fading up as one paragraph. Highlight boxes, a dark band and a word-by-word fade were tried and dropped.
 - Commitments: three of the supplied temple pillars (white fill), each above its passage in a leaf-shaped box. Outlines rest in grey and take the commitment's colour on hover (or as it reaches mid-screen on phones). Pillars draw in one after another, each followed by its passage. Colour-inside and paint-swipe treatments were tried and dropped.
