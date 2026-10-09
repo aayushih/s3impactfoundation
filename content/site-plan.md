@@ -18,16 +18,21 @@ Really nice, clean, sophisticated, with a "wow" factor. Phones first, and fast o
 
 Mobile weight measured (homepage, iPhone size): Rockefeller 0.5 MB, RWJF 0.8 MB, Open Society 1.2 MB, Dell 2.4 MB, Hewlett 5.9 MB, Gates 15.6 MB. Target for S3: under 1.5 MB per page, using CSS and SVG effects, lazy-loaded responsive images and few scripts.
 
-## Signature shape
-The sweeping wave from the S3 letterhead:
-- Strands of the wave become the Dell-style scroll ribbon.
-- Photo frames get one large wave-curved corner.
+## Signature shapes
+- The hero gate: a narrow column with a wide body and soft shoulders, opening on arrival (Gates).
+- Leaf corners on photos and cards (RWJF).
+- The letterhead wave lives on as the Dell-style scroll ribbon. The hero swoosh was removed.
+
+## Motion
+- Apple-style fade-up as elements enter the screen, on every section.
+- Buttons: gold turns sky blue on hover; outline buttons take a sky-blue outline.
 
 ## Colours (matched by eye from the logo and letterhead; replace with exact brand values when available)
 | Role | Hex |
 |---|---|
 | Midnight Indigo (base dark) | `#1F2340` |
 | Sky Blue (logo, wave) | `#9DCFE0` |
+| S3 Blue (sky for text on light backgrounds) | `#3D8CAD` |
 | Gold (wordmark) | `#E3B23C` |
 | Forest (letterhead gradient) | `#2E4A2E` |
 | Background, mist | `#F3F6F7` |
@@ -42,7 +47,7 @@ The sweeping wave from the S3 letterhead:
 ## Site map
 **Navigation:** dropdown panels with an intro card (Rockefeller, Gates). On phones, a full-screen menu with expandable sections.
 
-1. **Home:** hero in wave frame · mission (Gates style) · three commitments · impact journey with scroll ribbon (Dell) · Our Work tiles with colour-on-hover (Hewlett) · partners · recognition & mentions · closing band
+1. **Home:** hero gate (Gates style: shape opens on arrival, three rotating photo slides with dots, arrows and pause; solid indigo, no gradient) · mission (Gates style) · three commitments as a minimal temple (roof, three pillars, plinth) · impact journey with scroll ribbon (Dell) · Our Work tiles with colour-on-hover (Hewlett) · partners · recognition · closing band (solid indigo)
 2. **About Us:** why S3 (inspiration) · mission & vision · how we work · values wheel (MacArthur) · commitments and the SDGs · trustees · leadership (hidden until confirmed) · accountability (legal details)
 3. **Our Work:** categories in alternating rows (Hewlett)
    - Rural Development at GEV: Farmers & Agriculture · Water Resource Development · Women Empowerment · Skill Development · Rural Education · Healthcare & Elder Care · Animal Welfare
