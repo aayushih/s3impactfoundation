@@ -294,7 +294,7 @@ Completed · Water and environment · Barsana, Uttar Pradesh · From February 20
 | :-: | :-: |
 | Location | Priya Kund, Barsana, and Prem Sarovar, Mathura district, Uttar Pradesh |
 | Timeline | Survey from May 2022; restoration of Priya Kund from February 2023; upkeep continuing in 2026 |
-| Supported by | S3 Impact Foundation |
+| Implemented by | S3 Impact Foundation |
 | Key figures | 16 water bodies surveyed; Prem Sarovar water clarity up from 58 cm to 66 cm by March 2026 |
 
 ## The challenge
@@ -578,7 +578,7 @@ Completed · Skills and livelihoods · Boisar, Palghar, Maharashtra · February�
 | :-: | :-: |
 | Location | Centre of Excellence for Electric Vehicles, Boisar, Palghar district, Maharashtra |
 | Timeline | Inaugurated January 2024; training 5 February – 31 March 2024; projects and final assessment in April 2024 |
-| Supported by | S3 Impact Foundation |
+| Implemented by | S3 Impact Foundation |
 | Trainees | 55 students (51 young men and 4 young women), mostly from nearby ITIs |
 | Cost to students | Free |
 | Certification | National assessment and certificate as an Electric Vehicle Assembly Technician |
@@ -652,7 +652,7 @@ Under way · Water and environment · Nandgaon and Sanket, Uttar Pradesh · Sinc
 | At a glance |  |
 | :-: | :-: |
 | Location | Jal Vihar Kund and Kamal Kund, Nandgaon; Vihval Kund, Sanket; Pavan Sarovar, Nandgaon (Braj region, Uttar Pradesh) |
-| Supported by | S3 Impact Foundation |
+| Implemented by | S3 Impact Foundation |
 | Key figures | 3 kunds under restoration, plus Pavan Sarovar from July 2026 |
 
 ## Why it matters

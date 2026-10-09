@@ -63,7 +63,7 @@ The sweeping wave from the S3 letterhead:
 Only the projects in the Drive copy are listed. Not listed: Mira Road water proposal, MSDE skilling proposal, Srinath ji Cafe, IOCL, other donation projects, Goshala, Livelihood for Landless.
 
 ## Decisions log
-- Role: funder. Project tables say "Supported by" (changed from "Implemented by" on Priya Kund, Braj kunds revival and EV course).
+- Role: funder. Drive wording kept as is, including "Implemented by" on Priya Kund, the Braj kunds revival and the EV course.
 - Pond spelling: Vihval. School name: Govardhan English Medium School.
 - Budgets: shown where they appear in the Drive copy.
 - Trustees: Harneet Hariharan (Rādhikā Līlā DD), Managing Trustee; Aayushi Hariharan, Trustee. Placeholder bios and photos for now.

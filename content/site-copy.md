@@ -34,11 +34,11 @@ Email: **[PLACEHOLDER]** · Phone: **[PLACEHOLDER]**
 ## 1. Home
 
 ### Hero
-**Headline (recommended):** Rooted in service. *Flourishing* in every life we touch.
+**Headline (recommended):** Rooted in service. Reaching every heart, *nourishing every soul*.
 
 Alternatives:
-- Rooted in service. *Growing* with every community we serve.
-- Rooted in service. Reaching *every heart* we can.
+- Rooted in service. Reaching every heart, *touching every soul*.
+- Rooted in service. For every heart, *and every soul*.
 
 **Subline:** From a warm meal in a tribal village to a sacred pond brought back to life, we walk alongside communities as they grow in health, livelihood and spirit.
 
@@ -103,8 +103,7 @@ Sacred spaces, timeless values and a deeper sense of purpose, so that every chan
 **[PLACEHOLDER]** logo files for each partner.
 
 ### Recognition
-**Heading (recommended):** On *wider* stages
-Alternatives: Where our work *speaks* · Voices that *carry*
+**Heading:** On *wider* stages
 
 **Text:** Work that begins in a village does not stay there.
 - A project we support at Govardhan EcoVillage co-led the C20 Working Group on Food Systems, Hunger and Poverty during Brazil's 2024 G20 Presidency.
@@ -112,8 +111,8 @@ Alternatives: Where our work *speaks* · Voices that *carry*
 - The restoration of Braj's sacred kunds was covered in the regional press (Braj Breaking).
 
 ### Closing band
-**Heading (recommended):** Serve *with us*.
-Alternatives: Walk this path *with us*. · There is a place for *you* in this work.
+**Heading:** Walk this path *with us*.
+**Subheading:** There is a place for *you* in this work.
 
 **Text:** Seven new projects are waiting for partners, from a school for 620 children to a sanctuary for Palghar's community dogs. Let's bring them to life together.
 **Buttons:** Partner with us · See upcoming projects
