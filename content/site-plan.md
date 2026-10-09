@@ -24,7 +24,7 @@ Mobile weight measured (homepage, iPhone size): Rockefeller 0.5 MB, RWJF 0.8 MB,
 - The letterhead wave lives on as the Dell-style scroll ribbon. The hero swoosh was removed.
 
 ## Motion
-- Apple-style fade-up as elements enter the screen, on every section.
+- Apple-style fade-up as elements enter the screen, on every section, kept slow and calm (about 2 seconds per reveal; hero lines rise one after another).
 - Text links show a small arrow on hover.
 - Higher contrast: near-black indigo text, bolder coloured highlights (Dell-style).
 - Buttons: gold turns sky blue on hover; outline buttons take a sky-blue outline.
@@ -93,6 +93,7 @@ Only the projects in the Drive copy are listed. Not listed: Mira Road water prop
 - Titles and headings: no full stops.
 - Journey photos: leaf-shaped frames.
 - Saffron text uses the bright mission saffron `#E3A21A` everywhere.
-- Hero alternative on trial: a plain wall of midnight indigo bricks (no outline, no ground colour) that melts into the header, full width with no frame; its courses slide apart and leave stepped kund-like indigo sides around the photo. Compared side by side with the gate. (Earlier tries: textured Braj sandstone; white bricks with ink outlines; gold bricks.)
-- Mission on its light background; its coloured phrases use the same highlight as the journey figures (upright semi-bold text on a soft tint of its own colour), *serve* in S3 blue. A dark indigo band was tried and dropped.
-- Commitments: three of the supplied temple pillars (white fill, ink outline), each above its passage in a leaf-shaped box. On hover (or as it scrolls into view on phones) a paint swipe in that commitment's colour appears behind the pillar, cut from the brush shape behind the temple icon. Colouring inside the pillar was tried and dropped.
+- Hero alternative on trial: a plain wall of midnight indigo bricks, flush with both page edges, with the photo glimpsed through the joints from the start; the courses slide apart and leave stepped kund-like indigo sides that melt into the header. Compared side by side with the gate. (Earlier tries: textured Braj sandstone; white bricks with ink outlines; gold bricks.)
+- Hero headings: emphasis words in gold (*service*, *every soul* and the italic words on slides 2 and 3); no eyebrows on any slide.
+- Mission on its light background with the coloured italic phrases as before (no highlight boxes); *serve* in bold italic midnight indigo. The words fade in one at a time, slowly.
+- Commitments: three of the supplied temple pillars (white fill), each above its passage in a leaf-shaped box. Outlines rest in grey and take the commitment's colour on hover (or as it reaches mid-screen on phones). Pillars draw in one after another, each followed by its passage. Colour-inside and paint-swipe treatments were tried and dropped.
