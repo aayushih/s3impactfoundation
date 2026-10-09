@@ -30,7 +30,7 @@ The sweeping wave from the S3 letterhead:
 | Sky Blue (logo, wave) | `#9DCFE0` |
 | Gold (wordmark) | `#E3B23C` |
 | Forest (letterhead gradient) | `#2E4A2E` |
-| Background, warm cream | `#FAF6EE` |
+| Background, mist | `#F3F6F7` |
 | Accent, Social Impact: Coral | `#E2704F` |
 | Accent, Sustainability: Leaf | `#5A9E5F` |
 | Accent, Self Transformation: Saffron | `#E3A21A` |
