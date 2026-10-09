@@ -93,4 +93,4 @@ Only the projects in the Drive copy are listed. Not listed: Mira Road water prop
 - Titles and headings: no full stops.
 - Journey photos: leaf-shaped frames.
 - Saffron text uses the bright mission saffron `#E3A21A` everywhere.
-- Hero alternative on trial: a wall of warm Braj sandstone whose courses slide apart and leave stepped kund-like sides. Compared side by side with the gate.
+- Hero alternative on trial: a brick wall in the icon line style (white rounded bricks, bold ink outlines, flat gold ground) whose courses slide apart and leave stepped kund-like sides. Compared side by side with the gate. (First tried as textured Braj sandstone.)
