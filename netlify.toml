@@ -13,8 +13,19 @@
   [headers.values]
     X-Robots-Tag = "noindex, nofollow"
 
-# Photos, styles and scripts can be cached by browsers
+# Resized photos never change once made, so browsers can keep them
 [[headers]]
-  for = "/assets/*"
+  for = "/assets/img/*"
   [headers.values]
     Cache-Control = "public, max-age=604800"
+
+# Styles and scripts: browsers check for a newer version on every visit
+[[headers]]
+  for = "/assets/css/*"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/assets/js/*"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
