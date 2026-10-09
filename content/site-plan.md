@@ -69,7 +69,7 @@ Mobile weight measured (homepage, iPhone size): Rockefeller 0.5 MB, RWJF 0.8 MB,
 5. **Get Involved:** partner with us · back an upcoming project · values education for schools · donate (added later)
 6. **Contact Us**
 
-**On phones:** hover effects play as items scroll into view; tap reveals details; the ribbon runs down the centre behind each photo and its text, turning over in the open gap before each photo; reduced-motion settings are respected.
+**On phones:** hover effects play as items scroll into view; tap reveals details; the ribbon sweeps from side to side in an S through each open gap, twisting as it goes, and passes behind each photo and its text; reduced-motion settings are respected.
 
 ## Excluded for now
 Only the projects in the Drive copy are listed. Not listed: Mira Road water proposal, MSDE skilling proposal, Srinath ji Cafe, IOCL, other donation projects, Goshala, Livelihood for Landless.
@@ -93,6 +93,6 @@ Only the projects in the Drive copy are listed. Not listed: Mira Road water prop
 - Titles and headings: no full stops.
 - Journey photos: leaf-shaped frames.
 - Saffron text uses the bright mission saffron `#E3A21A` everywhere.
-- Hero alternative on trial: a plain wall of gold bricks (no outline, no ground colour), full width with no indigo frame, whose courses slide apart and leave stepped kund-like gold sides around the photo. Compared side by side with the gate. (Earlier tries: textured Braj sandstone; white bricks with ink outlines on gold.)
-- Mission and commitments sit together on one deep indigo band: white text, *serve* in bold white, the coral, green and saffron phrases unchanged. Mission phrases use the same highlight as the journey figures (upright semi-bold text on a soft tint of its own colour).
-- Pillars: the supplied temple pillar SVG (white fill, ink outline) in leaf-shaped bays. Two hover styles under review: colour inside (wide slab, lotus, rings, plinth, middle base step) or a paint swipe behind cut from the icons' brush shape.
+- Hero alternative on trial: a plain wall of midnight indigo bricks (no outline, no ground colour) that melts into the header, full width with no frame; its courses slide apart and leave stepped kund-like indigo sides around the photo. Compared side by side with the gate. (Earlier tries: textured Braj sandstone; white bricks with ink outlines; gold bricks.)
+- Mission on its light background; its coloured phrases use the same highlight as the journey figures (upright semi-bold text on a soft tint of its own colour), *serve* in S3 blue. A dark indigo band was tried and dropped.
+- Commitments: three of the supplied temple pillars (white fill, ink outline), each above its passage in a leaf-shaped box. On hover (or as it scrolls into view on phones) a paint swipe in that commitment's colour appears behind the pillar, cut from the brush shape behind the temple icon. Colouring inside the pillar was tried and dropped.
