@@ -61,14 +61,14 @@ nav.main .item > a.cta-pill:hover{background:#fff}
 nav.main .chev{width:9px;height:9px;transition:transform .3s var(--ease)}
 .mega{position:absolute;left:0;right:0;top:100%;padding-inline:clamp(16px,4vw,40px);opacity:0;visibility:hidden;transform:translateY(-8px);transition:opacity .25s,transform .35s var(--ease),visibility .25s}
 .mega-in{max-width:1200px;margin-inline:auto;background:var(--paper);color:var(--ink);border-radius:0 0 var(--r-lg) var(--r-lg);display:grid;grid-template-columns:minmax(220px,1fr) 2.4fr;overflow:hidden;box-shadow:0 30px 60px -30px rgba(19,22,44,.45)}
-.mega .intro{background:var(--sky);padding:32px;display:grid;gap:14px;align-content:start}
+.mega .intro{background:var(--gold);padding:32px;display:grid;gap:14px;align-content:start}
 .mega .intro h3{font-size:1.6rem}
 .mega .intro p{color:var(--ink)}
 .mega .intro a{font-weight:700;color:var(--ink)}
 .mega .cols{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;padding:32px}
 .mega .cols h4{margin:0 0 10px;font:700 .72rem var(--body);letter-spacing:.16em;text-transform:uppercase;color:var(--s3blue)}
 .mega .cols ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
-.mega .cols a{text-decoration:none;color:var(--body-ink);font-size:.95rem;background-image:linear-gradient(var(--sky),var(--sky));background-size:0 1.5px;background-repeat:no-repeat;background-position:0 100%;transition:background-size .35s var(--ease)}
+.mega .cols a{text-decoration:none;color:var(--body-ink);font-size:.95rem;background-image:linear-gradient(var(--gold),var(--gold));background-size:0 1.5px;background-repeat:no-repeat;background-position:0 100%;transition:background-size .35s var(--ease)}
 .mega .cols a:hover{background-size:100% 1.5px;color:var(--ink)}
 .item.has-mega:hover .mega,.item.has-mega:focus-within .mega,.item.has-mega.open .mega{opacity:1;visibility:visible;transform:none}
 .item.has-mega:hover .chev,.item.has-mega.open .chev{transform:rotate(180deg)}
@@ -129,7 +129,7 @@ nav.main .chev{width:9px;height:9px;transition:transform .3s var(--ease)}
 .mission .tlink{margin-top:28px}
 /* mission reads itself out: words fade in place (no movement, so line breaks never change), pausing after the colon and at each comma */
 .js-anim .mission p.big.rv{opacity:1;transform:none}
-.js-anim .mission .mw{opacity:0;transition:opacity 1s ease;transition-delay:var(--t)}
+.js-anim .mission .mw{opacity:0;transition:opacity 1.3s cubic-bezier(.4,0,.2,1);transition-delay:var(--t)}
 .js-anim .mission p.big.in .mw{opacity:1}
 
 /* commitments: three temple pillars, each above its passage; grey outlines take the commitment colour on hover */
