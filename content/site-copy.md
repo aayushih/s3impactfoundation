@@ -35,7 +35,7 @@ Email: **[PLACEHOLDER]** · Phone: **[PLACEHOLDER]**
 
 ### Hero
 **Headline:** Rooted in *service*, nourishing *every soul*.
-(One sentence. Highlights in gold.)
+(One sentence. All white, with service and every soul in italic. No eyebrow above it.)
 
 **Slide 2:** Eyebrow: Govardhan Annakshetra. Heading: 2.4 million free meals, *in a single year*. Text: Served in 2025-26 to tribal villagers, schoolchildren, young trainees and hospital patients around Palghar. Button: See the story
 
@@ -57,6 +57,7 @@ Our mission is to *serve*: to *nourish people*, uplift communities and *care for
 **Link:** Our story
 
 ### Our three commitments
+**Title:** Our three *commitments*.
 **Social Impact: *Nourishing lives.***
 Meals for the hungry, classrooms for the curious, skills for those ready to earn, and care for those who need it most.
 
