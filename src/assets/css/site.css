@@ -589,6 +589,56 @@ footer a:hover,footer a:focus-visible{color:#fff;background-size:100% 1px}
   .tname b{font-size:.98rem}
 }
 
+/* Global Goals wheel: the goals we support in their own colours; hover or tap one to see its name */
+.goals{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:clamp(32px,5vw,72px);align-items:center}
+.goals .ggroups{grid-template-columns:1fr;gap:14px}
+.goals .gg{padding:20px 22px}
+.goals .gg ul{grid-template-columns:1fr 1fr;gap:8px 14px;margin-top:12px}
+.goals .gg li{font-size:.9rem;line-height:1.3;cursor:default;border-radius:999px;transition:background .3s}
+.goals .gg li.hot{background:color-mix(in srgb,var(--tone) 10%,transparent)}
+.sdg{position:relative;width:min(100%,560px);aspect-ratio:1;margin-inline:auto}
+.sdg svg{display:block;width:100%;height:100%;overflow:visible}
+.sdg .rim{fill:none;stroke:#D9E4E0;stroke-width:1.5}
+.sdg .seg path{fill:#E6E3DD;transition:fill .5s ease}
+.sdg .seg text{font:700 22px var(--body);fill:#A8A49C;text-anchor:middle;dominant-baseline:central;pointer-events:none}
+.sdg .seg.on path{fill:var(--c)}
+.sdg .seg.on text{fill:#fff}
+.sdg .seg.on{cursor:pointer;outline:none;transition:transform .55s cubic-bezier(.34,1.56,.64,1),filter .4s}
+.sdg .seg.on.act{transform:translate(var(--dx),var(--dy)) scale(1.04);transform-origin:300px 300px;filter:drop-shadow(0 10px 14px rgba(19,22,44,.28))}
+.sdg.has-act .seg.on:not(.act) path{opacity:.55}
+.sdg .seg path{transition:fill .5s ease,opacity .4s}
+.js-anim .sdg .seg{opacity:0;transition:opacity .6s ease calc(var(--i) * 70ms + .3s),transform .55s cubic-bezier(.34,1.56,.64,1),filter .4s}
+.js-anim .sdg.in .seg{opacity:1}
+.sdg .hub{position:absolute;inset:23%;border-radius:50%;display:grid;place-items:center;text-align:center;pointer-events:none}
+.sdg .hub > div{grid-area:1/1;display:grid;justify-items:center;gap:6px;padding-inline:4%;transition:opacity .4s ease,transform .5s var(--ease)}
+.sdg .hub .info{opacity:0;transform:translateY(8px)}
+.sdg.has-act .hub .rest{opacity:0;transform:translateY(-8px)}
+.sdg .hub .info.show{opacity:1;transform:none}
+.sdg .k{font-size:.7rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--leaf-ink)}
+.sdg .big{font-family:var(--display);font-weight:500;font-size:clamp(3.2rem,8vw,5rem);line-height:1;color:var(--ink)}
+.sdg .big .of{font-size:.42em;color:var(--muted);margin-left:.15em;font-weight:400}
+.sdg .lbl{font-size:.78rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--ink)}
+.sdg .line{font-family:var(--display);font-size:clamp(.9rem,1.3vw,1.05rem);line-height:1.4;color:var(--muted);border-top:1px solid var(--line);padding-top:10px;margin-top:4px;max-width:20em}
+.sdg .info .k{color:var(--c)}
+.sdg .info .nm{font-family:var(--display);font-weight:500;font-size:clamp(1.3rem,2.6vw,1.9rem);line-height:1.15;color:var(--c);text-wrap:balance}
+.sdg .info .pl{display:flex;flex-wrap:wrap;justify-content:center;gap:6px}
+.sdg .info .pl span{font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--tone-ink);background:color-mix(in srgb,var(--tone) 12%,transparent);border-radius:999px;padding:4px 10px}
+@media (max-width:900px){
+  .goals{grid-template-columns:1fr;gap:0}
+  .goals .gtext{display:contents}
+  .goals .lede{margin-bottom:28px}
+  .sdg{order:1;margin-bottom:36px}
+  .goals .ggroups{order:2;margin-top:0}
+}
+@media (max-width:520px){
+  .sdg .seg text{font-size:26px}
+  .sdg .hub{inset:22%}
+  .sdg .line{font-size:.8rem;padding-top:6px}
+  .sdg .info .nm{font-size:1.15rem}
+  .sdg .k,.sdg .lbl{font-size:.6rem;letter-spacing:.12em}
+  .goals .gg ul{grid-template-columns:1fr}
+}
+
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
 
 /* logo */

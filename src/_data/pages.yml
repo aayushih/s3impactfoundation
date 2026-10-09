@@ -67,6 +67,20 @@ about:
       - colour: "saffron"
         name: "Self Transformation"
         goals: ["4 Quality Education (values and culture)", "11 Sustainable Cities and Communities (cultural heritage)"]
+    # The goals wheel lights up every goal listed above. Hovering or tapping a goal shows this line.
+    wheel_line: "Nourish people · uplift communities · care for the land"
+    notes:
+      1: "Skills and orchards that raise family incomes in Palghar’s tribal villages."
+      2: "2.4 million free meals in a year, and farms that grow food for the kitchens."
+      3: "A charitable hospital in Vrindavan, a home for elders and a planned 100-bed hospital."
+      4: "Better learning in 102 tribal residential schools, and values education for children."
+      5: "Skills and income for rural and tribal women, and a stronger voice at home."
+      6: "Safe drinking water at Govardhan Ecovillage, and sacred ponds brought back to life in Braj."
+      7: "A pilot that grows crops and solar power on the same acre."
+      8: "Training in tailoring, computers and electric vehicles that leads to real work."
+      11: "Restoring heritage places, from a temple in Palghar to an acharya’s home in Kolkata."
+      13: "Saving monsoon rain, planting trees and trying clean energy on the farm."
+      15: "Fruit orchards, healthy soil and living ponds."
 
   trustees:
     label: "Governance"

@@ -46,11 +46,39 @@ description: "S3 Impact Foundation is a charitable foundation based in Mumbai, s
 </div>
 
 <section class="wrap goals">
-  <p class="eyebrow rv">{{ a.goals.label }}</p>
-  <h2 class="rv">{{ a.goals.title | em("k") | safe }}</h2>
-  <p class="lede rv">{{ a.goals.text }}</p>
-  <div class="ggroups">
-    {% for g in a.goals.groups %}<div class="gg t-{{ g.colour }} rv" style="--d:{{ loop.index0 * 0.12 }}s"><h3>{{ g.name }}</h3><ul>{% for x in g.goals %}{% set num = x.split(" ")[0] %}<li><span class="gn">{{ num }}</span>{{ x | replace(num + " ", "") }}</li>{% endfor %}</ul></div>{% endfor %}
+  <div class="gtext">
+    <p class="eyebrow rv">{{ a.goals.label }}</p>
+    <h2 class="rv">{{ a.goals.title | em("k") | safe }}</h2>
+    <p class="lede rv">{{ a.goals.text }}</p>
+    <div class="ggroups">
+      {% for g in a.goals.groups %}<div class="gg t-{{ g.colour }} rv" style="--d:{{ loop.index0 * 0.12 }}s"><h3>{{ g.name }}</h3><ul>{% for x in g.goals %}{% set num = x.split(" ")[0] %}<li data-goal="{{ num }}"><span class="gn">{{ num }}</span>{{ x | replace(num + " ", "") }}</li>{% endfor %}</ul></div>{% endfor %}
+    </div>
+  </div>
+  <div class="sdg rv" id="sdg">
+    <svg viewBox="0 0 600 600" role="img" aria-labelledby="sdgT"><title id="sdgT">The {{ sdgs.count }} of 17 Global Goals our work supports</title>
+      <circle class="rim" cx="300" cy="300" r="297"/><circle class="rim" cx="300" cy="300" r="182"/>
+      {% for x in sdgs.goals %}
+      <g class="seg{% if x.on %} on{% endif %}" style="--dx:{{ x.dx }}px;--dy:{{ x.dy }}px;--c:{{ x.colour }};--i:{{ loop.index0 }}" data-goal="{{ x.n }}"{% if x.on %} tabindex="0" role="button" aria-label="Goal {{ x.n }}: {{ x.name }}"{% endif %}>
+        <path d="{{ x.d }}"/><text x="{{ x.lx }}" y="{{ x.ly }}">{{ x.num }}</text>
+      </g>
+      {% endfor %}
+    </svg>
+    <div class="hub" aria-live="polite">
+      <div class="rest">
+        <p class="k">{{ site.tagline }}</p>
+        <p class="big"><span class="fig" data-to="{{ sdgs.count }}">{{ sdgs.count }}</span><span class="of">/ 17</span></p>
+        <p class="lbl">Global Goals</p>
+        <p class="line">{{ a.goals.wheel_line }}</p>
+      </div>
+      {% for x in sdgs.goals %}{% if x.on %}
+      <div class="info" data-goal="{{ x.n }}" style="--c:{{ x.colour }}">
+        <p class="k">Goal {{ x.num }}</p>
+        <p class="nm">{{ x.name }}</p>
+        <p class="pl">{% for pl in x.pillars %}<span class="t-{{ pl.colour }}">{{ pl.name }}</span>{% endfor %}</p>
+        {% if x.note %}<p class="line">{{ x.note }}</p>{% endif %}
+      </div>
+      {% endif %}{% endfor %}
+    </div>
   </div>
 </section>
 
