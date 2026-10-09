@@ -595,7 +595,6 @@ footer a:hover,footer a:focus-visible{color:#fff;background-size:100% 1px}
 /* Global Goals wheel: the goals we support in their own colours; hover or tap one to see its name */
 .goals{display:grid;justify-items:center;text-align:center;gap:clamp(28px,4vw,48px)}
 .goals .gtext{display:grid;justify-items:center;max-width:640px}
-.goals .hint{margin-top:14px;font-size:.88rem;font-style:italic;color:var(--s3blue)}
 .goals .ggroups{grid-template-columns:1fr;gap:14px}
 .goals .gg{padding:20px 22px}
 .goals .gg ul{grid-template-columns:1fr 1fr;gap:8px 14px;margin-top:12px}
@@ -626,6 +625,8 @@ footer a:hover,footer a:focus-visible{color:#fff;background-size:100% 1px}
 .sdg .big .of{font-size:.42em;color:var(--muted);margin-left:.15em;font-weight:400}
 .sdg .lbl{font-size:max(.6rem,1.65cqw);font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--leaf-ink);max-width:16em;line-height:1.55}
 .sdg .line{font-family:var(--display);font-size:2.55cqw;line-height:1.4;color:var(--muted);border-top:1px solid var(--line);padding-top:1.6cqw;margin-top:.6cqw;max-width:19em;text-wrap:balance}
+.sdg .rest .k{font-family:var(--display);font-style:italic;font-weight:420;font-size:3.6cqw;letter-spacing:0;text-transform:none;line-height:1.1}
+.sdg .rest .lbl{font-family:var(--display);font-weight:450;font-size:3.1cqw;letter-spacing:0;text-transform:none;line-height:1.25;max-width:12em;text-wrap:balance}
 .sdg .info .k{color:var(--c)}
 .sdg .badge{display:block;width:16cqw;height:auto;aspect-ratio:1;background:var(--c);border-radius:2.8cqw;padding:1.9cqw;box-sizing:border-box;margin-bottom:.6cqw;box-shadow:0 1.6cqw 3cqw -1.8cqw var(--c)}
 .sdg .info .nm{font-family:var(--display);font-weight:500;font-size:4.5cqw;line-height:1.15;color:var(--c);text-wrap:balance}
