@@ -1,0 +1,66 @@
+---
+layout: base.njk
+title: Impact
+permalink: /impact/
+description: "The numbers behind the work of S3 Impact Foundation, and the lives behind the numbers."
+---
+{%- set m = pages.impact -%}
+{%- set ph = { title: m.title, intro: m.intro, image: "assets/img/" + m.image, image_alt: m.image_alt, label: "Impact" } -%}
+{% include "phero.njk" %}
+
+<section class="numbers inumbers">
+  <div class="wrap">
+    <div class="head">
+      <h2 class="rv">{{ m.numbers.title | em("k") | safe }}</h2>
+      <p class="lede rv" style="--d:.12s">{{ m.numbers.intro }}</p>
+    </div>
+    <div class="ngrid">
+      {% for n in m.numbers.items %}
+      <div class="ncol ncard t-{{ n.colour }} rv" style="--d:{{ ((loop.index0 % 4) * 0.1) | round(2) }}s">
+        <button class="num" type="button" aria-expanded="false">
+        <span class="front"><span class="fig" data-to="{{ n.count_to }}"{% if n.decimals %} data-dec="{{ n.decimals }}"{% endif %}{% if n.suffix %} data-suf="{{ n.suffix }}"{% endif %}{% if n.format == 'indian' %} data-loc="en-IN"{% elif n.format == 'international' %} data-loc="en-US"{% endif %}>{{ n.shows }}</span><span class="lab">{{ n.label }}</span></span>
+        <span class="back"><p>{{ n.detail }}</p></span></button>
+        <a class="pill" href="{{ n.link }}">See the project</a></div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="wrap stories">
+  <p class="eyebrow rv">{{ m.stories.label }}</p>
+  <h2 class="rv">{{ m.stories.title | em("k") | safe }}</h2>
+  <div class="slist">
+    {% for s in m.stories.items %}{% for p in projects %}{% if p.slug == s.project %}
+    <article class="story t-{{ s.colour }}{% if loop.index0 % 2 %} flip{% endif %}">
+      <figure class="rv"><img src="assets/projects/{{ p.slug }}/{{ p.photos.cover.file }}" alt="{{ p.photos.cover.alt }}" sizes="(max-width: 760px) 92vw, 44vw"></figure>
+      <div class="rv" style="--d:.15s"><h3>{{ s.title }}</h3><p>{{ s.text }}</p><a class="tlink" href="{{ p.url }}">{{ s.link_label }} <span class="a" aria-hidden="true">→</span></a></div>
+    </article>
+    {% endif %}{% endfor %}{% endfor %}
+  </div>
+</section>
+
+<div class="mband">
+  <section class="wrap voices">
+    <p class="eyebrow rv">{{ m.voices.label }}</p>
+    <div class="vgrid">
+      {% for v in m.voices.items %}<blockquote class="vq rv" style="--d:{{ loop.index0 * 0.15 }}s"><span class="qm" aria-hidden="true">“</span><p>{{ v.text }}</p><cite>{{ v.name }}<span>{{ v.role }}</span></cite></blockquote>{% endfor %}
+    </div>
+  </section>
+</div>
+
+<section class="wrap partners" id="partners">
+  <div class="rv"><p class="eyebrow">{{ m.partners.label }}</p><h2>{{ m.partners.title | em("k") | safe }}</h2><p class="lede">{{ m.partners.text }}</p></div>
+  <ul class="plogos">
+    {% for pt in m.partners.items %}<li class="rv" style="--d:{{ loop.index0 * 0.08 }}s">{% if pt.logo %}<img src="assets/img/{{ pt.logo }}" alt="{{ pt.name }}" sizes="200px">{% else %}<span>{{ pt.name }}</span><small>Logo to be added</small>{% endif %}</li>{% endfor %}
+  </ul>
+</section>
+
+<section class="stages wrap" id="press">
+  <p class="eyebrow rv">{{ m.press.label }}</p>
+  <h2 class="rv" style="margin-top:12px">{{ m.press.title | em("k") | safe }}</h2>
+  <div class="scards">
+    {% for c in m.press.items %}
+    <a class="scard t-{{ c.colour }} rv" style="--d:{{ (0.05 + loop.index0 * 0.1) | round(2) }}s" href="{{ c.link }}"><div class="img"><img src="assets/img/{{ c.image }}" alt="{{ c.image_alt }}" sizes="(max-width: 900px) 92vw, 32vw"><span class="tint"></span></div><p class="eyebrow">{{ c.outlet }}</p><p class="where">{{ c.title }}</p><p>{{ c.text | em | safe }}</p><span class="tlink">{{ c.link_label }} <span class="a" aria-hidden="true">→</span></span></a>
+    {% endfor %}
+  </div>
+</section>

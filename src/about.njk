@@ -1,0 +1,82 @@
+---
+layout: base.njk
+title: About Us
+permalink: /about/
+description: "S3 Impact Foundation is a charitable foundation based in Mumbai, serving people, communities and the land with care, and with results we can show."
+---
+{%- set a = pages.about -%}
+{%- set ph = { title: a.title, intro: a.intro, image: "assets/img/" + a.image, image_alt: a.image_alt, label: "About us" } -%}
+{% include "phero.njk" %}
+
+<section class="wrap why" id="why">
+  <div class="why-text rv">
+    <p class="eyebrow">{{ a.why.label }}</p>
+    <h2>{{ a.why.title | em("k") | safe }}</h2>
+    {% for para in a.why.paragraphs %}<p>{{ para }}</p>{% endfor %}
+  </div>
+  <div class="trio">
+    {% for pl in a.why.pillars %}
+    <div class="cm t-{{ pl.colour }} mini"><div class="pil rv" style="--d:{{ loop.index0 * 0.5 }}s" aria-hidden="true">{% include "pillar.svg" %}</div><p class="tname rv" style="--d:{{ loop.index0 * 0.5 + 0.4 }}s"><b>{{ pl.name }}</b>{{ pl.line }}</p></div>
+    {% endfor %}
+  </div>
+</section>
+
+<div class="mband" id="mission">
+  <section class="wrap vm">
+    <div class="vmcard rv"><h2>{{ a.vision.title | em("k") | safe }}</h2><p>{{ a.vision.text }}</p></div>
+    <div class="vmcard rv" style="--d:.15s"><h2>{{ a.mission.title | em("k") | safe }}</h2><p>{{ a.mission.text }}</p></div>
+  </section>
+</div>
+
+<section class="wrap how">
+  <p class="eyebrow rv">{{ a.how.label }}</p>
+  <h2 class="rv">{{ a.how.title | em("k") | safe }}</h2>
+  <ol class="steps">
+    {% for i in a.how.items %}<li class="t-{{ i.colour }} rv" style="--d:{{ loop.index0 * 0.15 }}s"><span class="n">0{{ loop.index }}</span><h3>{{ i.title }}</h3><p>{{ i.text }}</p></li>{% endfor %}
+  </ol>
+</section>
+
+<div class="mband" id="values">
+  <section class="wrap values">
+    <div class="vhead rv"><p class="eyebrow">{{ a.values.label }}</p><h2>{{ a.values.title | em("k") | safe }}</h2></div>
+    <ul class="vlist">
+      {% for v in a.values.items %}<li class="t-{{ v.colour }} rv" style="--d:{{ loop.index0 * 0.1 }}s"><span class="dot" aria-hidden="true"></span><h3>{{ v.title }}</h3><p>{{ v.text }}</p></li>{% endfor %}
+    </ul>
+  </section>
+</div>
+
+<section class="wrap goals">
+  <p class="eyebrow rv">{{ a.goals.label }}</p>
+  <h2 class="rv">{{ a.goals.title | em("k") | safe }}</h2>
+  <p class="lede rv">{{ a.goals.text }}</p>
+  <div class="ggroups">
+    {% for g in a.goals.groups %}<div class="gg t-{{ g.colour }} rv" style="--d:{{ loop.index0 * 0.12 }}s"><h3>{{ g.name }}</h3><ul>{% for x in g.goals %}{% set num = x.split(" ")[0] %}<li><span class="gn">{{ num }}</span>{{ x | replace(num + " ", "") }}</li>{% endfor %}</ul></div>{% endfor %}
+  </div>
+</section>
+
+<div class="mband" id="trustees">
+  <section class="wrap people">
+    <p class="eyebrow rv">{{ a.trustees.label }}</p>
+    <h2 class="rv">{{ a.trustees.title | em("k") | safe }}</h2>
+    <div class="pplgrid">
+      {% for t in a.trustees.people %}
+      <article class="person rv" style="--d:{{ loop.index0 * 0.15 }}s">
+        <div class="ava">{% if t.photo %}<img src="assets/img/{{ t.photo }}" alt="{{ t.name }}" sizes="160px">{% else %}<span aria-hidden="true">{% for w in t.name.split(" ") %}{% if loop.index <= 2 %}{{ w[0] }}{% endif %}{% endfor %}</span>{% endif %}</div>
+        <div><h3>{{ t.name }}</h3><p class="role">{{ t.role }}</p><p>{{ t.bio | replace("[", '<span class="pending">') | replace("]", "</span>") | safe }}</p></div>
+      </article>
+      {% endfor %}
+    </div>
+  </section>
+</div>
+
+<section class="wrap acc" id="accountability">
+  <div class="rv">
+    <p class="eyebrow">{{ a.accountability.label }}</p>
+    <h2>{{ a.accountability.title | em("k") | safe }}</h2>
+    <p class="lede">{{ a.accountability.text }}</p>
+  </div>
+  <dl class="facts rv">
+    {% for f in a.accountability.items %}<div><dt>{{ f.label }}</dt><dd>{% if f.value %}{{ f.value }}{% else %}<span class="pending">To be added</span>{% endif %}</dd></div>{% endfor %}
+    <div class="wide"><dt>Reports</dt><dd><span class="pending">{{ a.accountability.reports_text }}</span></dd></div>
+  </dl>
+</section>

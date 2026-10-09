@@ -1,0 +1,7 @@
+{#- A project card. Expects p (a project) and pages. -#}
+<a class="pcard t-{{ pages.pillar_colours[p.pillar] }}" href="{{ p.url }}">
+  <div class="img">{% if p.photos.cover %}<img src="assets/projects/{{ p.slug }}/{{ p.photos.cover.file }}" alt="{{ p.photos.cover.alt }}" sizes="(max-width: 640px) 92vw, (max-width: 1000px) 46vw, 380px">{% else %}<span class="ph">Photo to be added</span>{% endif %}<span class="stag s-{{ p.statusClass }}">{{ p.status }}</span></div>
+  <h3>{{ p.title }}</h3>
+  <p>{{ p.summary }}</p>
+  {% if p.place %}<p class="where">{{ p.place }}</p>{% endif %}
+</a>

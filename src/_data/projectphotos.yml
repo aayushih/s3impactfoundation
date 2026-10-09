@@ -1,0 +1,142 @@
+# Photos for each project page.
+# cover: the large photo at the top. gallery: more photos below.
+# To change a photo, upload it to src/assets/projects/<project>/ and edit the file name here.
+# "alt" describes the photo for people using screen readers.
+
+vedic-education-cultural-centre:
+  cover: { file: "01.jpg", alt: "The carved wooden ceiling and shrine of the renewed temple at Govardhan Ecovillage" }
+  gallery:
+    - { file: "02.jpg", alt: "The new Mangalore-tile roof of the temple" }
+    - { file: "03.jpg", alt: "Students listening to a talk in the temple hall" }
+    - { file: "04.jpg", alt: "The temple fountain lit at night" }
+    - { file: "05.jpg", alt: "Visitors before the shrine under the carved ceiling" }
+    - { file: "06.jpg", alt: "A full hall during darshan" }
+elderly-care-home:
+  cover: { file: "01.jpg", alt: "The new Elderly Care Home at Govardhan Ecovillage at sunset" }
+  gallery:
+    - { file: "02.jpg", alt: "A resident’s room with a sitting area and study desk" }
+    - { file: "03.jpg", alt: "Senior devotees at the opening ceremony" }
+    - { file: "04.jpg", alt: "A twin room in the new home" }
+    - { file: "05.jpg", alt: "An accessible bathroom with grab bars" }
+govardhan-annakshetra:
+  cover: { file: "01.jpg", alt: "Two village elders smiling with their plates of khichdi" }
+  gallery:
+    - { file: "02.jpg", alt: "Schoolchildren eating a hot meal together" }
+    - { file: "03.jpg", alt: "Volunteers serving meals at Govardhan Ecovillage" }
+    - { file: "04.jpg", alt: "Meals reaching families in a tribal village" }
+    - { file: "05.jpg", alt: "Girls sharing a meal in the dining hall" }
+    - { file: "06.jpg", alt: "Rows of guests at a festival meal" }
+growing-food-for-kitchens:
+  cover: { file: "01.jpg", alt: "Vegetables climbing trellises under the shade net" }
+  gallery:
+    - { file: "02.jpg", alt: "Fodder grass growing on the farm" }
+    - { file: "03.jpg", alt: "Vegetable beds at Govardhan Ecovillage" }
+    - { file: "04.jpg", alt: "Freshly prepared beds with drip lines" }
+    - { file: "05.jpg", alt: "The farm in full growth" }
+bhaktivedanta-model-school:
+  cover: { file: "01.jpg", alt: "Students gathered in front of the new Bhaktivedanta Model School building in Pune" }
+  gallery:
+    - { file: "02.jpg", alt: "Students in the computer lab" }
+    - { file: "03.jpg", alt: "The school library" }
+    - { file: "04.jpg", alt: "A yoga class" }
+    - { file: "05.jpg", alt: "Students at microscopes in the science lab" }
+sushasan-mahotsav-2024:
+  cover: { file: "01.jpg", alt: "Visitors at the Govardhan EcoVillage stall at Sushasan Mahotsav 2024" }
+  gallery:
+    - { file: "02.jpg", alt: "A felicitation at the festival" }
+    - { file: "03.jpg", alt: "Guests visiting the stall" }
+    - { file: "04.jpg", alt: "The stall at the National Health Authority pavilion" }
+c20-food-systems:
+  cover: { file: "01.jpg", alt: "The C20 Brazil 2024 stage in Recife" }
+  gallery:
+    - { file: "02.jpg", alt: "C20 working group members together in Recife" }
+    - { file: "03.jpg", alt: "Delegates at a working group session" }
+    - { file: "04.jpg", alt: "A presentation of thanks at the C20 meeting" }
+priya-kund-prem-sarovar:
+  cover: { file: "01.jpg", alt: "Visitors beside the new murals at Priya Kund" }
+  gallery:
+    - { file: "02.jpg", alt: "The restored Priya Kund with its chhatri" }
+    - { file: "03.jpg", alt: "Villagers and sadhus at the kund restoration ceremony" }
+    - { file: "04.jpg", alt: "Guests at the Priya Kund revival event" }
+bhaktivedanta-hospital-vrindavan:
+  cover: { file: "01.jpg", alt: "Bhaktivedanta Hospital, Vrindavan" }
+  gallery:
+    - { file: "02.jpg", alt: "A ward at the hospital" }
+    - { file: "03.jpg", alt: "The shrine in the hospital lobby" }
+    - { file: "04.jpg", alt: "The dental room" }
+    - { file: "05.jpg", alt: "The hospital building" }
+bhakti-bhavan-kolkata:
+  cover: { file: "01.jpg", alt: "The restored courtyard of Bhakti Bhavan, Kolkata" }
+  gallery:
+    - { file: "02.jpg", alt: "A restored room at Bhakti Bhavan" }
+    - { file: "03.jpg", alt: "Guests before the photo wall" }
+    - { file: "04.jpg", alt: "The altar decorated for the reopening" }
+    - { file: "05.jpg", alt: "Unveiling the plaque of gratitude" }
+    - { file: "06.jpg", alt: "The house before restoration" }
+fruit-orchards:
+  cover: { file: "01.jpg", alt: "Planting a fruit sapling in Palghar" }
+  gallery:
+    - { file: "02.jpg", alt: "A farmer planting a sapling with a volunteer" }
+    - { file: "03.jpg", alt: "Farmers with newly planted saplings" }
+    - { file: "04.jpg", alt: "Volunteers planting together" }
+safe-drinking-water:
+  cover: { file: "01.jpg", alt: "The ultrafiltration water plant at Govardhan Ecovillage" }
+  gallery:
+    - { file: "02.jpg", alt: "Controls of the water treatment plant" }
+    - { file: "03.jpg", alt: "An operator checking the plant" }
+    - { file: "04.jpg", alt: "Filters and pumps at the plant" }
+ashramshala-education:
+  cover: { file: "01.jpg", alt: "Students holding up their learning charts in a tribal residential school" }
+  gallery:
+    - { file: "02.jpg", alt: "A full classroom of students reading" }
+    - { file: "03.jpg", alt: "One-to-one support for a student" }
+    - { file: "04.jpg", alt: "A student at the blackboard" }
+    - { file: "05.jpg", alt: "Morning assembly at an ashramshala" }
+womens-skills:
+  cover: { file: "01.jpg", alt: "Women trainees in the computer lab at Govardhan Skill Centre" }
+  gallery:
+    - { file: "02.jpg", alt: "A beauty course practical session" }
+    - { file: "03.jpg", alt: "The tailoring class" }
+    - { file: "04.jpg", alt: "Trainees learning computer skills" }
+    - { file: "05.jpg", alt: "Craft work at the skill centre" }
+ev-skilling:
+  cover: { file: "01.jpg", alt: "Electric vehicle course trainees with their certificates" }
+  gallery:
+    - { file: "02.jpg", alt: "Students at the electric vehicle circuit workbench" }
+    - { file: "03.jpg", alt: "Trainees converting a petrol scooter to electric" }
+    - { file: "04.jpg", alt: "Hands-on work on an electric vehicle" }
+surya-kund:
+  cover: { file: "01.jpg", alt: "Excavation at Surya Kund, Govardhan Ecovillage" }
+  gallery:
+    - { file: "02.jpg", alt: "Surya Kund with the hills of Wada behind" }
+    - { file: "03.jpg", alt: "Water held at Surya Kund" }
+    - { file: "04.jpg", alt: "The Surya Kund site" }
+agrivoltaics-pilot:
+  cover: { file: "01.jpg", alt: "Preparing the one-acre pilot plot at Govardhan Ecovillage" }
+  gallery:
+    - { file: "02.jpg", alt: "Indicative: crops growing under raised solar panels on another farm" }
+    - { file: "03.jpg", alt: "Indicative: leafy crops between solar rows" }
+    - { file: "04.jpg", alt: "Planned layout of the solar array on the plot" }
+dog-welfare-sanctuary:
+  cover: { file: "01.jpg", alt: "A community dog in Palghar" }
+  gallery:
+    - { file: "02.jpg", alt: "The sanctuary shelter under construction" }
+    - { file: "03.jpg", alt: "Building the kennel shelter" }
+    - { file: "04.jpg", alt: "Site plan of the sanctuary" }
+govardhan-english-medium-school:
+  cover: { file: "01.jpg", alt: "Architect’s view of the planned Govardhan English Medium School" }
+  gallery:
+    - { file: "02.jpg", alt: "The planned school building and grounds" }
+    - { file: "03.jpg", alt: "The school’s main block" }
+gev-madhya-masterplan:
+  cover: { file: "01.jpg", alt: "3D view of the GEV Madhya masterplan" }
+  gallery:
+    - { file: "02.jpg", alt: "Architect’s view of the planned hospital" }
+    - { file: "03.jpg", alt: "Architect’s view of the planned school" }
+    - { file: "04.jpg", alt: "Site work under way at GEV Madhya" }
+    - { file: "05.jpg", alt: "The masterplan site plan" }
+vedic-value-education:
+  cover: { file: "01.jpg", alt: "Students listening to a talk on values in the temple hall at Govardhan Ecovillage" }
+braj-kunds-revival:
+  cover: { file: "01.webp", alt: "Pavan Sarovar, one of the sacred kunds of Braj" }
+  # Photos of Jal Vihar, Kamal and Vihval Kund to be added

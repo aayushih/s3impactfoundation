@@ -1,0 +1,13 @@
+{#- Page header. Set ph = { label, title, intro, image, image_alt, crumbs } before including. -#}
+<section class="phero{% if not ph.image %} noimg{% endif %}">
+  <div class="wrap phero-in">
+    <div class="ptext">
+      {% if ph.crumbs %}<nav class="crumbs" aria-label="Breadcrumb">{% for c in ph.crumbs %}<a href="{{ c.link }}">{{ c.label }}</a><span aria-hidden="true">/</span>{% endfor %}</nav>{% elif ph.label %}<p class="eyebrow">{{ ph.label }}</p>{% endif %}
+      {% if ph.tag %}<p class="stag s-{{ ph.tagClass }}">{{ ph.tag }}</p>{% endif %}
+      <h1>{{ ph.title | em("k") | safe }}</h1>
+      {% if ph.intro %}<p class="plede">{{ ph.intro }}</p>{% endif %}
+      {% if ph.meta %}<p class="pmeta">{% for m in ph.meta %}{% if m %}<span>{{ m }}</span>{% endif %}{% endfor %}</p>{% endif %}
+    </div>
+    {% if ph.image %}<figure class="pimg"><img src="{{ ph.image }}" alt="{{ ph.image_alt }}" sizes="(max-width: 900px) 92vw, 46vw" loading="eager" fetchpriority="high"></figure>{% endif %}
+  </div>
+</section>

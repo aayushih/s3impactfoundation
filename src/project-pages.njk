@@ -1,0 +1,70 @@
+---
+layout: base.njk
+pagination:
+  data: projects
+  size: 1
+  alias: p
+permalink: "/projects/{{ p.slug }}/"
+eleventyComputed:
+  title: "{{ p.title }}"
+  description: "{{ p.summary }}"
+---
+{%- set tone = pages.pillar_colours[p.pillar] -%}
+{%- set cat = null -%}{%- for c in pages.work.categories -%}{%- if c.id == p.category -%}{%- set cat = c -%}{%- endif -%}{%- endfor -%}
+{%- set crumbs = [{ label: "Our Work", link: "/our-work/" }] -%}
+{%- if cat -%}{%- set crumbs = (crumbs.push({ label: cat.title | replace("*",""), link: "/our-work/#" + cat.id }), crumbs) -%}{%- endif -%}
+{%- set ph = { title: p.title, intro: p.summary, crumbs: crumbs, tag: p.status, tagClass: p.statusClass, meta: [p.field, p.place, p.when] } -%}
+<div class="t-{{ tone }}">
+{% include "phero.njk" %}
+
+{% if p.photos.cover %}
+<div class="wrap"><figure class="pcover rv"><img src="assets/projects/{{ p.slug }}/{{ p.photos.cover.file }}" alt="{{ p.photos.cover.alt }}" sizes="(max-width: 1240px) 96vw, 1160px" loading="eager"></figure></div>
+{% endif %}
+
+<div class="wrap pbody">
+  <aside class="glance rv" aria-label="{{ pages.project.glance_title }}">
+    <h2 class="eyebrow">{{ pages.project.glance_title }}</h2>
+    <dl>{% for g in p.glance %}<div><dt>{{ g.label }}</dt><dd>{{ g.value }}</dd></div>{% endfor %}</dl>
+  </aside>
+  <article class="prose">
+    {% for s in p.sections %}
+    <section class="psec rv">
+      <h2>{{ s.title }}</h2>
+      {% for b in s.blocks %}
+        {% if b.type == "p" %}<p>{% if b.lead %}<b>{{ b.lead }}</b> {% endif %}{{ b.text }}</p>
+        {% elif b.type == "list" %}{% if b.lead %}<p>{{ b.lead }}</p>{% endif %}<ul>{% for i in b.items %}<li>{{ i }}</li>{% endfor %}</ul>
+        {% elif b.type == "figures" %}{% if b.lead %}<p class="flead">{{ b.lead }}</p>{% endif %}<ul class="figs">{% for i in b.items %}<li>{{ i }}</li>{% endfor %}</ul>
+        {% endif %}
+      {% endfor %}
+    </section>
+    {% endfor %}
+  </article>
+</div>
+
+{% if p.photos.gallery and p.photos.gallery.length %}
+<section class="wrap gallery">
+  <h2 class="rv">{{ pages.project.gallery_title | em("k") | safe }}</h2>
+  <div class="ggrid">
+    {% for g in p.photos.gallery %}<figure class="rv" style="--d:{{ (loop.index0 % 3) * 0.12 }}s"><img src="assets/projects/{{ p.slug }}/{{ g.file }}" alt="{{ g.alt }}" sizes="(max-width: 640px) 92vw, (max-width: 1000px) 46vw, 380px"><figcaption>{{ g.alt }}</figcaption></figure>{% endfor %}
+  </div>
+</section>
+{% endif %}
+
+{%- set more = [] -%}
+{%- for q in projects -%}{%- if q.slug != p.slug and q.category == p.category and more.length < 3 -%}{%- set more = (more.push(q), more) -%}{%- endif -%}{%- endfor -%}
+{%- for q in projects -%}{%- if q.slug != p.slug and q.category != p.category and q.pillar == p.pillar and more.length < 3 -%}{%- set more = (more.push(q), more) -%}{%- endif -%}{%- endfor -%}
+<section class="wrap more">
+  <h2 class="rv">{{ pages.project.more_title | em("k") | safe }}</h2>
+  <div class="pgrid">{% for q in more %}{% set p2 = p %}{% set p = q %}<div class="rv">{% include "pcard.njk" %}</div>{% set p = p2 %}{% endfor %}</div>
+</section>
+
+{%- set cta = pages.project.cta_next if p.upcoming else pages.project.cta_done -%}
+<section class="wrap">
+  <div class="band rv">
+    {% if p.photos.cover %}<img class="bimg" src="assets/projects/{{ p.slug }}/{{ p.photos.cover.file }}" alt="" sizes="(max-width: 1240px) 100vw, 1200px">{% else %}<img class="bimg" src="assets/img/band-temple-path.webp" alt="" sizes="(max-width: 1240px) 100vw, 1200px">{% endif %}<span class="bshade" aria-hidden="true"></span>
+    <h2>{{ cta.title | em("k") | safe }}</h2>
+    <p class="t">{{ cta.text }}</p>
+    <div class="btns"><a class="btn sun" href="{{ cta.button.link }}">{{ cta.button.label }} <span class="arr">→</span></a><a class="btn ghost" href="{{ cta.second_button.link }}">{{ cta.second_button.label }}</a></div>
+  </div>
+</section>
+</div>

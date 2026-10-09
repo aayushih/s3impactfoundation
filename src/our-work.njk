@@ -1,0 +1,54 @@
+---
+layout: base.njk
+title: Our Work
+permalink: /our-work/
+description: "Twenty-two projects, from warm meals and village classrooms to sacred ponds and clean water, most of them in the villages around Govardhan Ecovillage in Palghar."
+---
+{%- set w = pages.work -%}
+{%- set ph = { title: w.title, intro: w.intro, image: "assets/img/" + w.image, image_alt: w.image_alt, label: "Twenty-two projects" } -%}
+{% include "phero.njk" %}
+
+<nav class="chips" aria-label="Jump to a group">
+  <div class="wrap chips-in">
+    {% for c in w.categories %}<a href="#{{ c.id }}" class="t-{{ c.colour }}">{{ c.title | replace("*","") }}</a>{% endfor %}
+    <a href="#upcoming" class="t-s3">Upcoming</a>
+  </div>
+</nav>
+
+{% for c in w.categories %}
+<section class="wgroup t-{{ c.colour }}" id="{{ c.id }}">
+  <div class="wrap">
+    <div class="ghead rv">
+      <h2>{{ c.title | em("k") | safe }}</h2>
+      <p class="lede">{{ c.intro }}</p>
+    </div>
+    {% if c.themes %}
+      {% for th in c.themes %}
+      <div class="theme" id="{{ th.id }}">
+        <div class="thead rv"><h3>{{ th.name }}</h3><p>{{ th.text }}</p></div>
+        <div class="pgrid">
+          {% for p in projects %}{% if p.category == c.id and p.theme == th.name %}<div class="rv" style="--d:{{ (loop.index0 % 3) * 0.12 }}s">{% include "pcard.njk" %}</div>{% endif %}{% endfor %}
+        </div>
+      </div>
+      {% endfor %}
+    {% else %}
+    <div class="pgrid">
+      {% for p in projects %}{% if p.category == c.id %}<div class="rv">{% include "pcard.njk" %}</div>{% endif %}{% endfor %}
+    </div>
+    {% endif %}
+  </div>
+</section>
+{% endfor %}
+
+<section class="wgroup upcoming t-s3" id="upcoming">
+  <div class="wrap">
+    <div class="ghead rv">
+      <h2>{{ w.upcoming.title | em("k") | safe }}</h2>
+      <p class="lede">{{ w.upcoming.intro }}</p>
+    </div>
+    <div class="pgrid">
+      {% for p in projects %}{% if p.upcoming %}<div class="rv">{% include "pcard.njk" %}</div>{% endif %}{% endfor %}
+    </div>
+    <div class="btns center rv"><a class="btn ink" href="{{ w.upcoming.button.link }}">{{ w.upcoming.button.label }} <span class="arr">→</span></a></div>
+  </div>
+</section>

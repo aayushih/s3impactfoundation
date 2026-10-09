@@ -17,6 +17,11 @@ If something goes wrong, Netlify keeps the last working version online and shows
 |---|---|
 | Email, phone, address, menu, footer links, tagline | `src/_data/site.yml` |
 | Everything on the home page (hero slides, mission, pillars, journey, numbers, work tiles, quote, recognition, closing band) | `src/_data/home.yml` |
+| About Us, Our Work, Impact, Get Involved and Contact pages (trustees, registration numbers, partners, press) | `src/_data/pages.yml` |
+| The words on each project page | `content/projects.md` |
+| Which group a project sits in, and its pillar | `content/projects-meta.json` |
+| The photos on each project page | `src/_data/projectphotos.yml` (photos in `src/assets/projects/<project>/`) |
+| Privacy Policy and Terms of Use (drafts) | `src/privacy.md`, `src/terms.md` |
 
 Little codes you can use inside the text:
 
@@ -35,12 +40,17 @@ Use file names without spaces (for example `kund-revival-2026.jpg`).
 
 The logo files are in `src/assets/logo/`: `s3-logo-mark.svg` (header), `s3-logo-full.svg` (footer) and `s3-impact-logo-source.svg` (the original from the designer).
 
+## Contact form
+
+Messages sent through the contact form appear in Netlify under **Forms → contact**. To get them by email: **Site configuration → Notifications → Emails and webhooks → Form submission notifications → Add notification**, and enter the inbox address.
+
 ## Before launch (one-time)
 
 1. In `src/_data/site.yml` set `preview: false` and set `url` to the real web address.
 2. In `src/robots.txt` replace the two lines at the bottom with `User-agent: *` and `Allow: /`.
-3. In `netlify.toml` delete the block marked "While the site is a preview".
-4. Connect the domain in Netlify (**Domain management**).
+3. Have the Privacy Policy and Terms of Use checked, then remove the "Draft for review" note in `src/_includes/legal.njk`.
+4. In `netlify.toml` delete the block marked "While the site is a preview".
+5. Connect the domain in Netlify (**Domain management**).
 
 ## For developers
 

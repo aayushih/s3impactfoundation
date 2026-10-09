@@ -39,7 +39,7 @@
             </div>
             <div class="cols">
               {% for col in site.work_menu.columns %}
-              <div><h4>{{ col.heading }}</h4><ul>{% for l in col.links %}<li><a href="{{ col.link }}">{{ l }}</a></li>{% endfor %}</ul></div>
+              <div><h4>{{ col.heading }}</h4><ul>{% for l in col.links %}<li><a href="{{ l.link }}">{{ l.label }}</a></li>{% endfor %}</ul></div>
               {% endfor %}
             </div>
           </div>
@@ -58,7 +58,7 @@
   <button class="close" type="button" id="closeBtn">Close</button>
   <p class="lead">{{ site.tagline }}</p>
   {% for col in site.footer.columns %}
-  <details{% if loop.index == 2 %} open{% endif %}><summary>{{ col.heading }}</summary><ul>{% for l in col.links %}<li><a href="{{ col.link }}">{{ l }}</a></li>{% endfor %}</ul></details>
+  <details{% if loop.index == 2 %} open{% endif %}><summary>{{ col.heading }}</summary><ul>{% for l in col.links %}<li><a href="{{ l.link }}">{{ l.label }}</a></li>{% endfor %}</ul></details>
   {% endfor %}
 </div>
 
@@ -74,7 +74,7 @@
     </div>
     <div class="fcols">
       {% for col in site.footer.columns %}
-      <div><h4>{{ col.heading }}</h4><ul>{% for l in col.links %}<li><a href="{{ col.link }}">{{ l }}</a></li>{% endfor %}</ul></div>
+      <div><h4>{{ col.heading }}</h4><ul>{% for l in col.links %}<li><a href="{{ l.link }}">{{ l.label }}</a></li>{% endfor %}</ul></div>
       {% endfor %}
       <div class="fcontact"><h4 style="margin-bottom:2px">Get in touch</h4>
         <p><span class="lab">Visit</span>{{ site.contact.address }}</p>
@@ -82,7 +82,7 @@
         <p><span class="lab">Phone</span>{% if site.contact.phone %}<a href="{{ site.contact.phone | tel }}">{{ site.contact.phone }}</a>{% else %}<span class="pending">To be added</span>{% endif %}</p>
       </div>
     </div>
-    <div class="fbot"><p>{{ site.footer.copyright }}</p><p><a href="#top">Privacy Policy</a> · <a href="#top">Terms of Use</a></p></div>
+    <div class="fbot"><p>{{ site.footer.copyright }}</p><p><a href="/privacy/">Privacy Policy</a> · <a href="/terms/">Terms of Use</a></p></div>
   </div>
 </footer>
 

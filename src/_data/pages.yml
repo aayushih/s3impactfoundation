@@ -1,0 +1,294 @@
+# ─────────────────────────────────────────────────────────────
+#  INNER PAGE TEXT (About, Our Work, Impact, Get Involved, Contact)
+#  Edit the words between the quotation marks.
+#  *word* makes a word italic. "[To be added]" marks a placeholder.
+#  Project pages take their words from content/projects.md.
+# ─────────────────────────────────────────────────────────────
+
+pillar_colours:
+  social: "coral"
+  sustainability: "leaf"
+  self: "saffron"
+
+# ── ABOUT US ────────────────────────────────────────────────
+about:
+  title: "About *S3*"
+  intro: "S3 Impact Foundation is a charitable foundation based in Mumbai. We serve people, communities and the land, and we stay beside each project long enough to see the lives it changes."
+  image: "work-spiritual.webp"
+  image_alt: "The carved ceiling and shrine of the renewed temple at Govardhan Ecovillage"
+
+  why:
+    label: "Our inspiration"
+    title: "Why *S3*"
+    paragraphs:
+      - "True change is never only material. A family needs food, water, schooling and work. It also needs dignity, purpose and a sense of belonging."
+      - "Our name holds these together. S3 stands for three commitments: Social Impact, for the people we serve; Sustainability, for the land that sustains them; and Self Transformation, for the inner growth that makes every other change last."
+    pillars:
+      - { colour: "coral", name: "Social Impact", line: "For the people we serve" }
+      - { colour: "leaf", name: "Sustainability", line: "For the land that sustains them" }
+      - { colour: "saffron", name: "Self Transformation", line: "For the growth that makes change last" }
+
+  vision:
+    title: "Our *Vision*"
+    text: "A world where no one goes hungry, every child can learn, the land is cared for, and every person has the chance to grow in spirit."
+  mission:
+    title: "Our *Mission*"
+    text: "To nourish people, uplift communities and care for the land, so that every life we touch can grow in spirit as well as in strength."
+
+  how:
+    label: "How we serve"
+    title: "We give, and we *stay*"
+    items:
+      - { colour: "coral", title: "We give, and we stay", text: "We support trusted partners on the ground and walk with each project from the first survey to the final report." }
+      - { colour: "leaf", title: "We see the results", text: "Water is lab-tested, learning is tracked from baseline to endline, and harvests are recorded every month." }
+      - { colour: "saffron", title: "We begin close to home", text: "Many of our projects start in the villages around Govardhan Ecovillage, where we can see needs clearly and respond with care." }
+
+  values:
+    label: "Our values"
+    title: "What we *stand for*"
+    items:
+      - { colour: "coral", title: "Service to all", text: "Our work is open to every community, without discrimination." }
+      - { colour: "rose", title: "Compassion in action", text: "Care for the whole person, body, mind and spirit, especially those who are most vulnerable." }
+      - { colour: "leaf", title: "Local hands, local pride", text: "Villagers, farmers and “friends of the kund” are partners in the work, not just its beneficiaries." }
+      - { colour: "water", title: "Honest results", text: "We test, measure and share what we find, including what is still in progress." }
+      - { colour: "saffron", title: "Stewardship", text: "Of land, water, heritage and every rupee entrusted to us." }
+
+  goals:
+    label: "The Global Goals"
+    title: "Part of a *wider* promise"
+    text: "Our work contributes to the United Nations Sustainable Development Goals."
+    groups:
+      - colour: "coral"
+        name: "Social Impact"
+        goals: ["1 No Poverty", "2 Zero Hunger", "3 Good Health and Well-being", "4 Quality Education", "5 Gender Equality", "8 Decent Work and Economic Growth"]
+      - colour: "leaf"
+        name: "Sustainability"
+        goals: ["6 Clean Water and Sanitation", "7 Affordable and Clean Energy", "13 Climate Action", "15 Life on Land"]
+      - colour: "saffron"
+        name: "Self Transformation"
+        goals: ["4 Quality Education (values and culture)", "11 Sustainable Cities and Communities (cultural heritage)"]
+
+  trustees:
+    label: "Governance"
+    title: "Our *Trustees*"
+    people:
+      # To add a photo: upload it to src/assets/img/ and type its file name after photo:
+      - name: "Harneet Hariharan (Rādhikā Līlā DD)"
+        role: "Managing Trustee"
+        photo: ""
+        bio: "Harneet leads S3 Impact Foundation and guides its work across food, water, education, health and heritage. [A fuller background to be added]"
+      - name: "Aayushi Hariharan"
+        role: "Trustee"
+        photo: ""
+        bio: "Aayushi serves on the foundation’s board of trustees and helps shape its direction and partnerships. [A fuller background to be added]"
+
+  accountability:
+    label: "Accountability"
+    title: "*Transparency* matters"
+    text: "We believe partners and the public should always be able to see who we are and how we work."
+    # Leave a value as "" to show "To be added"
+    items:
+      - { label: "Registration number", value: "" }
+      - { label: "PAN", value: "" }
+      - { label: "12A registration", value: "" }
+      - { label: "80G registration", value: "" }
+      - { label: "CSR-1 registration", value: "" }
+    reports_text: "Annual reports and audited accounts will be shared here."
+
+# ── OUR WORK ────────────────────────────────────────────────
+work:
+  title: "Our *Work*"
+  intro: "S3 Impact Foundation invests in projects that serve people, communities and the land: from food and farming to education, water, health, elder care and culture. Here are the projects the Foundation has carried out, and those it is preparing to support next."
+  image: "work-rural.webp"
+  image_alt: "Women learning computer skills at Govardhan Skill Centre"
+  # The groups on the page, in order. "id" must match the menu links (/our-work/#id).
+  categories:
+    - id: "rural"
+      colour: "coral"
+      title: "Rural Development at *GEV*"
+      intro: "Palghar district, about 100 km north of Mumbai, is largely tribal. Farming is hard, work is seasonal, and schools and clinics can be far away. From Govardhan Ecovillage, we serve these villages where people live."
+      themes:
+        - { id: "farmers-agriculture", name: "Farmers & Agriculture", text: "Orchards for small farmers, a farm for the community kitchens, and a pilot that grows food and solar power on the same acre." }
+        - { id: "water-resource-development", name: "Water Resource Development", text: "Safe drinking water today, and more monsoon rain saved for tomorrow." }
+        - { id: "women-empowerment", name: "Women Empowerment", text: "Skills that let women earn close to home, and a stronger voice at home." }
+        - { id: "skill-development", name: "Skill Development", text: "Hands-on training for growing fields, from electric vehicles to tailoring." }
+        - { id: "rural-education", name: "Rural Education", text: "Better learning in tribal residential schools, and a new English-medium school on the way." }
+        - { id: "healthcare-elder-care", name: "Healthcare & Elder Care", text: "A caring home for senior devotees, and a masterplan for a 100-bed hospital." }
+        - { id: "animal-welfare", name: "Animal Welfare", text: "A planned sanctuary to vaccinate, sterilise and care for community dogs." }
+    - id: "annakshetra"
+      colour: "leaf"
+      title: "Govardhan *Annakshetra*"
+      intro: "One kitchen, six meal programmes and 2.4 million free meals in 2025-26, for villagers, schoolchildren, trainees and hospital patients."
+    - id: "spiritual"
+      colour: "saffron"
+      title: "Spiritual & *Culture*"
+      intro: "Some places hold a community’s heart. We help restore them and pass their values on: a temple and cultural centre that welcomed over eight lakh visitors in 2024-25, a heritage home in Kolkata, and a values curriculum for children."
+    - id: "kunds"
+      colour: "water"
+      title: "Braj *Kunds*"
+      intro: "The kunds of Braj are sacred ponds, used by villagers and by pilgrims walking the parikrama. A survey of 16 found that about 70% held water unfit even for bathing. Six are now being revived: Priya Kund, Prem Sarovar, Jal Vihar Kund, Kamal Kund, Vihval Kund and Pavan Sarovar."
+    - id: "beyond"
+      colour: "rose"
+      title: "Beyond *GEV*"
+      intro: "Our care reaches past Palghar, to a permanent campus for nearly 300 students in Pune and a charitable hospital caring for pilgrims and village families in Vrindavan."
+    - id: "policy"
+      colour: "water"
+      title: "Policy & *Advocacy*"
+      intro: "Grassroots work earns a place at bigger tables. Projects we support have helped lead a G20 civil-society working group on hunger and joined a national festival of good governance."
+  upcoming:
+    title: "What’s *next*"
+    intro: "Seven projects are waiting for partners. Each one grows from work already under way."
+    button: { label: "Partner on a project", link: "/contact/?interest=project" }
+
+# ── PROJECT PAGES (labels shared by every project) ──────────
+project:
+  glance_title: "At a glance"
+  gallery_title: "In *pictures*"
+  more_title: "More from *our work*"
+  cta_done:
+    title: "Walk this path *with us*"
+    text: "Every project here began with a partner who believed in it. There is a place for you in what comes next."
+    button: { label: "Partner with us", link: "/get-involved/" }
+    second_button: { label: "See upcoming projects", link: "/our-work/#upcoming" }
+  cta_next:
+    title: "Help bring this *to life*"
+    text: "This project is waiting for partners. We would be glad to share the plan, the budget and how progress will be reported."
+    button: { label: "Partner on this project", link: "/contact/?interest=project" }
+    second_button: { label: "See all upcoming projects", link: "/our-work/#upcoming" }
+
+# ── IMPACT ──────────────────────────────────────────────────
+impact:
+  title: "Our *Impact*"
+  intro: "We count what changes: meals served, scores raised, litres cleaned, incomes earned. Then we listen for the stories behind each number."
+  image: "journey-food.webp"
+  image_alt: "Volunteers serving hot food to a queue of visitors"
+
+  numbers:
+    title: "The work in *numbers*"
+    intro: "Tap or hover over a number to see where it comes from."
+    items:
+      - { colour: "coral", icon: "meals.webp", shows: "2.4M", count_to: 2.4, decimals: 1, suffix: "M", label: "Free meals, 2025-26", detail: "Cooked at Govardhan Annakshetra for villagers, schoolchildren, trainees and hospital patients across five talukas.", link: "/projects/govardhan-annakshetra/" }
+      - { colour: "s3", icon: "learning.webp", shows: "67%", count_to: 67, suffix: "%", label: "Rise in learning scores", detail: "Average scores rose from 19.85 to 33.16 across 102 tribal residential schools in Palghar.", link: "/projects/ashramshala-education/" }
+      - { colour: "leaf", icon: "water.webp", shows: "12,000", count_to: 12000, format: "international", label: "Litres of safe water an hour", detail: "Borewell water at Govardhan Ecovillage now tests free of coliform bacteria and E. coli.", link: "/projects/safe-drinking-water/" }
+      - { colour: "saffron", icon: "temple.webp", shows: "81%", count_to: 81, suffix: "%", label: "Women earning within 3 months", detail: "65 of 80 trainees found work or started a business, and report earning ₹4,500 to ₹8,000 more a month.", link: "/projects/womens-skills/" }
+      - { colour: "leaf", icon: "", shows: "2,000", count_to: 2000, format: "international", label: "Fruit saplings planted", detail: "Mango, cashew and guava, for 40 tribal farmers growing orchards on their own land.", link: "/projects/fruit-orchards/" }
+      - { colour: "s3", icon: "", shows: "55", count_to: 55, label: "EV technicians trained", detail: "A free course at Boisar that ended with students converting a petrol scooter to electric.", link: "/projects/ev-skilling/" }
+      - { colour: "saffron", icon: "", shows: "8,11,071", count_to: 811071, format: "indian", label: "Visitors in a year", detail: "Day visitors to Govardhan Ecovillage in 2024-25, up from about one lakh a year.", link: "/projects/vedic-education-cultural-centre/" }
+      - { colour: "coral", icon: "", shows: "6", count_to: 6, label: "Sacred kunds in revival", detail: "Priya Kund is now a working model, and natural springs are flowing again at Jal Vihar, Kamal and Vihval Kund.", link: "/our-work/#kunds" }
+
+  stories:
+    label: "Stories of life transformation"
+    title: "Lives behind the *numbers*"
+    items:
+      - colour: "leaf"
+        project: "fruit-orchards"
+        title: "Home, not the work site"
+        text: "Two farmers from Sukasale village had left home for daily-wage work. Each planted 20 mango, 20 cashew and 10 guava saplings. Both now tend orchards of their own. For one of them, it was the first support he had ever received."
+        link_label: "Fruit Orchards for Palghar’s Small Farmers"
+      - colour: "saffron"
+        project: "womens-skills"
+        title: "A stronger voice at home"
+        text: "Within three months of training, 65 of 80 women were earning. They report more say in household decisions, and an alumni network now links each new batch to those who came before."
+        link_label: "Skills and Income for Rural and Tribal Women"
+      - colour: "coral"
+        project: "govardhan-annakshetra"
+        title: "One less worry"
+        text: "For about 200 patients and carers a day at Bhaktivedanta Hospital, a free meal eases the cost and stress of treatment."
+        link_label: "Govardhan Annakshetra"
+      - colour: "water"
+        project: "ev-skilling"
+        title: "From classroom to career"
+        text: "Fifty-five young people learned to build electric vehicles. Some were placed with a manufacturer in Pune soon after the course."
+        link_label: "Electric Vehicle Skilling Course"
+
+  voices:
+    label: "In their words"
+    items:
+      - text: "I am deeply grateful to S3 Impact Foundation for their generous support of the Food Self-Sufficiency Project at Govardhan Ecovillage."
+        name: "Gauranga Das"
+        role: "Govardhan Ecovillage"
+      - text: "The primary condition of civilization is the availability of an abundance of food, and the primary discipline of civilization is the sharing of that food."
+        name: "HG Gauranga Das"
+        role: "Director, Govardhan EcoVillage, at the C20 meeting in Recife"
+
+  partners:
+    label: "Our partners"
+    title: "Stronger *together*"
+    text: "Every project rests on many hands: community organisations, government bodies and local residents who care for what is built long after the work is done."
+    # To show a logo: upload it to src/assets/img/ and type its file name after logo:
+    items:
+      - { name: "Govardhan Ecovillage", logo: "" }
+      - { name: "UP Braj Teerth Vikas Parishad", logo: "" }
+      - { name: "Nandgaon Nagar Panchayat", logo: "" }
+      - { name: "Govardhan Skill Centre", logo: "" }
+      - { name: "Bhaktivedanta Hospital", logo: "" }
+
+  press:
+    label: "In the press"
+    title: "Making *news*"
+    items:
+      - colour: "leaf"
+        image: "press-braj.webp"
+        image_alt: "Visitors beside the new murals at Priya Kund"
+        outlet: "Braj Breaking"
+        title: "A Braj Break-through"
+        text: "The revival of Braj’s kunds was reported by *Braj Breaking*, a local Braj news site, which called restoring the kunds and cleaning their water the first need of the day."
+        link: "/projects/priya-kund-prem-sarovar/"
+        link_label: "Read about the kunds"
+      - colour: "saffron"
+        image: "press-dainik-bhaskar.jpg"
+        image_alt: "A Dainik Bhaskar newspaper clipping about the kund revival"
+        outlet: "Dainik Bhaskar"
+        title: "The kunds, in print"
+        text: "*Dainik Bhaskar*, one of India’s largest Hindi dailies, covered the work to clean and revive the sacred ponds of Braj."
+        link: "/projects/priya-kund-prem-sarovar/"
+        link_label: "Read about the kunds"
+      - colour: "water"
+        image: "press-lok-bharti.jpg"
+        image_alt: "A Lok Bharti newspaper clipping about the kund revival"
+        outlet: "Lok Bharti"
+        title: "A local story, told locally"
+        text: "*Lok Bharti* reported on the revival of the kunds and the villagers who now care for them."
+        link: "/projects/priya-kund-prem-sarovar/"
+        link_label: "Read about the kunds"
+
+# ── GET INVOLVED ────────────────────────────────────────────
+involved:
+  title: "Serve *with us*"
+  intro: "There is a place for everyone in this work."
+  image: "band-temple-path.webp"
+  ways:
+    - colour: "coral"
+      id: "partner"
+      label: "For companies and foundations"
+      title: "Partner *with us*"
+      text: "Companies, foundations and institutions can co-fund a project, from a single programme to a whole site. We share plans, budgets and progress at every stage."
+      button: { label: "Start a conversation", link: "/contact/?interest=partnership" }
+    - colour: "leaf"
+      id: "back"
+      label: "Seven projects waiting"
+      title: "Back an *upcoming project*"
+      text: "Each one grows from work already under way, and each is ready for a partner who would like to see it through."
+      button: { label: "See upcoming projects", link: "/our-work/#upcoming" }
+    - colour: "saffron"
+      id: "values"
+      label: "For schools and communities"
+      title: "Bring *values education* to your school"
+      text: "When the Vedic Value Education Programme’s books, audio and online lessons are ready, schools and communities can use them."
+      button: { label: "Register your interest", link: "/contact/?interest=values" }
+  upcoming_title: "Projects waiting for *partners*"
+  donate_note: "Individual donations will open here soon."
+
+# ── CONTACT US ──────────────────────────────────────────────
+contact:
+  title: "Let’s *talk*"
+  intro: "Whether you are exploring a partnership, planning a visit or simply want to know more, write to us. We read every message."
+  interests:
+    - { value: "partnership", label: "Partnership" }
+    - { value: "project", label: "A specific project" }
+    - { value: "values", label: "Values education" }
+    - { value: "visit", label: "Visiting" }
+    - { value: "other", label: "Something else" }
+  button: "Send message"
+  thanks_title: "Thank *you*"
+  thanks_text: "Thank you for reaching out. We will be in touch soon."

@@ -22,6 +22,8 @@
     document.querySelectorAll('.rv').forEach(el => rio.observe(el));
   }
 
+  // ── home page only: the brick wall and the hero slideshow ──
+  if (document.getElementById('portal')) {
   // sandstone wall: rows part along their joints and slide behind the stones that stay
   const portal = document.getElementById('portal'), wall = document.getElementById('wall');
   const SAND = ['#B0705A','#BC7D64','#A8654F','#C38C70','#B57760','#9F5E4A','#C99C7F','#B98468','#AD6B55','#D1A88A'];
@@ -105,6 +107,7 @@
   ['mouseenter','focusin'].forEach(ev => portal.addEventListener(ev, () => { hovering = true; arm(); }));
   ['mouseleave','focusout'].forEach(ev => portal.addEventListener(ev, () => { hovering = false; arm(); }));
   arm();
+  }
 
   // mission: "Our mission is to serve:" first, a pause, then the rest word by word with a rest at each comma
   if (!reduce && io) { const mp = document.querySelector('.mission p.big'); let t = 0;
@@ -113,7 +116,7 @@
         const sp = document.createElement('span'); sp.className = 'mw'; sp.textContent = w; sp.style.setProperty('--t', t.toFixed(2) + 's'); frag.appendChild(sp);
         t += /:$/.test(w) ? 0.6 : /,$/.test(w) ? 0.3 : (t < 0.5 ? 0.06 : 0.08); });
       c.replaceWith(frag); } else walk(c); });
-    walk(mp); }
+    if (mp) walk(mp); }
 
   // commitments: on touch screens the pillar takes its colour as it reaches the middle of the screen
   if (noHover && io) { const cio = new IntersectionObserver(es => es.forEach(e => e.target.classList.toggle('lit', e.isIntersecting)), {rootMargin:'-35% 0px -35% 0px'}); document.querySelectorAll('.cm').forEach(c => cio.observe(c)); }
@@ -156,6 +159,8 @@
     vfig.style.setProperty('--px', (-12 - (p - .5) * 22).toFixed(2) + '%');
   }
 
+  // ── home page only: the journey ribbon ──
+  if (document.getElementById('journey')) {
   // Dell-style journey ribbon
   const journey = document.getElementById('journey'), svg = journey.querySelector('svg.ribbon');
   const gGhost = svg.querySelector('.ghost'), gLive = svg.querySelector('.live'), NS = 'http://www.w3.org/2000/svg';
@@ -266,4 +271,9 @@
   let rt; addEventListener('resize', () => { clearTimeout(rt); rt = setTimeout(build, 150); });
   if (document.fonts && document.fonts.ready) document.fonts.ready.then(build); else build();
   addEventListener('load', build);
+  }
+
+  // contact form: "/contact/?interest=project" picks that topic for you
+  const sel = document.getElementById('interest');
+  if (sel) { const v = new URLSearchParams(location.search).get('interest'); if (v && [...sel.options].some(o => o.value === v)) sel.value = v; }
 })();

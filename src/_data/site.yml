@@ -20,45 +20,61 @@ contact:
   email: ""
   phone: ""
 
-# Main menu. "link" can be a page (/about/) or a section on the home page (/#impact).
+# Main menu along the top
 menu:
-  - label: "About Us"
-    link: "/#about"
-  - label: "Our Work"
-    link: "/#work"
-    dropdown: true
-  - label: "Impact"
-    link: "/#impact"
-  - label: "Contact Us"
-    link: "/#contact"
-    button: true
+  - { label: "About Us", link: "/about/" }
+  - { label: "Our Work", link: "/our-work/", dropdown: true }
+  - { label: "Impact", link: "/impact/" }
+  - { label: "Get Involved", link: "/get-involved/" }
+  - { label: "Contact Us", link: "/contact/", button: true }
 
 # The panel that opens under "Our Work"
 work_menu:
   intro_title: "Twenty-two projects, one *calling*"
   intro_text: "From warm meals and village classrooms to sacred ponds and clean water. Most begin in the villages around Govardhan Ecovillage in Palghar."
   intro_link: "See all projects"
-  # Each column's links lead to "link" until the project pages are built
   columns:
     - heading: "Rural Development at GEV"
-      link: "/#work"
-      links: ["Farmers & Agriculture", "Water Resource Development", "Women Empowerment", "Skill Development", "Rural Education", "Healthcare & Elder Care", "Animal Welfare"]
+      links:
+        - { label: "Farmers & Agriculture", link: "/our-work/#farmers-agriculture" }
+        - { label: "Water Resource Development", link: "/our-work/#water-resource-development" }
+        - { label: "Women Empowerment", link: "/our-work/#women-empowerment" }
+        - { label: "Skill Development", link: "/our-work/#skill-development" }
+        - { label: "Rural Education", link: "/our-work/#rural-education" }
+        - { label: "Healthcare & Elder Care", link: "/our-work/#healthcare-elder-care" }
+        - { label: "Animal Welfare", link: "/our-work/#animal-welfare" }
     - heading: "Programmes"
-      link: "/#work"
-      links: ["Govardhan Annakshetra", "Spiritual & Culture", "Braj Kunds"]
+      links:
+        - { label: "Govardhan Annakshetra", link: "/our-work/#annakshetra" }
+        - { label: "Spiritual & Culture", link: "/our-work/#spiritual" }
+        - { label: "Braj Kunds", link: "/our-work/#kunds" }
     - heading: "Further afield"
-      link: "/#work"
-      links: ["Beyond GEV", "Policy & Advocacy", "Upcoming projects"]
+      links:
+        - { label: "Beyond GEV", link: "/our-work/#beyond" }
+        - { label: "Policy & Advocacy", link: "/our-work/#policy" }
+        - { label: "Upcoming projects", link: "/our-work/#upcoming" }
 
 footer:
   columns:
     - heading: "About"
-      link: "/#about"
-      links: ["Why S3", "Vision & Mission", "Our Values", "Our Trustees", "Accountability"]
+      links:
+        - { label: "Why S3", link: "/about/#why" }
+        - { label: "Vision & Mission", link: "/about/#mission" }
+        - { label: "Our Values", link: "/about/#values" }
+        - { label: "Our Trustees", link: "/about/#trustees" }
+        - { label: "Accountability", link: "/about/#accountability" }
     - heading: "Our Work"
-      link: "/#work"
-      links: ["Rural Development at GEV", "Govardhan Annakshetra", "Spiritual & Culture", "Braj Kunds", "Beyond GEV", "Policy & Advocacy"]
+      links:
+        - { label: "Rural Development at GEV", link: "/our-work/#rural" }
+        - { label: "Govardhan Annakshetra", link: "/our-work/#annakshetra" }
+        - { label: "Spiritual & Culture", link: "/our-work/#spiritual" }
+        - { label: "Braj Kunds", link: "/our-work/#kunds" }
+        - { label: "Beyond GEV", link: "/our-work/#beyond" }
+        - { label: "Policy & Advocacy", link: "/our-work/#policy" }
     - heading: "Explore"
-      link: "/#contact"
-      links: ["Impact", "Upcoming projects", "Get Involved", "Contact Us"]
+      links:
+        - { label: "Impact", link: "/impact/" }
+        - { label: "Upcoming projects", link: "/our-work/#upcoming" }
+        - { label: "Get Involved", link: "/get-involved/" }
+        - { label: "Contact Us", link: "/contact/" }
   copyright: "© 2026 S3 Impact Foundation. All rights reserved."

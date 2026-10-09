@@ -16,18 +16,18 @@ hero:
       text: "From a warm meal in a tribal village to a sacred pond brought back to life, we walk alongside communities as they grow in health, livelihood and spirit."
       image: "hero-meal.webp"
       image_focus: "50% 46%"
-      button: { label: "Explore our work", link: "/#work" }
-      second_button: { label: "Our story", link: "/#about" }
+      button: { label: "Explore our work", link: "/our-work/" }
+      second_button: { label: "Our story", link: "/about/" }
     - lines: ["2.4 million free meals,", "*in a single year*"]
       text: "Served in 2025-26 to tribal villagers, schoolchildren, young trainees and hospital patients around Palghar."
       image: "hero-grocery-kits.webp"
       image_focus: "50% 18%"
-      button: { label: "See the story", link: "/#journey" }
+      button: { label: "See the story", link: "/projects/govardhan-annakshetra/" }
     - lines: ["A home for culture,", "*open to all*"]
       text: "In 2026 the kalash was fixed atop the spire and the new roof completed at the cultural heart of Govardhan Ecovillage, which welcomed 8,11,071 visitors in 2024-25."
       image: "hero-kalash.webp"
       image_focus: "50% 40%"
-      button: { label: "See the centre", link: "/#work" }
+      button: { label: "See the centre", link: "/projects/vedic-education-cultural-centre/" }
 
 mission: "Our mission is to *serve:*{s3} to *nourish people*{coral}, uplift communities and *care for the land*{leaf}, so that every life we touch can *grow in spirit*{saffron} as well as in *strength.*{saffron}"
 
@@ -57,35 +57,35 @@ journey:
       image_alt: "Volunteers serving hot food to a queue of visitors"
       highlight: "2.4 million free meals"
       text: "served in 2025-26 to tribal villagers, schoolchildren, young trainees and hospital patients around Palghar."
-      link: { label: "Govardhan Annakshetra", url: "/#work" }
+      link: { label: "Govardhan Annakshetra", url: "/projects/govardhan-annakshetra/" }
     - colour: "saffron"
       label: "Education"
       image: "journey-education.webp"
       image_alt: "Schoolgirls in blue uniforms holding new books in a classroom"
       highlight: "A 67% rise in learning scores"
       text: "across 102 tribal residential schools, as fellows, trained teachers and student-led schools took root."
-      link: { label: "Better Learning in Palghar's Tribal Residential Schools", url: "/#work" }
+      link: { label: "Better Learning in Palghar's Tribal Residential Schools", url: "/projects/ashramshala-education/" }
     - colour: "water"
       label: "Water"
       image: "journey-water.webp"
       image_alt: "Operators at the ultrafiltration water plant at Govardhan Ecovillage"
       highlight: "12,000 litres of safe water an hour"
       text: "at Govardhan Ecovillage, where borewell water now tests free of coliform bacteria."
-      link: { label: "Safe Drinking Water for Govardhan Ecovillage", url: "/#work" }
+      link: { label: "Safe Drinking Water for Govardhan Ecovillage", url: "/projects/safe-drinking-water/" }
     - colour: "rose"
       label: "Livelihoods"
       image: "journey-livelihoods.webp"
       image_alt: "A trainee sewing at the tailoring course, Govardhan Skill Centre"
       highlight: "65 of 80 women earning"
       text: "within three months of finishing their training in tailoring, beauty and computer skills."
-      link: { label: "Skills and Income for Rural and Tribal Women", url: "/#work" }
+      link: { label: "Skills and Income for Rural and Tribal Women", url: "/projects/womens-skills/" }
     - colour: "leaf"
       label: "Sacred water"
       image: "journey-kund.webp"
       image_alt: "Priya Kund in Barsana with restored banks and painted walls"
       highlight: "6 sacred kunds"
       text: "in Braj being brought back to life, with natural springs flowing again once the silt was cleared."
-      link: { label: "Braj Kunds", url: "/#work" }
+      link: { label: "Braj Kunds", url: "/our-work/#kunds" }
 
 numbers:
   title: "Lives behind the *numbers*"
@@ -101,7 +101,7 @@ numbers:
       suffix: "M"
       label: "Free meals in 2025-26"
       detail: "Cooked at Govardhan Annakshetra for villagers, schoolchildren, trainees and hospital patients across five talukas."
-      link: { label: "Govardhan Annakshetra", url: "/#work" }
+      link: { label: "Govardhan Annakshetra", url: "/projects/govardhan-annakshetra/" }
     - colour: "saffron"
       icon: "learning.webp"
       shows: "67%"
@@ -109,7 +109,7 @@ numbers:
       suffix: "%"
       label: "Rise in learning scores"
       detail: "Average scores rose from 19.85 to 33.16 across 102 tribal residential schools in Palghar."
-      link: { label: "Ashramshala education", url: "/#work" }
+      link: { label: "Ashramshala education", url: "/projects/ashramshala-education/" }
     - colour: "water"
       icon: "water.webp"
       shows: "12,000"
@@ -117,7 +117,7 @@ numbers:
       format: "international"
       label: "Litres of safe water an hour"
       detail: "Borewell water at Govardhan Ecovillage now tests free of coliform bacteria and E. coli."
-      link: { label: "Safe drinking water", url: "/#work" }
+      link: { label: "Safe drinking water", url: "/projects/safe-drinking-water/" }
     - colour: "leaf"
       icon: "temple.webp"
       shows: "8,11,071"
@@ -125,37 +125,37 @@ numbers:
       format: "indian"
       label: "Visitors in a year"
       detail: "Day visitors to Govardhan Ecovillage in 2024-25, up from about one lakh a year."
-      link: { label: "Cultural Centre", url: "/#work" }
+      link: { label: "Cultural Centre", url: "/projects/vedic-education-cultural-centre/" }
 
 work:
   label: "Our work"
   title: "Where we *serve*"
-  button: { label: "See all projects", link: "/#work" }
+  button: { label: "See all projects", link: "/our-work/" }
   tiles:
     - colour: "coral"
       image: "work-rural.webp"
       image_alt: "Women learning computer skills at Govardhan Skill Centre"
       title: "Rural Development at GEV"
       text: "Farming, water, schools, skills and care in the tribal villages of Palghar."
-      link: "/#work"
+      link: "/our-work/#rural"
     - colour: "leaf"
       image: "work-annakshetra.webp"
       image_alt: "A free meal being served at Govardhan Ecovillage"
       title: "Govardhan Annakshetra"
       text: "A community kitchen that served 2.4 million free meals in a single year."
-      link: "/#work"
+      link: "/our-work/#annakshetra"
     - colour: "saffron"
       image: "work-spiritual.webp"
       image_alt: "The carved ceiling and shrine of the renewed temple at Govardhan Ecovillage"
       title: "Spiritual & Culture"
       text: "Restoring sacred places and passing timeless values to the next generation."
-      link: "/#work"
+      link: "/our-work/#spiritual"
     - colour: "water"
       image: "work-kunds.webp"
       image_alt: "Pavan Sarovar, one of the sacred kunds of Braj"
       title: "Braj Kunds"
       text: "Reviving the sacred ponds of Braj with natural methods and local hands."
-      link: "/#work"
+      link: "/our-work/#kunds"
 
 quote:
   image: "quote-kitchen.webp"
@@ -175,26 +175,26 @@ recognition:
       label: "G20 · Recife, Brazil · 2024"
       title: "C20 Working Group"
       text: "A project we support at Govardhan EcoVillage co-led the C20 Working Group on Food Systems, Hunger and Poverty during Brazil's 2024 G20 Presidency."
-      link: { label: "Read more", url: "/#work" }
+      link: { label: "Read more", url: "/projects/c20-food-systems/" }
     - colour: "saffron"
       image: "stage-sushasan.webp"
       image_alt: "The Sushasan Mahotsav 2024 stage in New Delhi"
       label: "New Delhi · February 2024"
       title: "Sushasan Mahotsav"
       text: "With our support, Govardhan EcoVillage was invited to partner in a national festival of good governance, in recognition of its work on food security."
-      link: { label: "Read more", url: "/#work" }
+      link: { label: "Read more", url: "/projects/sushasan-mahotsav-2024/" }
     - colour: "leaf"
       image: "press-braj.webp"
       image_alt: "Visitors beside the new murals at Priya Kund"
       label: "In the press"
       title: "A Braj Break-through"
       text: "The revival of Braj's kunds was reported by *Braj Breaking*, a local Braj news site, which called restoring the kunds and cleaning their water the first need of the day."
-      link: { label: "Read the article", url: "/#work" }
+      link: { label: "Read the article", url: "/impact/#press" }
 
 closing:
   image: "band-temple-path.webp"
   title: "Walk this path *with us*"
   subtitle: "There is a place for you in this work"
   text: "Seven new projects are waiting for partners, from a school for 620 children to a sanctuary for Palghar's community dogs. Let's bring them to life together."
-  button: { label: "Partner with us", link: "/#contact" }
-  second_button: { label: "See upcoming projects", link: "/#work" }
+  button: { label: "Partner with us", link: "/get-involved/" }
+  second_button: { label: "See upcoming projects", link: "/our-work/#upcoming" }

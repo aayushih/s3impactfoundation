@@ -1,0 +1,29 @@
+---
+layout: base.njk
+title: Get Involved
+permalink: /get-involved/
+description: "Partner with S3 Impact Foundation, back an upcoming project or bring values education to your school."
+---
+{%- set g = pages.involved -%}
+{%- set ph = { title: g.title, intro: g.intro, image: "assets/img/" + g.image, image_alt: "", label: "Get involved" } -%}
+{% include "phero.njk" %}
+
+<section class="wrap ways">
+  {% for w in g.ways %}
+  <article class="way t-{{ w.colour }} rv" id="{{ w.id }}">
+    <span class="wn" aria-hidden="true">0{{ loop.index }}</span>
+    <div><p class="eyebrow">{{ w.label }}</p><h2>{{ w.title | em("k") | safe }}</h2><p>{{ w.text }}</p></div>
+    <a class="btn ink" href="{{ w.button.link }}">{{ w.button.label }} <span class="arr">→</span></a>
+  </article>
+  {% endfor %}
+</section>
+
+<section class="wgroup upcoming t-s3">
+  <div class="wrap">
+    <div class="ghead rv"><h2>{{ g.upcoming_title | em("k") | safe }}</h2></div>
+    <div class="pgrid">
+      {% for p in projects %}{% if p.upcoming %}<div class="rv">{% include "pcard.njk" %}</div>{% endif %}{% endfor %}
+    </div>
+    <p class="note rv">{{ g.donate_note }}</p>
+  </div>
+</section>

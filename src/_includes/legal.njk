@@ -1,0 +1,9 @@
+---
+layout: base.njk
+---
+{%- set ph = { title: heading, intro: intro, label: "Draft for review" } -%}
+{% include "phero.njk" %}
+<section class="wrap legal">
+  <p class="draftnote">This is a draft prepared for the foundation’s review. Please have it checked before launch.</p>
+  <div class="prose">{{ content | safe }}</div>
+</section>
