@@ -35,7 +35,7 @@ Email: **[PLACEHOLDER]** · Phone: **[PLACEHOLDER]**
 
 ### Hero
 **Headline:** Rooted in *service*. Reaching *every heart*, nourishing *every soul*.
-(Highlights: service in sky blue, every heart in coral, every soul in saffron.)
+(Highlights: service, every heart and every soul, all in gold.)
 
 **Slide 2:** Eyebrow: Govardhan Annakshetra. Heading: 2.4 million free meals, *in a single year*. Text: Served in 2025-26 to tribal villagers, schoolchildren, young trainees and hospital patients around Palghar. Button: See the story
 
@@ -89,7 +89,6 @@ Sacred spaces, timeless values and a deeper sense of purpose, so that every chan
 **6 sacred kunds** in Braj being brought back to life, with natural springs flowing again once the silt was cleared.
 *Link:* Braj Kunds
 
-**Closing line:** A family fed. A classroom alive. A pond running clear. This is what service looks like.
 
 ### Our Work (category tiles)
 - **Rural Development at GEV:** Farming, water, schools, skills and care in the tribal villages of Palghar.
