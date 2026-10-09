@@ -259,7 +259,7 @@
     let k = 0; photoTops.forEach((t, i) => { if (front >= t) k = i; });
     const tone = toneVar(blocks[k]);
     if (tone !== lastTone) { journey.style.setProperty('--cur', tone); lastTone = tone; }
-    if (!reduce && innerWidth >= 760) texts.forEach(t => { const b = t.parentElement.getBoundingClientRect(); const p = (b.top + b.height/2) / innerHeight - .5; t.style.setProperty('--py', (p * 110).toFixed(1) + 'px'); });
+    if (!reduce && innerWidth >= 760) texts.forEach(t => { const b = t.parentElement.getBoundingClientRect(); const p = Math.max(-.6, Math.min(.6, (b.top + b.height/2) / innerHeight - .5)); t.style.setProperty('--py', (p * 110).toFixed(1) + 'px'); });
   }
   let raf = 0;
   addEventListener('scroll', () => { if (!raf) raf = requestAnimationFrame(() => { raf = 0; tick(); }); }, {passive:true});
