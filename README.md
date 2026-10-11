@@ -17,7 +17,7 @@ If something goes wrong, Cloudflare keeps the last working version online and sh
 |---|---|
 | Email, phone, address, menu, footer links, tagline | `src/_data/site.yml` |
 | Everything on the home page (hero slides, mission, pillars, journey, numbers, work tiles, quote, recognition, closing band) | `src/_data/home.yml` |
-| About Us, Our Work, Impact, Get Involved and Contact pages (trustees, registration numbers, partners, press) | `src/_data/pages.yml` |
+| About Us, Our Work, Impact, Get Involved and Contact pages (trustees, transparency, partners, press) | `src/_data/pages.yml` |
 | The words on each project page | `content/projects.md` |
 | Which group a project sits in, and its pillar | `content/projects-meta.json` |
 | The photos on each project page | `src/_data/projectphotos.yml` (photos in `src/assets/projects/<project>/`) |

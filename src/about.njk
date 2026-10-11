@@ -94,14 +94,14 @@ description: "S3 Impact Foundation is a charitable foundation based in Mumbai, s
   </section>
 </div>
 
-<section class="wrap acc" id="accountability">
-  <div class="rv">
-    <p class="eyebrow">{{ a.accountability.label }}</p>
-    <h2>{{ a.accountability.title | em("k") | safe }}</h2>
-    <p class="lede">{{ a.accountability.text }}</p>
+<section class="wrap trans" id="transparency">
+  <div class="thead2 rv">
+    <p class="eyebrow">{{ a.transparency.label }}</p>
+    <h2>{{ a.transparency.title | em("k") | safe }}</h2>
+    <p class="lede">{{ a.transparency.text }}</p>
   </div>
-  <dl class="facts rv">
-    {% for f in a.accountability.items %}<div><dt>{{ f.label }}</dt><dd>{% if f.value %}{{ f.value }}{% else %}<span class="pending">To be added</span>{% endif %}</dd></div>{% endfor %}
-    <div class="wide"><dt>Reports</dt><dd><span class="pending">{{ a.accountability.reports_text }}</span></dd></div>
-  </dl>
+  <div class="tgrid">
+    {% for t in a.transparency.items %}<article class="tcard t-{{ t.colour }} rv" style="--d:{{ loop.index0 * 0.12 }}s"><h3>{{ t.title }}</h3><p>{{ t.text }}</p></article>{% endfor %}
+  </div>
+  <div class="btns center rv"><a class="btn ink" href="{{ a.transparency.button.link }}">{{ a.transparency.button.label }} <span class="arr">→</span></a></div>
 </section>

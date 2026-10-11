@@ -490,6 +490,19 @@ footer a:hover,footer a:focus-visible{color:#fff;background-size:100% 1px}
 .facts dt{font-size:.74rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
 .facts dd{margin:4px 0 0;color:var(--ink)}
 
+/* about: transparency */
+.trans{padding-block:clamp(72px,9vw,120px);scroll-margin-top:20px}
+.thead2{text-align:center;display:grid;justify-items:center;max-width:720px;margin:0 auto clamp(36px,4vw,52px)}
+.thead2 h2{font-size:clamp(2.1rem,4.2vw,3.3rem);margin-top:12px}
+.thead2 h2 em{color:var(--leaf-ink)}
+.thead2 .lede{margin-top:14px}
+.tgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(16px,2.4vw,28px)}
+.tcard{background:var(--paper);border-radius:12px 56px 12px 56px;padding:clamp(26px,3vw,36px);border-top:4px solid var(--tone)}
+.tcard h3{font-size:1.4rem;color:var(--tone-ink)}
+.tcard p{margin-top:12px;color:var(--muted)}
+.trans .btns{margin-top:36px}
+@media (max-width:900px){.tgrid{grid-template-columns:1fr}}
+
 /* impact */
 .inumbers{padding-top:clamp(72px,9vw,120px);background:var(--mist)}
 .inumbers .ngrid{row-gap:clamp(18px,2.4vw,30px)}

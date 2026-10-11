@@ -95,18 +95,21 @@ about:
         photo: ""
         bio: "Aayushi serves on the foundation’s board of trustees and helps shape its creative direction. [A fuller background to be added]"
 
-  accountability:
-    label: "Accountability"
-    title: "*Transparency* matters"
-    text: "We believe partners and the public should always be able to see who we are and how we work."
-    # Leave a value as "" to show "To be added"
+  transparency:
+    label: "Transparency"
+    title: "Open by *design*"
+    text: "We believe partners and the public should always be able to see how we work and what their support achieves."
     items:
-      - { label: "Registration number", value: "" }
-      - { label: "PAN", value: "" }
-      - { label: "12A registration", value: "" }
-      - { label: "80G registration", value: "" }
-      - { label: "CSR-1 registration", value: "" }
-    reports_text: "Annual reports and audited accounts will be shared here."
+      - colour: "leaf"
+        title: "Results we measure"
+        text: "Water is lab-tested, learning is tracked from baseline to endline and harvests are recorded every month. We share what we find, including what is still in progress."
+      - colour: "coral"
+        title: "Every project followed through"
+        text: "Each project is planned with its own budget, and followed through progress reports to a final report."
+      - colour: "saffron"
+        title: "Questions welcome"
+        text: "Our registration details are available to partners and donors who would like to see them, and we are always glad to explain how a project is run."
+    button: { label: "Ask us a question", link: "/contact/?interest=documents" }
 
 # ── OUR WORK ────────────────────────────────────────────────
 work:
@@ -301,6 +304,7 @@ contact:
     - { value: "project", label: "A specific project" }
     - { value: "values", label: "Values education" }
     - { value: "visit", label: "Visiting" }
+    - { value: "documents", label: "Registration details" }
     - { value: "other", label: "Something else" }
   button: "Send message"
   thanks_title: "Thank *you*"

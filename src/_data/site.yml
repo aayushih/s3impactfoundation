@@ -65,7 +65,7 @@ footer:
         - { label: "Vision & Mission", link: "/about/#mission" }
         - { label: "Our Values", link: "/about/#values" }
         - { label: "Our Trustees", link: "/about/#trustees" }
-        - { label: "Accountability", link: "/about/#accountability" }
+        - { label: "Transparency", link: "/about/#transparency" }
     - heading: "Our Work"
       links:
         - { label: "Rural Development at GEV", link: "/our-work/#rural" }
