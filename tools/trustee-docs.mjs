@@ -80,13 +80,18 @@ async function build(p, d) {
     ...d.focus.map(([t, c]) => P([run("■  ", { size: 15, color: c }), run(t, { size: 17, color: C.body })], { after: 40, line: 250 })),
   ];
 
-  const nameBlock = [
-    P(run(p.name, { size: 52, color: C.ink }), { after: 20, line: null }),
-    ...(p.other_name ? [P(run(p.other_name, { italics: true, size: 26, color: C.s3 }), { after: 80 })] : []),
-    table([new TableRow({ children: [cell([P(run(p.role.toUpperCase(), { bold: true, size: 16, color: "FFFFFF", spacing: 40 }), { after: 0, line: 240 })], 3000, { fill: tone, pad: 70, padX: 180 })] })], [3000]),
-    P([], { after: 160 }),
-    P(rich(d.lead, { size: 23, color: C.ink, strong: tone }), { after: 220, line: 320 }),
-  ];
+  const PW = 2600; // portrait column
+  const nameBlock = [table([new TableRow({ children: [
+    cell([
+      P(run(p.name, { size: 52, color: C.ink }), { after: 20, line: null }),
+      ...(p.other_name ? [P(run(p.other_name, { italics: true, size: 26, color: C.s3 }), { after: 80 })] : []),
+      table([new TableRow({ children: [cell([P(run(p.role.toUpperCase(), { bold: true, size: 16, color: "FFFFFF", spacing: 40 }), { after: 0, line: 240 })], 3000, { fill: tone, pad: 70, padX: 180 })] })], [3000]),
+      P([], { after: 160 }),
+      P(rich(d.lead, { size: 23, color: C.ink, strong: tone }), { after: 0, line: 320 }),
+    ], W - PW - 300, { padX: 0, pad: 0 }),
+    cell([P([], { after: 0 })], 300, { padX: 0, pad: 0 }),
+    cell([P(await photo(d.portrait, 130, 163), { after: 0, line: null })], PW, { padX: 0, pad: 0, topColor: tone }),
+  ] })], [W - PW - 300, 300, PW]), P([], { after: 200 })];
 
   const banner = P(await photo(d.photo, 642, 190), { after: 60, line: null });
   const caption = P(run(d.caption, { italics: true, size: 15, color: C.muted }), { after: 220 });
@@ -136,6 +141,7 @@ const bold = (text, phrases) => phrases.reduce((t, ph) => t.replace(ph, `**${ph}
 
 await build(harneet, {
   tone: C.coral,
+  portrait: "content/design-assets/portrait-harneet.jpg",
   lead: bold(harneet.bio, ["sets the direction of S3 Impact Foundation", "three decades of building and leading a national business"]),
   photo: "content/design-assets/architecture/GEV-temple-entrance-and-fountain-at-dusk.jpg",
   caption: "The renewed temple at Govardhan Ecovillage, one of the projects Harneet has supported since 2022.",
@@ -153,6 +159,7 @@ await build(harneet, {
 
 await build(aayushi, {
   tone: C.s3,
+  portrait: "content/design-assets/portrait-aayushi.jpg",
   lead: bold(aayushi.bio, ["shape its creative direction", "Central Saint Martins", "from large installations and print campaigns to websites and mobile apps"]),
   photo: "content/design-assets/architecture/GEV-temple-carved-ceiling-and-shrine.jpg",
   caption: "Craft and detail at the renewed temple, Govardhan Ecovillage.",
