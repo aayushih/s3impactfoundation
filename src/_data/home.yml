@@ -142,7 +142,7 @@ work:
       image: "work-annakshetra.webp"
       image_alt: "A free meal being served at Govardhan Ecovillage"
       title: "Govardhan Annakshetra"
-      text: "A community kitchen that served 2.4 million free meals in a single year."
+      text: "A community kitchen that served 2.4 million free sanctified meals in a single year."
       link: "/our-work/#annakshetra"
     - colour: "saffron"
       image: "work-spiritual.webp"
@@ -181,7 +181,7 @@ recognition:
       image_alt: "The Sushasan Mahotsav 2024 stage in New Delhi"
       label: "New Delhi · February 2024"
       title: "Sushasan Mahotsav"
-      text: "With our support, Govardhan EcoVillage was invited to partner in a national festival of good governance, in recognition of its work on food security."
+      text: "With our support, Govardhan EcoVillage was invited to partner in a national festival of good governance, in recognition of its work on food security, serving prasadam (sanctified meals) to about 1,500 people."
       link: { label: "Read more", url: "/projects/sushasan-mahotsav-2024/" }
     - colour: "leaf"
       image: "press-braj.webp"

@@ -91,7 +91,7 @@ const pillars = table([new TableRow({ children: a.why.pillars.map((pl, i) => cel
 // one line per work area (the same lines as the home page tiles)
 const oneLine = {
   rural: "Farming, water, schools, skills and care in the tribal villages of Palghar.",
-  annakshetra: "A community kitchen that served 2.4 million free meals in a single year.",
+  annakshetra: "A community kitchen that served 2.4 million free sanctified meals in a single year.",
   spiritual: "Restoring sacred places and passing timeless values to the next generation.",
   kunds: "Reviving the sacred ponds of Braj with natural methods and local hands.",
   beyond: "A school campus in Pune and a charitable hospital in Vrindavan.",
