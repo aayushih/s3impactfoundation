@@ -7,7 +7,7 @@ import yaml from "js-yaml";
 import sharp from "sharp";
 import {
   Document, Packer, Paragraph, TextRun, ImageRun, Table, TableRow, TableCell, WidthType, BorderStyle,
-  ShadingType, AlignmentType, Footer, VerticalAlign, TableLayoutType, TabStopType,
+  ShadingType, AlignmentType, Header, Footer, VerticalAlign, TableLayoutType, TabStopType, HeightRule,
 } from "docx";
 
 const root = path.resolve(import.meta.dirname, "..");
@@ -54,14 +54,23 @@ async function img(file, width, height) {
 
 // ── page 1: who we are and what we do ───────────────────────
 const a = pages.about;
-const logo = new ImageRun({ type: "png", data: fs.readFileSync(path.join(root, "src/assets/logo/s3-impact-logo-original.png")), transformation: { width: 170, height: 66 } });
+const logoPng = await sharp(path.join(root, "src/assets/logo/s3-logo-full.svg"), { density: 400 }).png().toBuffer();
+const logo = new ImageRun({ type: "png", data: logoPng, transformation: { width: 196, height: 77 } });
 const month = new Date().toLocaleDateString("en-GB", { month: "long", year: "numeric" });
 
-const top = table([new TableRow({ children: [
-  cell([P(logo, { after: 0, line: null })], 4000, { padX: 0, v: VerticalAlign.CENTER }),
-  cell([P(run("ORGANISATION PROFILE", { bold: true, size: 15, color: C.s3, spacing: 50 }), { align: AlignmentType.RIGHT, after: 20 }),
-        P(run(month, { size: 16, color: C.muted }), { align: AlignmentType.RIGHT, after: 0 })], W - 4000, { padX: 0, v: VerticalAlign.CENTER }),
-] })], [4000, W - 4000]);
+// Dark blue bands run edge to edge at the top and bottom of every page
+const PAGE_W = 11906, SIDE = 1134;
+const band = (cells, widths, height) => new Table({ width: { size: PAGE_W, type: WidthType.DXA }, columnWidths: widths, layout: TableLayoutType.FIXED,
+  indent: { size: -SIDE, type: WidthType.DXA }, borders: noBorders,
+  rows: [new TableRow({ height: { value: height, rule: HeightRule.EXACT }, children: cells })] });
+const bandCell = (children, width, o = {}) => new TableCell({ width: { size: width, type: WidthType.DXA }, children, verticalAlign: VerticalAlign.CENTER,
+  shading: { type: ShadingType.CLEAR, color: "auto", fill: C.indigo }, margins: { top: 0, bottom: 0, left: o.left ?? 0, right: o.right ?? 0 },
+  borders: { top: none, bottom: none, left: none, right: none } });
+const headerBand = band([
+  bandCell([P(logo, { after: 0, line: null })], PAGE_W / 2, { left: SIDE }),
+  bandCell([P(run("ORGANISATION PROFILE", { bold: true, size: 15, color: C.sky, spacing: 50 }), { align: AlignmentType.RIGHT, after: 30 }),
+            P(run(month, { size: 16, color: "C9CEE0" }), { align: AlignmentType.RIGHT, after: 0 })], PAGE_W / 2, { right: SIDE }),
+], [PAGE_W / 2, PAGE_W / 2], 1500);
 
 const hero = table([new TableRow({ children: [
   cell([
@@ -116,17 +125,20 @@ const trustee = (t) => [
 const up = projects.filter((p) => p.upcoming);
 const shortName = (t) => t.replace(/:.*/, "").replace(/^Reviving Sacred Ponds of Braj/, "Braj kunds: Jal Vihar, Kamal and Vihval Kund");
 
-const v = (val, label) => (val ? run(val, { size: 18, color: "FFFFFF" }) : pending(`${label} to be added`));
-const contact = table([new TableRow({ children: [cell([
-  P(rich("Walk this path *with us*", { size: 30, color: "FFFFFF", accent: C.sky, font: HEAD }), { after: 60 }),
-  P(run(plain(pages.involved.ways[0].text), { size: 18, color: "E3E6F0" }), { after: 140, line: 270 }),
-  ...[["Visit", run(site.contact.address, { size: 18, color: "FFFFFF" })], ["Email", v(site.contact.email, "Email")], ["Phone", v(site.contact.phone, "Phone")], ["Website", site.url && !/example\.org/.test(site.url) ? run(site.url.replace(/^https?:\/\//, ""), { size: 18, color: "FFFFFF" }) : pending("Web address to be added")]]
-    .map(([k, val]) => new Paragraph({ spacing: { after: 50 }, tabStops: [{ type: TabStopType.LEFT, position: 1100 }],
-      children: [run(k.toUpperCase(), { bold: true, size: 14, color: C.sky, spacing: 30 }), new TextRun({ text: "\t" }), val] })),
-], W, { fill: C.indigo, pad: 260, padX: 320 })] })], [W]);
+const v = (val, label) => (val ? run(val, { size: 16, color: "FFFFFF" }) : pending(`${label} to be added`));
+const web = site.url && !/example\.org/.test(site.url) ? site.url.replace(/^https?:\/\//, "") : "";
+const detail = (k, val) => P([run(k.toUpperCase() + "   ", { bold: true, size: 13, color: C.sky, spacing: 30 }), val], { after: 30, line: 240 });
+const footerBand = band([
+  bandCell([detail("Visit", run(site.contact.address, { size: 16, color: "FFFFFF" })), detail("Phone", v(site.contact.phone, "Phone"))], 7100, { left: SIDE }),
+  bandCell([detail("Email", v(site.contact.email, "Email")), detail("Web", v(web, "Web address"))], PAGE_W - 7100, { right: SIDE }),
+], [7100, PAGE_W - 7100], 1000);
+const closing = [
+  P(rich("Walk this path *with us*", { size: 30, color: C.ink, accent: C.s3, font: HEAD }), { before: 260, after: 60, keepNext: true }),
+  P(run(plain(pages.involved.ways[0].text), { size: 19, color: C.body }), { after: 0, line: 280 }),
+];
 
 const children = [
-  top, P([], { after: 160 }), hero, P([], { after: 160 }), pillars,
+  hero, P([], { after: 160 }), pillars,
   eyebrow("What we do", C.s3, 260),
   P(run(plain(pages.work.intro), { size: 18, color: C.muted }), { after: 100, line: 270 }),
   areas,
@@ -146,15 +158,16 @@ const children = [
   eyebrow("Looking ahead", C.s3, 160),
   P(run(plain(pages.work.upcoming.intro), { size: 18, color: C.muted }), { after: 60 }),
   P(run(up.map((p) => shortName(p.title)).join("  ·  "), { size: 18, color: C.ink }), { after: 200, line: 280 }),
-  contact,
+  ...closing,
 ];
 
 const doc = new Document({
   creator: site.name, title: `${site.name}: Profile`, description: site.description,
   styles: { default: { document: { run: { font: BODY, size: 20, color: C.body } } } },
   sections: [{
-    properties: { page: { margin: { top: 900, bottom: 900, left: 1134, right: 1134 } } },
-    footers: { default: new Footer({ children: [P(run(`${site.name}  ·  ${site.tagline}`, { size: 14, color: C.muted }), { align: AlignmentType.CENTER, after: 0 })] }) },
+    properties: { page: { margin: { top: 1900, bottom: 1300, left: SIDE, right: SIDE, header: 0, footer: 0 } } },
+    headers: { default: new Header({ children: [headerBand] }) },
+    footers: { default: new Footer({ children: [footerBand] }) },
     children,
   }],
 });
