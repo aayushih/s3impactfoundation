@@ -112,13 +112,23 @@ async function build(p, d) {
     ], tlW[i], { topColor: col, pad: 130, padX: 140, fill: C.mist })) })], tlW),
   ];
 
+  // optional photo with a short note (e.g. a recognition), on page 2
+  const extra = d.extra ? [
+    label(d.extra.label, tone, 240),
+    table([new TableRow({ cantSplit: true, children: [
+      cell([P(await photo(d.extra.photo, 120, 160), { after: 0, line: null })], 2800, { padX: 0, pad: 0 }),
+      cell([P([], { after: 0 })], 300, { padX: 0, pad: 0 }),
+      cell([P(rich(d.extra.title, { size: 26, color: C.ink }), { after: 100, line: 280 }), P(rich(d.extra.text, { size: 19, color: C.body, strong: C.ink }), { after: 0, line: 300 })], W - 3100, { padX: 0, pad: 60, v: VerticalAlign.CENTER }),
+    ] })], [2800, 300, W - 3100]),
+  ] : [];
+
   const quote = [
-    P([], { after: 260 }),
+    P([], { after: d.extra ? 160 : 260 }),
     table([new TableRow({ cantSplit: true, children: [cell([
       P(run("“", { size: 80, color: tone }), { after: 0, line: 300 }),
       P(rich(d.quote, { size: 22, color: C.ink, strong: C.ink, accent: tone }), { after: 0, line: 320 }),
     ], W, { fill: C.skySoft, leftColor: tone, pad: 240, padX: 360 })] })], [W]),
-    P([], { after: 280 }),
+    P([], { after: d.extra ? 160 : 280 }),
     closingBand(),
   ];
 
@@ -126,7 +136,7 @@ async function build(p, d) {
     creator: site.name, title: `${p.name}: Trustee Profile`,
     styles: { default: { document: { run: { font: FONT, size: 20, color: C.body } } } },
     sections: [{ properties: { page: { margin: { top: 1800, bottom: 900, left: SIDE, right: SIDE } } },
-      children: [headerBand(), ...nameBlock, banner, caption, columns, ...timeline, ...quote] }],
+      children: [headerBand(), ...nameBlock, banner, caption, columns, ...timeline, ...extra, ...quote] }],
   });
   const out = path.join(root, `content/Trustee-Profile-${p.name.replace(/\s+/g, "-")}.docx`);
   fs.writeFileSync(out, await Packer.toBuffer(doc));
@@ -145,6 +155,12 @@ await build(harneet, {
   lead: bold(harneet.bio, ["sets the direction of S3 Impact Foundation", "three decades of building and leading a national business"]),
   photo: "content/design-assets/harneet-site-visit.jpg",
   bannerH: 250,
+  extra: {
+    label: "Recognition",
+    photo: "content/design-assets/harneet-priya-kund-certificate.jpg",
+    title: "Priya Kund, Barsana",
+    text: "In November 2024 the **Uttar Pradesh Braj Tirtha Vikas Parishad** awarded a **Certificate of Completion and Appreciation** to Shri Chaitanya Health & Care Trust, Govardhan Ecovillage, for the **eco-restoration of Priya Kund** (Pili Pokhar) in Barsana, the revival Harneet initiated and coordinated. The Parishad recognised the work as a lasting contribution to preserving the heritage of Braj.",
+  },
   caption: "Harneet on site with the project team, reviewing restoration plans.",
   paragraphs: [
     bold(harneet.more[0], ["MBA in International Marketing", "founded Pace Setters Business Solutions", "more than 5,000 people"]),
