@@ -40,9 +40,29 @@ const cell = (children, width, o = {}) => new TableCell({ width: { size: width, 
 const table = (rows, widths, o = {}) => new Table({ width: { size: widths.reduce((a, b) => a + b, 0), type: WidthType.DXA }, columnWidths: widths, layout: TableLayoutType.FIXED, borders: noBorders, rows, ...o });
 const split = (n, total = W) => Array(n).fill(Math.floor(total / n)).map((w, i, a) => (i === a.length - 1 ? total - w * (a.length - 1) : w));
 
-async function photo(file, width, height) {
-  const buf = await sharp(path.join(root, file)).rotate().resize({ width: width * 3, height: height * 3, fit: "cover", position: "attention" }).jpeg({ quality: 86 }).toBuffer();
-  return new ImageRun({ type: "jpg", data: buf, transformation: { width, height } });
+// leaf shape, as on the website: small radius on two corners, large on the other two; `flip` mirrors it
+const leafMask = (w, h, flip, big = 44 * 3, small = 5 * 3) => {
+  const [tl, tr, br, bl] = flip ? [big, small, big, small] : [small, big, small, big];
+  return Buffer.from(`<svg xmlns="http://www.w3.org/2000/svg" width="${w}" height="${h}"><path d="M${tl},0 H${w - tr} A${tr},${tr} 0 0 1 ${w},${tr} V${h - br} A${br},${br} 0 0 1 ${w - br},${h} H${bl} A${bl},${bl} 0 0 1 0,${h - bl} V${tl} A${tl},${tl} 0 0 1 ${tl},0 Z"/></svg>`);
+};
+const leaf = (img, w, h, flip) => sharp(img).ensureAlpha().composite([{ input: leafMask(w, h, flip), blend: "dest-in" }]).png().toBuffer();
+
+// shape: "leaf" for one photo; "pair" for a banner of two photos split by a white gap, shaped as mirror images
+async function photo(file, width, height, shape, gap) {
+  const img = sharp(path.join(root, file)).rotate().resize({ width: width * 3, height: height * 3, fit: "cover", position: "attention" });
+  if (!shape) return new ImageRun({ type: "jpg", data: await img.jpeg({ quality: 86 }).toBuffer(), transformation: { width, height } });
+  const raw = await img.clone().raw().toBuffer({ resolveWithObject: true });
+  const { width: w, height: h, channels: ch } = raw.info;
+  let data;
+  if (shape === "pair") {
+    // gap: the white strip between the two photos, in the source file's pixels
+    const src = await sharp(path.join(root, file)).metadata();
+    const g0 = Math.round(gap[0] * w / src.width), g1 = Math.round(gap[1] * w / src.width);
+    const half = async (left, cw, flip) => ({ input: await leaf(await sharp(raw.data, { raw: raw.info }).extract({ left, top: 0, width: cw, height: h }).png().toBuffer(), cw, h, flip), left, top: 0 });
+    data = await sharp({ create: { width: w, height: h, channels: 4, background: { r: 0, g: 0, b: 0, alpha: 0 } } })
+      .composite([await half(0, g0, false), await half(g1, w - g1, true)]).png().toBuffer();
+  } else data = await leaf(await img.png().toBuffer(), w, h, false);
+  return new ImageRun({ type: "png", data, transformation: { width, height } });
 }
 const logoPng = await sharp(path.join(root, "src/assets/logo/s3-logo-full.svg"), { density: 400 }).png().toBuffer();
 
@@ -90,10 +110,10 @@ async function build(p, d) {
       P(rich(d.lead, { size: 23, color: C.ink, strong: tone }), { after: 0, line: 320 }),
     ], W - PW - 300, { padX: 0, pad: 0 }),
     cell([P([], { after: 0 })], 300, { padX: 0, pad: 0 }),
-    cell([P(await photo(d.portrait, 150, 200), { after: 0, line: null, align: AlignmentType.RIGHT })], PW, { padX: 0, pad: 0 }),
+    cell([P(await photo(d.portrait, 150, 200, "leaf"), { after: 0, line: null, align: AlignmentType.RIGHT })], PW, { padX: 0, pad: 0 }),
   ] })], [W - PW - 300, 300, PW]), P([], { after: 200 })];
 
-  const banner = P(await photo(d.photo, 642, d.bannerH || 190), { after: 60, line: null });
+  const banner = P(await photo(d.photo, 642, d.bannerH || 190, "pair", d.gap), { after: 60, line: null });
   const caption = P(run(d.caption, { italics: true, size: 15, color: C.muted }), { after: 220 });
 
   const main = d.paragraphs.map((t) => P(rich(t, { size: 20, color: C.body, strong: C.ink }), { after: 150, line: 300 }));
@@ -151,6 +171,7 @@ await build(harneet, {
   portrait: "content/design-assets/portrait-harneet.jpg",
   lead: bold(harneet.bio, ["sets the direction of S3 Impact Foundation", "three decades of building and leading a national business"]),
   photo: "content/design-assets/harneet-banner.jpg",
+  gap: [1356, 1366],
   bannerH: 250,
   caption: "Left: on site with the project team, reviewing restoration plans. Right: with the Uttar Pradesh Braj Tirtha Vikas Parishad’s certificate for the eco-restoration of Priya Kund, alongside His Grace Gaurāṅga Dās and His Holiness Rādhānāth Swāmī Mahārāja.",
   paragraphs: [
@@ -170,6 +191,7 @@ await build(aayushi, {
   portrait: "content/design-assets/portrait-aayushi.jpg",
   lead: bold(aayushi.bio, ["shape its creative direction", "Central Saint Martins", "from large installations and print campaigns to websites and mobile apps"]),
   photo: "content/design-assets/aayushi-work-banner.jpg",
+  gap: [958, 968],
   caption: "Aayushi’s work: infographic panels on the 17 SDGs for Govardhan Ecovillage, and the Manthan Shivir book.",
   paragraphs: [
     bold(aayushi.more[0], ["First Class Honours in Graphic Communication Design", "Central Saint Martins, University of the Arts London", "IBM Enterprise Design Thinking Practitioner"]),
