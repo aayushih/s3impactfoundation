@@ -122,13 +122,10 @@ async function build(p, d) {
     ] })], [2800, 300, W - 3100]),
   ] : [];
 
+  // the closing paragraph, as normal text with its key phrases in bold
   const quote = [
-    P([], { after: d.extra ? 160 : 260 }),
-    table([new TableRow({ cantSplit: true, children: [cell([
-      P(run("“", { size: 80, color: tone }), { after: 0, line: 300 }),
-      P(rich(d.quote, { size: 22, color: C.ink, strong: C.ink, accent: tone }), { after: 0, line: 320 }),
-    ], W, { fill: C.skySoft, leftColor: tone, pad: d.extra ? 170 : 240, padX: 360 })] })], [W]),
-    P([], { after: d.extra ? 60 : 280 }),
+    P(rich(d.quote, { size: 20, color: C.body, strong: C.ink, accent: tone }), { before: 260, after: 0, line: 300 }),
+    P([], { after: 280 }),
     closingBand(),
   ];
 
@@ -161,7 +158,7 @@ await build(harneet, {
     bold(harneet.more[1], ["dedicating the profits of her company to service"]),
     bold(harneet.more[2], ["CEO of the Social Impact Initiatives of ISKCON Govardhan Ecovillage", "more than 7.18 million free meals", "Priya Kund and Prem Sarovar are complete", "Centre of Excellence for electric-vehicle skilling"]),
   ],
-  quote: harneet.more[3],
+  quote: bold(harneet.more[3], ["decisive, hands-on leader", "boardroom discipline and on-ground compassion"]),
   stats: [["1993", "Founded Pace Setters Business Solutions", C.coral], ["5,000+", "People in the company she leads", C.saffron], ["7.18M", "Free meals served by Govardhan Annakshetra", C.leaf], ["2 + 5", "Kunds revived in Braj, with five more under way", C.water]],
   education: [["MBA,", "International Marketing, Faculty of Management Studies, M.S. University of Baroda"], ["B.Sc.,", "Physics, Chemistry and Mathematics"]],
   focus: [["Nutrition and food security", C.coral], ["Water and sacred ponds", C.water], ["Skills and livelihoods", C.leaf], ["Heritage and temples", C.saffron], ["Institution building", C.s3]],
@@ -180,7 +177,7 @@ await build(aayushi, {
     bold(aayushi.more[2], ["Design Lead at Govardhan Ecovillage", "more than 17 initiatives", "website for Govardhan Annakshetra", "raised their traffic by 70%"]),
     bold(aayushi.more[3], ["Strategic Creative Lead at Healy World GmbH", "redesign of its website", "visual identity", "graphics and marketing teams"]),
   ],
-  quote: aayushi.more[4],
+  quote: bold(aayushi.more[4], ["human-centred design", "a global eye and a deep respect for the communities it serves"]),
   stats: [["1st", "First Class Honours, Central Saint Martins", C.s3], ["17+", "Initiatives aligned with the UN Sustainable Development Goals", C.leaf], ["70%", "Rise in traffic after the websites’ redesign", C.coral], ["IBM", "Certified Enterprise Design Thinking Practitioner", C.saffron]],
   education: [["BA (Hons),", "Graphic Communication Design, Central Saint Martins, UAL"], ["Foundation Diploma,", "Art and Design, with Distinction"]],
   focus: [["Brand strategy and identity", C.s3], ["Websites and mobile apps", C.water], ["Campaigns and social media", C.coral], ["Reports and infographics", C.leaf], ["Installations and placemaking", C.saffron]],
