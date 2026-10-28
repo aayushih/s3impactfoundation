@@ -93,7 +93,7 @@ async function build(p, d) {
     cell([P(await photo(d.portrait, 130, 163), { after: 0, line: null })], PW, { padX: 0, pad: 0, topColor: tone }),
   ] })], [W - PW - 300, 300, PW]), P([], { after: 200 })];
 
-  const banner = P(await photo(d.photo, 642, 190), { after: 60, line: null });
+  const banner = P(await photo(d.photo, 642, d.bannerH || 190), { after: 60, line: null });
   const caption = P(run(d.caption, { italics: true, size: 15, color: C.muted }), { after: 220 });
 
   const main = d.paragraphs.map((t) => P(rich(t, { size: 20, color: C.body, strong: C.ink }), { after: 150, line: 300 }));
@@ -143,8 +143,9 @@ await build(harneet, {
   tone: C.coral,
   portrait: "content/design-assets/portrait-harneet.jpg",
   lead: bold(harneet.bio, ["sets the direction of S3 Impact Foundation", "three decades of building and leading a national business"]),
-  photo: "content/design-assets/architecture/GEV-temple-entrance-and-fountain-at-dusk.jpg",
-  caption: "The renewed temple at Govardhan Ecovillage, one of the projects Harneet has supported since 2022.",
+  photo: "content/design-assets/harneet-site-visit.jpg",
+  bannerH: 250,
+  caption: "Harneet on site with the project team, reviewing restoration plans.",
   paragraphs: [
     bold(harneet.more[0], ["MBA in International Marketing", "founded Pace Setters Business Solutions", "more than 5,000 people"]),
     bold(harneet.more[1], ["dedicating the profits of her company to service"]),
@@ -161,8 +162,8 @@ await build(aayushi, {
   tone: C.s3,
   portrait: "content/design-assets/portrait-aayushi.jpg",
   lead: bold(aayushi.bio, ["shape its creative direction", "Central Saint Martins", "from large installations and print campaigns to websites and mobile apps"]),
-  photo: "content/design-assets/architecture/GEV-temple-carved-ceiling-and-shrine.jpg",
-  caption: "Craft and detail at the renewed temple, Govardhan Ecovillage.",
+  photo: "content/design-assets/aayushi-work-banner.jpg",
+  caption: "Aayushi’s work, from left: infographic panels on the 17 SDGs for Govardhan Ecovillage, a community mural, the Manthan Shivir book and the Simple Vedas app.",
   paragraphs: [
     bold(aayushi.more[0], ["First Class Honours in Graphic Communication Design", "Central Saint Martins, University of the Arts London", "IBM Enterprise Design Thinking Practitioner"]),
     bold(aayushi.more[1], ["brand strategist", "Chief Creative Officer of Simple Vedas"]),
