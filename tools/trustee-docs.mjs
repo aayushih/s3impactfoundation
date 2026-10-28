@@ -153,16 +153,9 @@ await build(harneet, {
   tone: C.coral,
   portrait: "content/design-assets/portrait-harneet.jpg",
   lead: bold(harneet.bio, ["sets the direction of S3 Impact Foundation", "three decades of building and leading a national business"]),
-  photo: "content/design-assets/harneet-site-visit.jpg",
+  photo: "content/design-assets/harneet-banner.jpg",
   bannerH: 250,
-  extra: {
-    label: "Recognition",
-    photo: "content/design-assets/harneet-priya-kund-certificate.jpg",
-    title: "Priya Kund, Barsana",
-    caption: "From left: His Grace Gaurāṅga Dās, His Holiness Rādhānāth Swāmī Mahārāja and Harneet.",
-    text: "In November 2024 the **Uttar Pradesh Braj Tirtha Vikas Parishad** awarded a **Certificate of Completion and Appreciation** to Shri Chaitanya Health & Care Trust, Govardhan Ecovillage, for the **eco-restoration of Priya Kund** (Pili Pokhar) in Barsana, the revival Harneet initiated and coordinated. The Parishad recognised the work as a lasting contribution to preserving the heritage of Braj.",
-  },
-  caption: "Harneet on site with the project team, reviewing restoration plans.",
+  caption: "Left: on site with the project team, reviewing restoration plans. Right: with the Uttar Pradesh Braj Tirtha Vikas Parishad’s certificate for the eco-restoration of Priya Kund, alongside His Grace Gaurāṅga Dās and His Holiness Rādhānāth Swāmī Mahārāja.",
   paragraphs: [
     bold(harneet.more[0], ["MBA in International Marketing", "founded Pace Setters Business Solutions", "more than 5,000 people"]),
     bold(harneet.more[1], ["dedicating the profits of her company to service"]),
