@@ -13,7 +13,7 @@ pillar_colours:
 # ── ABOUT US ────────────────────────────────────────────────
 about:
   title: "About *S3*"
-  intro: "S3 Impact Foundation is a charitable foundation based in Mumbai. We serve people, communities and the land, and we stay beside each project long enough to see the lives it changes."
+  intro: "S3 Impact Foundation is a charitable foundation based in Mumbai. We turn compassion into change that can be seen, measured and sustained, and we stand beside each project long enough to see the lives it transforms."
   image: "work-spiritual.webp"
   image_alt: "The carved ceiling and shrine of the renewed temple at Govardhan Ecovillage"
 
@@ -39,7 +39,7 @@ about:
     label: "How we serve"
     title: "We give, and we *stay*"
     items:
-      - { colour: "coral", title: "We give, and we stay", text: "We support trusted partners on the ground and walk with each project from the first survey to the final report." }
+      - { colour: "coral", title: "With every project, start to finish", text: "We back trusted partners on the ground and stay closely involved, from the first survey to the final report." }
       - { colour: "leaf", title: "We see the results", text: "Water is lab-tested, learning is tracked from baseline to endline, and harvests are recorded every month." }
       - { colour: "saffron", title: "We begin close to home", text: "Many of our projects start in the villages around Govardhan Ecovillage, where we can see needs clearly and respond with care." }
 
@@ -127,7 +127,7 @@ about:
 # ── OUR WORK ────────────────────────────────────────────────
 work:
   title: "Our *Work*"
-  intro: "S3 Impact Foundation invests in projects that serve people, communities and the land: from food and farming to education, water, health, elder care and culture. Here are the projects the Foundation has carried out, and those it is preparing to support next."
+  intro: "S3 Impact Foundation invests in work that feeds, teaches, heals and restores: from food and farming to education, water, health, elder care and culture. Here are the projects the Foundation has carried out, and those it is preparing to support next."
   image: "work-rural.webp"
   image_alt: "Women learning computer skills at Govardhan Skill Centre"
   # The groups on the page, in order. "id" must match the menu links (/our-work/#id).
