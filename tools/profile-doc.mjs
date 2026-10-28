@@ -120,7 +120,7 @@ const v = (val, label) => (val ? run(val, { size: 18, color: "FFFFFF" }) : pendi
 const contact = table([new TableRow({ children: [cell([
   P(rich("Walk this path *with us*", { size: 30, color: "FFFFFF", accent: C.sky, font: HEAD }), { after: 60 }),
   P(run(plain(pages.involved.ways[0].text), { size: 18, color: "E3E6F0" }), { after: 140, line: 270 }),
-  ...[["Visit", run(site.contact.address, { size: 18, color: "FFFFFF" })], ["Email", v(site.contact.email, "Email")], ["Phone", v(site.contact.phone, "Phone")], ["Website", pending("Web address to be added")]]
+  ...[["Visit", run(site.contact.address, { size: 18, color: "FFFFFF" })], ["Email", v(site.contact.email, "Email")], ["Phone", v(site.contact.phone, "Phone")], ["Website", site.url && !/example\.org/.test(site.url) ? run(site.url.replace(/^https?:\/\//, ""), { size: 18, color: "FFFFFF" }) : pending("Web address to be added")]]
     .map(([k, val]) => new Paragraph({ spacing: { after: 50 }, tabStops: [{ type: TabStopType.LEFT, position: 1100 }],
       children: [run(k.toUpperCase(), { bold: true, size: 14, color: C.sky, spacing: 30 }), new TextRun({ text: "\t" }), val] })),
 ], W, { fill: C.indigo, pad: 260, padX: 320 })] })], [W]);
