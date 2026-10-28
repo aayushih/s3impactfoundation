@@ -159,7 +159,7 @@ The long-term aim is ambitious: the plan is for the farm to meet more than half 
 
 Infrastructure built on 6.145 acres by June 2026
 
-“I am deeply grateful to S3 Impact Foundation for their generous support of the Food Self-Sufficiency Project at Govardhan Ecovillage.” — Gauranga Das, Govardhan Ecovillage
+“I am deeply grateful to S3 Impact Foundation for their generous support of the Food Self-Sufficiency Project at Govardhan Ecovillage.” — His Grace Gaurāṅga Dās, Govardhan Ecovillage
 
 ## A New Home for Bhaktivedanta Model School
 
@@ -266,7 +266,7 @@ The G20 brings together the world’s largest economies. Alongside it, the C20 (
 
 S3 Impact Foundation supported this project, which took on a leading role in this work. The C20’s Brazilian hosts chose Govardhan EcoVillage to co-facilitate Working Group 2 alongside a Brazilian organisation. The role built on Govardhan EcoVillage’s work on “Food and LiFE” during India’s own G20 Presidency in 2023.
 
-At the C20 inception meeting in Recife, Pernambuco, HG Gauranga Das, Director of Govardhan EcoVillage, represented India and co-led the working group session. He spoke about food, fairness and sustainability rooted in values. He also put forward policy ideas, including universal basic income, stronger social safety nets, international cooperation and action on tax havens.
+At the C20 inception meeting in Recife, Pernambuco, His Grace Gaurāṅga Dās, Director of Govardhan EcoVillage, represented India and co-led the working group session. He spoke about food, fairness and sustainability rooted in values. He also put forward policy ideas, including universal basic income, stronger social safety nets, international cooperation and action on tax havens.
 
 A three-year plan sets out how a small secretariat would support the working group: mapping partners and reviewing research in the first year, holding major and regional consultations and drafting policy briefs in the second, and publishing an action plan in the third.
 
@@ -282,7 +282,7 @@ With support from S3 Impact Foundation, the project helped lead civil-society di
 
 3-year secretariat plan set out for the working group
 
-“The primary condition of civilization is the availability of an abundance of food, and the primary discipline of civilization is the sharing of that food” — HG Gauranga Das, Director, Govardhan EcoVillage, at the C20 meeting in Recife
+“The primary condition of civilization is the availability of an abundance of food, and the primary discipline of civilization is the sharing of that food” — His Grace Gaurāṅga Dās, Director, Govardhan EcoVillage, at the C20 meeting in Recife
 
 ## Bringing Braj’s Sacred Ponds Back to Life: Priya Kund and Prem Sarovar
 
