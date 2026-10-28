@@ -294,7 +294,7 @@ Hidden until there is content.
 **Heading:** Serve *with us*
 **Text:** There is a place for everyone in this work.
 
-**Partner with us.** Companies, foundations and institutions can co-fund a project, from a single programme to a whole site. We share plans, budgets and progress at every stage.
+**Partner with us.** Companies, foundations and institutions can co-fund a project, from a single programme to a whole site. We keep partners closely informed, from the first plan to the final report.
 *Button:* Start a conversation
 
 **Back an upcoming project.** Seven projects are waiting for partners:

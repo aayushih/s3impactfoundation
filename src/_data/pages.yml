@@ -291,7 +291,7 @@ involved:
       id: "partner"
       label: "For companies and foundations"
       title: "Partner *with us*"
-      text: "Companies, foundations and institutions can co-fund a project, from a single programme to a whole site. We share plans, budgets and progress at every stage."
+      text: "Companies, foundations and institutions can co-fund a project, from a single programme to a whole site. We keep partners closely informed, from the first plan to the final report."
       button: { label: "Start a conversation", link: "/contact/?interest=partnership" }
     - colour: "leaf"
       id: "back"
