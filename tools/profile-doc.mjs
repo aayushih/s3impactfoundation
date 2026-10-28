@@ -7,7 +7,7 @@ import yaml from "js-yaml";
 import sharp from "sharp";
 import {
   Document, Packer, Paragraph, TextRun, ImageRun, Table, TableRow, TableCell, WidthType, BorderStyle,
-  ShadingType, AlignmentType, Header, Footer, VerticalAlign, TableLayoutType, TabStopType, HeightRule,
+  ShadingType, AlignmentType, VerticalAlign, TableLayoutType, HeightRule, TableAnchorType, OverlapType, SectionType,
 } from "docx";
 
 const root = path.resolve(import.meta.dirname, "..");
@@ -58,10 +58,12 @@ const logoPng = await sharp(path.join(root, "src/assets/logo/s3-logo-full.svg"),
 const logo = new ImageRun({ type: "png", data: logoPng, transformation: { width: 196, height: 77 } });
 const month = new Date().toLocaleDateString("en-GB", { month: "long", year: "numeric" });
 
-// Dark blue bands run edge to edge at the top and bottom of every page
-const PAGE_W = 11906, SIDE = 1134;
-const band = (cells, widths, height) => new Table({ width: { size: PAGE_W, type: WidthType.DXA }, columnWidths: widths, layout: TableLayoutType.FIXED,
-  indent: { size: -SIDE, type: WidthType.DXA }, borders: noBorders,
+// Dark blue bands run edge to edge: across the top of page 1 and the bottom of page 2.
+// They sit on the page itself (not in Word's header and footer), so Word shows them at full colour.
+const PAGE_W = 11906, PAGE_H = 16838, SIDE = 1134;
+const band = (cells, widths, height, y) => new Table({ width: { size: PAGE_W, type: WidthType.DXA }, columnWidths: widths, layout: TableLayoutType.FIXED,
+  float: { horizontalAnchor: TableAnchorType.PAGE, verticalAnchor: TableAnchorType.PAGE, absoluteHorizontalPosition: 0, absoluteVerticalPosition: y, overlap: OverlapType.NEVER },
+  borders: noBorders,
   rows: [new TableRow({ height: { value: height, rule: HeightRule.EXACT }, children: cells })] });
 const bandCell = (children, width, o = {}) => new TableCell({ width: { size: width, type: WidthType.DXA }, children, verticalAlign: VerticalAlign.CENTER,
   shading: { type: ShadingType.CLEAR, color: "auto", fill: C.indigo }, margins: { top: 0, bottom: 0, left: o.left ?? 0, right: o.right ?? 0 },
@@ -70,7 +72,7 @@ const headerBand = band([
   bandCell([P(logo, { after: 0, line: null })], PAGE_W / 2, { left: SIDE }),
   bandCell([P(run("ORGANISATION PROFILE", { bold: true, size: 15, color: C.sky, spacing: 50 }), { align: AlignmentType.RIGHT, after: 30 }),
             P(run(month, { size: 16, color: "C9CEE0" }), { align: AlignmentType.RIGHT, after: 0 })], PAGE_W / 2, { right: SIDE }),
-], [PAGE_W / 2, PAGE_W / 2], 1500);
+], [PAGE_W / 2, PAGE_W / 2], 1500, 0);
 
 const hero = table([new TableRow({ children: [
   cell([
@@ -127,17 +129,19 @@ const shortName = (t) => t.replace(/:.*/, "").replace(/^Reviving Sacred Ponds of
 
 const v = (val, label) => (val ? run(val, { size: 16, color: "FFFFFF" }) : pending(`${label} to be added`));
 const web = site.url && !/example\.org/.test(site.url) ? site.url.replace(/^https?:\/\//, "") : "";
-const detail = (k, val) => P([run(k.toUpperCase() + "   ", { bold: true, size: 13, color: C.sky, spacing: 30 }), val], { after: 30, line: 240 });
+const item = (k, val) => [run(k.toUpperCase() + "   ", { bold: true, size: 14, color: C.sky, spacing: 30 }), val];
+const FOOT_H = 760;
 const footerBand = band([
-  bandCell([detail("Visit", run(site.contact.address, { size: 16, color: "FFFFFF" })), detail("Phone", v(site.contact.phone, "Phone"))], 7100, { left: SIDE }),
-  bandCell([detail("Email", v(site.contact.email, "Email")), detail("Web", v(web, "Web address"))], PAGE_W - 7100, { right: SIDE }),
-], [7100, PAGE_W - 7100], 1000);
+  bandCell([P([...item("Email", v(site.contact.email, "Email")), run("        "), ...item("Phone", v(site.contact.phone, "Phone")), run("        "), ...item("Web", v(web, "Web address"))],
+    { align: AlignmentType.CENTER, after: 0, line: 240 })], PAGE_W, { left: SIDE, right: SIDE }),
+], [PAGE_W], FOOT_H, PAGE_H - FOOT_H);
 const closing = [
   P(rich("Walk this path *with us*", { size: 30, color: C.ink, accent: C.s3, font: HEAD }), { before: 260, after: 60, keepNext: true }),
   P(run(plain(pages.involved.ways[0].text), { size: 19, color: C.body }), { after: 0, line: 280 }),
 ];
 
-const children = [
+const page1 = [
+  headerBand,
   hero, P([], { after: 160 }), pillars,
   eyebrow("What we do", C.s3, 260),
   P(run(plain(pages.work.intro), { size: 18, color: C.muted }), { after: 100, line: 270 }),
@@ -146,7 +150,9 @@ const children = [
   ...how,
   eyebrow("What we stand for", C.s3, 220),
   ...a.values.items.map((x) => P([run(x.title + ". ", { bold: true, size: 19, color: C.ink }), run(x.text, { size: 19 })], { after: 50 })),
-  eyebrow("Impact at a glance", C.s3, 0, true),
+];
+const page2 = [
+  eyebrow("Impact at a glance", C.s3, 0),
   impact,
   eyebrow("Part of a wider promise", C.s3, 220),
   P(run(`Our work contributes to ${goals.length} of the 17 United Nations Sustainable Development Goals.`, { size: 18, color: C.muted }), { after: 80 }),
@@ -159,17 +165,16 @@ const children = [
   P(run(plain(pages.work.upcoming.intro), { size: 18, color: C.muted }), { after: 60 }),
   P(run(up.map((p) => shortName(p.title)).join("  ·  "), { size: 18, color: C.ink }), { after: 200, line: 280 }),
   ...closing,
+  footerBand,
 ];
 
 const doc = new Document({
   creator: site.name, title: `${site.name}: Profile`, description: site.description,
   styles: { default: { document: { run: { font: BODY, size: 20, color: C.body } } } },
-  sections: [{
-    properties: { page: { margin: { top: 1900, bottom: 1300, left: SIDE, right: SIDE, header: 0, footer: 0 } } },
-    headers: { default: new Header({ children: [headerBand] }) },
-    footers: { default: new Footer({ children: [footerBand] }) },
-    children,
-  }],
+  sections: [
+    { properties: { page: { margin: { top: 1900, bottom: 900, left: SIDE, right: SIDE } } }, children: page1 },
+    { properties: { type: SectionType.NEXT_PAGE, page: { margin: { top: 900, bottom: 0, left: SIDE, right: SIDE, footer: 0 } } }, children: page2 },
+  ],
 });
 
 const out = path.join(root, "content/S3-Impact-Foundation-Profile.docx");
