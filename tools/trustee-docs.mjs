@@ -80,7 +80,7 @@ async function build(p, d) {
     ...d.focus.map(([t, c]) => P([run("■  ", { size: 15, color: c }), run(t, { size: 17, color: C.body })], { after: 40, line: 250 })),
   ];
 
-  const PW = 2600; // portrait column
+  const PW = 3000; // portrait column
   const nameBlock = [table([new TableRow({ children: [
     cell([
       P(run(p.name, { size: 52, color: C.ink }), { after: 20, line: null }),
@@ -90,7 +90,7 @@ async function build(p, d) {
       P(rich(d.lead, { size: 23, color: C.ink, strong: tone }), { after: 0, line: 320 }),
     ], W - PW - 300, { padX: 0, pad: 0 }),
     cell([P([], { after: 0 })], 300, { padX: 0, pad: 0 }),
-    cell([P(await photo(d.portrait, 130, 163), { after: 0, line: null })], PW, { padX: 0, pad: 0, topColor: tone }),
+    cell([P(await photo(d.portrait, 150, 200), { after: 0, line: null, align: AlignmentType.RIGHT })], PW, { padX: 0, pad: 0 }),
   ] })], [W - PW - 300, 300, PW]), P([], { after: 200 })];
 
   const banner = P(await photo(d.photo, 642, d.bannerH || 190), { after: 60, line: null });
@@ -163,7 +163,7 @@ await build(aayushi, {
   portrait: "content/design-assets/portrait-aayushi.jpg",
   lead: bold(aayushi.bio, ["shape its creative direction", "Central Saint Martins", "from large installations and print campaigns to websites and mobile apps"]),
   photo: "content/design-assets/aayushi-work-banner.jpg",
-  caption: "Aayushi’s work, from left: infographic panels on the 17 SDGs for Govardhan Ecovillage, a community mural, the Manthan Shivir book and the Simple Vedas app.",
+  caption: "Aayushi’s work: infographic panels on the 17 SDGs for Govardhan Ecovillage, and the Manthan Shivir book.",
   paragraphs: [
     bold(aayushi.more[0], ["First Class Honours in Graphic Communication Design", "Central Saint Martins, University of the Arts London", "IBM Enterprise Design Thinking Practitioner"]),
     bold(aayushi.more[1], ["brand strategist", "Chief Creative Officer of Simple Vedas"]),
