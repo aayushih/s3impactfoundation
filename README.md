@@ -58,4 +58,5 @@ Messages sent through the contact form are emailed to you by [Web3Forms](https:/
 - Page templates are in `src/` (`index.njk`) and `src/_includes/` (`base.njk` holds the header, menu and footer).
 - Styles: `src/assets/css/site.css`. Scripts: `src/assets/js/site.js`.
 - Photos referenced in templates are resized at build time by `@11ty/eleventy-img` (see `eleventy.config.js`).
+- The organisation profile (Word) is built from the same content: `node tools/profile-doc.mjs` writes `content/S3-Impact-Foundation-Profile.docx`. Run it again after changing the site's words so the two stay in step.
 - Content planning notes live in `content/` (Drive copy of every project, drafted site copy and the site plan).
