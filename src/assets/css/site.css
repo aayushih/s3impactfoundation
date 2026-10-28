@@ -473,14 +473,23 @@ footer a:hover,footer a:focus-visible{color:#fff;background-size:100% 1px}
 .gg .gn{flex:none;width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:color-mix(in srgb,var(--tone) 16%,transparent);color:var(--tone-ink);font-weight:700;font-size:.86rem}
 .people{padding-block:clamp(72px,9vw,120px);scroll-margin-top:20px}
 .people h2 em{color:var(--s3blue)}
-.pplgrid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(18px,3vw,40px);margin-top:40px}
+.pplgrid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(18px,3vw,40px);margin-top:40px;align-items:start}
 .person{display:grid;grid-template-columns:120px 1fr;gap:24px;align-items:start;background:var(--mist);border-radius:18px;padding:26px}
 .ava{width:120px;height:120px;border-radius:50% 50% 12px 50%;overflow:hidden;background:var(--indigo);display:grid;place-items:center}
 .ava span{font-family:var(--display);font-style:italic;font-size:2.6rem;color:var(--sky)}
 .ava img{width:100%;height:100%;object-fit:cover}
 .person h3{font-size:1.3rem}
 .person .role{font-size:.8rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--s3blue);margin:6px 0 12px}
-.person p:not(.role){color:var(--muted)}
+.person p:not(.role):not(.oname){color:var(--muted)}
+.person .oname{font-family:var(--display);font-style:italic;font-size:1.05rem;color:var(--s3blue);margin-top:2px}
+.person .fullbio{margin-top:14px}
+.person .fullbio summary,.person .fullbio .less{list-style:none;cursor:pointer;display:block;width:max-content;font:600 .92rem var(--body);color:var(--ink);background:none;border:0;border-bottom:1.5px solid var(--s3blue);padding:0 0 2px}
+.person .fullbio summary::-webkit-details-marker{display:none}
+.person .fullbio[open] summary{display:none}
+
+.person .fullbio .less{margin-top:18px}
+.person .fullbio p{margin-top:14px;line-height:1.7;max-width:46em}
+.person:has(.fullbio[open]){grid-column:1/-1}
 .acc{display:grid;grid-template-columns:1fr 1.3fr;gap:clamp(32px,6vw,90px);padding-block:clamp(72px,9vw,120px);scroll-margin-top:20px}
 .acc h2 em{color:var(--leaf-ink)}
 .acc .lede{margin-top:14px}

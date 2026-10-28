@@ -86,10 +86,18 @@ about:
     title: "Our *Trustees*"
     people:
       # To add a photo: upload it to src/assets/img/ and type its file name after photo:
-      - name: "Harneet Hariharan (Rādhikā Līlā DD)"
+      - name: "Harneet Hariharan"
+        other_name: "Rādhikā Līlā Devī Dāsī"
         role: "Managing Trustee"
         photo: ""
-        bio: "Harneet leads S3 Impact Foundation and guides its work across food, water, education, health and heritage. [A fuller background to be added]"
+        bio: "As Managing Trustee, Harneet sets the direction of S3 Impact Foundation and follows its projects closely, from community kitchens and village classrooms to the sacred ponds of Braj. She brings three decades of building and leading a national business, and a long commitment to service."
+        # The longer profile, shown when "Read full profile" is opened. One paragraph per line.
+        more:
+          - "Since 2023, Harneet has also served as CEO of the Social Impact Initiatives of ISKCON Govardhan Ecovillage, where she leads work in nutrition, water and skilling."
+          - "She has brought the discipline of business to this work. At Govardhan Annakshetra, she introduced direct sourcing of groceries from wholesale markets and moved fundraising online. In Braj, she initiated the revival of the sacred kunds, visiting every month, training the local Kund Mitras who now care for them and working with the Braj Tirtha Vikas Parishad, which has encouraged the model’s expansion. She set up the Centre of Excellence for electric-vehicle skilling at Boisar with Tata Capital, linking young people from tribal communities to employers, and supported Govardhan Ecovillage’s role as co-facilitator of the C20 working group on food systems, hunger and poverty."
+          - "Harneet founded Pace Setters Business Solutions in 1993 with a team of fifteen. As its Chairperson and Managing Director, she has grown it into a business-process company of more than 5,000 people, with contact centres in five cities and field teams across more than 20 states, serving sectors from banking and telecom to hospitality and healthcare. Since 2022, the company’s profits have been dedicated to service."
+          - "With her husband, Hariharan Subramanian, she also runs Samatol Seva Foundation, which has rescued more than 35,000 runaway children at railway stations, and Children Reunited Foundation, which supports a residential school for tribal children in Vikramgad, free children’s clinics in Kerala and Maharashtra, and scholarships for thousands of students."
+          - "Harneet holds an MBA in International Marketing from the Faculty of Management Studies, M.S. University of Baroda, and a bachelor’s degree in physics, chemistry and mathematics. Her work is anchored in daily spiritual practice and the study of scripture, under the guidance of HH Radhanath Swami and HG Gauranga Prabhu."
       - name: "Aayushi Hariharan"
         role: "Trustee"
         photo: ""

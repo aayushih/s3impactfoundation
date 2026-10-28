@@ -309,6 +309,9 @@
     if (io) new IntersectionObserver(es => es.forEach(e => { seen = e.isIntersecting;
       if (seen && !busy) resume(cur === null && step < 0 ? 3600 : 1500); else if (!seen) { clearTimeout(timer); } }), {threshold:.45}).observe(sdg); }
 
+  // trustee profiles: "Show less" closes the full profile and brings the card back into view
+  document.querySelectorAll('.person .fullbio .less').forEach(b => b.addEventListener('click', () => { const d = b.closest('details'); d.open = false; d.closest('.person').scrollIntoView({block:'nearest', behavior: reduce ? 'auto' : 'smooth'}); }));
+
   // contact form: after sending, come back to our own thank-you page
   const rd = document.querySelector('#contactForm input[name=redirect]');
   if (rd) rd.value = location.origin + rd.dataset.thanks;

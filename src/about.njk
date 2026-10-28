@@ -87,7 +87,8 @@ description: "S3 Impact Foundation is a charitable foundation based in Mumbai, s
       {% for t in a.trustees.people %}
       <article class="person rv" style="--d:{{ loop.index0 * 0.15 }}s">
         <div class="ava">{% if t.photo %}<img src="assets/img/{{ t.photo }}" alt="{{ t.name }}" sizes="160px">{% else %}<span aria-hidden="true">{% for w in t.name.split(" ") %}{% if loop.index <= 2 %}{{ w[0] }}{% endif %}{% endfor %}</span>{% endif %}</div>
-        <div><h3>{{ t.name }}</h3><p class="role">{{ t.role }}</p><p>{{ t.bio | replace("[", '<span class="pending">') | replace("]", "</span>") | safe }}</p></div>
+        <div><h3>{{ t.name }}</h3>{% if t.other_name %}<p class="oname">{{ t.other_name }}</p>{% endif %}<p class="role">{{ t.role }}</p><p>{{ t.bio | replace("[", '<span class="pending">') | replace("]", "</span>") | safe }}</p>
+          {% if t.more %}<details class="fullbio"><summary>Read full profile</summary>{% for para in t.more %}<p>{{ para }}</p>{% endfor %}<button type="button" class="less">Show less</button></details>{% endif %}</div>
       </article>
       {% endfor %}
     </div>
