@@ -88,17 +88,17 @@ const oneLine = {
 };
 const cats = pages.work.categories;
 const areaCell = (c, i) => cell([
-  P(run(plain(c.title), { size: 21, color: tone[c.colour], font: HEAD }), { after: 20 }),
+  P(run(plain(c.title), { size: 21, color: C.ink, font: HEAD }), { after: 20 }),
   P(run(oneLine[c.id] || "", { size: 17, color: C.body }), { after: 0, line: 260 }),
 ], split(3)[i], { pad: 90, bottomLine: true });
 const areas = table([0, 3].map((s) => new TableRow({ cantSplit: true, children: cats.slice(s, s + 3).map(areaCell) })), split(3));
 
-const how = a.how.items.map((i) => P([run(i.title + ". ", { bold: true, size: 19, color: tone[i.colour] }), run(i.text, { size: 19 })], { after: 60 }));
+const how = a.how.items.map((i) => P([run(i.title + ". ", { bold: true, size: 19, color: C.ink }), run(i.text, { size: 19 })], { after: 60 }));
 
 // ── page 2: impact, leadership, partnership, contact ────────
 const nums = pages.impact.numbers.items;
 const numCell = (n, w) => cell([
-  P(run(n.shows, { size: 34, color: tone[n.colour] || C.s3, font: HEAD }), { after: 10 }),
+  P(run(n.shows, { size: 34, color: C.s3, font: HEAD }), { after: 10 }),
   P(run(n.label, { size: 16, color: C.body }), { after: 0, line: 250 }),
 ], w, { pad: 100, padX: 120, fill: C.mist });
 const impact = table([0, 4].map((s) => new TableRow({ cantSplit: true, children: nums.slice(s, s + 4).map((n, i) => numCell(n, split(4)[i])) })), split(4));
@@ -127,23 +127,23 @@ const contact = table([new TableRow({ children: [cell([
 
 const children = [
   top, P([], { after: 160 }), hero, P([], { after: 160 }), pillars,
-  eyebrow("What we do", C.leaf, 260),
+  eyebrow("What we do", C.s3, 260),
   P(run(plain(pages.work.intro), { size: 18, color: C.muted }), { after: 100, line: 270 }),
   areas,
-  eyebrow("How we serve", C.coral, 220),
+  eyebrow("How we serve", C.s3, 220),
   ...how,
-  eyebrow("What we stand for", C.saffron, 220),
-  ...a.values.items.map((x) => P([run(x.title + ". ", { bold: true, size: 19, color: tone[x.colour] }), run(x.text, { size: 19 })], { after: 50 })),
-  eyebrow("Impact at a glance", C.coral, 0, true),
+  eyebrow("What we stand for", C.s3, 220),
+  ...a.values.items.map((x) => P([run(x.title + ". ", { bold: true, size: 19, color: C.ink }), run(x.text, { size: 19 })], { after: 50 })),
+  eyebrow("Impact at a glance", C.s3, 0, true),
   impact,
   eyebrow("Part of a wider promise", C.s3, 220),
   P(run(`Our work contributes to ${goals.length} of the 17 United Nations Sustainable Development Goals.`, { size: 18, color: C.muted }), { after: 80 }),
   goalStrip,
-  eyebrow("On wider stages", C.saffron, 240),
-  ...home.recognition.cards.map((c) => P([run(c.title + ". ", { bold: true, size: 18, color: tone[c.colour] }), run(plain(c.text), { size: 18 })], { after: 50, line: 270 })),
+  eyebrow("On wider stages", C.s3, 240),
+  ...home.recognition.cards.map((c) => P([run(c.title + ". ", { bold: true, size: 18, color: C.ink }), run(plain(c.text), { size: 18 })], { after: 50, line: 270 })),
   eyebrow("Leadership", C.s3, 200),
   ...a.trustees.people.flatMap(trustee),
-  eyebrow("Projects waiting for partners", C.leaf, 160),
+  eyebrow("Looking ahead", C.s3, 160),
   P(run(plain(pages.work.upcoming.intro), { size: 18, color: C.muted }), { after: 60 }),
   P(run(up.map((p) => shortName(p.title)).join("  ·  "), { size: 18, color: C.ink }), { after: 200, line: 280 }),
   contact,

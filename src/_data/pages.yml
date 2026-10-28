@@ -166,7 +166,7 @@ work:
       intro: "Grassroots work earns a place at bigger tables. Projects we support have helped lead a G20 civil-society working group on hunger and joined a national festival of good governance."
   upcoming:
     title: "What’s *next*"
-    intro: "Seven projects are waiting for partners. Each one grows from work already under way."
+    intro: "Seven new projects are taking shape, each one growing from work already under way."
     button: { label: "Partner on a project", link: "/contact/?interest=project" }
 
 # ── PROJECT PAGES (labels shared by every project) ──────────
@@ -181,7 +181,7 @@ project:
     second_button: { label: "See upcoming projects", link: "/our-work/#upcoming" }
   cta_next:
     title: "Help bring this *to life*"
-    text: "This project is waiting for partners. We would be glad to share the plan, the budget and how progress will be reported."
+    text: "We would welcome partners in bringing this project to life, and would be glad to share the plan and how its progress will be followed."
     button: { label: "Partner on this project", link: "/contact/?interest=project" }
     second_button: { label: "See all upcoming projects", link: "/our-work/#upcoming" }
 
@@ -295,9 +295,9 @@ involved:
       button: { label: "Start a conversation", link: "/contact/?interest=partnership" }
     - colour: "leaf"
       id: "back"
-      label: "Seven projects waiting"
+      label: "Seven new projects"
       title: "Back an *upcoming project*"
-      text: "Each one grows from work already under way, and each is ready for a partner who would like to see it through."
+      text: "Each one grows from work already under way, and partners are warmly welcome to join us in bringing it to life."
       button: { label: "See upcoming projects", link: "/our-work/#upcoming" }
     - colour: "saffron"
       id: "values"
@@ -305,7 +305,7 @@ involved:
       title: "Bring *values education* to your school"
       text: "When the Vedic Value Education Programme’s books, audio and online lessons are ready, schools and communities can use them."
       button: { label: "Register your interest", link: "/contact/?interest=values" }
-  upcoming_title: "Projects waiting for *partners*"
+  upcoming_title: "The road *ahead*"
   donate_note: "Individual donations will open here soon."
 
 # ── CONTACT US ──────────────────────────────────────────────

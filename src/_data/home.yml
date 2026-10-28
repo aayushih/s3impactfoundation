@@ -195,6 +195,6 @@ closing:
   image: "band-temple-path.webp"
   title: "Walk this path *with us*"
   subtitle: "There is a place for you in this work"
-  text: "Seven new projects are waiting for partners, from a school for 620 children to a sanctuary for Palghar's community dogs. Let's bring them to life together."
+  text: "Seven new projects are taking shape, from a school for 620 children to a sanctuary for Palghar's community dogs. We would be glad to bring them to life together."
   button: { label: "Partner with us", link: "/get-involved/" }
   second_button: { label: "See upcoming projects", link: "/our-work/#upcoming" }
